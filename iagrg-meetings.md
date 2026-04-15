@@ -3,7 +3,7 @@ layout: default
 title: IAGRG Meetings
 ---
 
-<link rel="stylesheet" href="/assets/css/style-meetings.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-meetings.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">
@@ -21,6 +21,7 @@ IAGRG Meetings are primarily national-level meetings, typically organized once e
 Their format usually includes plenary talks, contributed paper sessions, the Vaidya–Raychaudhuri Endowment Award Lecture, and the General Body Meeting of the IAGRG, which is generally held toward the close of the meeting.
 
 These meetings are typically held over four days and host around 70 participants from institutions across the country.
+
 </div>
 
 </details>
@@ -50,6 +51,7 @@ These meetings are typically held over four days and host around 70 participants
 </div>
 
 {% if meeting.theme %}
+
 <div class="theme-text">“{{ meeting.theme }}”</div>
 {% endif %}
 
@@ -59,19 +61,23 @@ These meetings are typically held over four days and host around 70 participants
 {% if meeting.proceedings %}
 <strong>Proceedings:</strong> {{ meeting.proceedings }}
 {% endif %}
+
 </div>
 
 {% if meeting.soc_chair or meeting.soc_members %}
+
 <details class="soc-details">
 <summary class="soc-summary">Scientific Organising Committee</summary>
 
 <div class="soc-list">
 
 {% if meeting.soc_chair %}
+
 <p><strong>Chair:</strong> {{ meeting.soc_chair }}</p>
 {% endif %}
 
 {% if meeting.soc_members.size > 0 %}
+
 <p><strong>Members:</strong></p>
 
 <ul>

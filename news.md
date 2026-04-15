@@ -3,7 +3,7 @@ layout: default
 title: News & Announcements
 ---
 
-<link rel="stylesheet" href="/assets/css/style-news.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-news.css' | relative_url }}">
 
 <header class="news-header">
   <div class="container">

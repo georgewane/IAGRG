@@ -9,7 +9,7 @@ excerpt: >
   conference, focused on advancing gender equity in physics in India.
 ---
 
-<link rel="stylesheet" href="/assets/css/style-wggnews.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-wggnews.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">

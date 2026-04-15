@@ -3,7 +3,7 @@ layout: default
 title: IAGRG Workshops & Schools
 ---
 
-<link rel="stylesheet" href="/assets/css/style-meetings.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-meetings.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">

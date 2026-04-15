@@ -3,7 +3,7 @@ layout: default
 title: Working Group on Gender
 ---
 
-<link rel="stylesheet" href="/assets/css/style-wgg.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-wgg.css' | relative_url }}">
 
 <header class="wgg-header">
   <div class="container">
@@ -25,7 +25,7 @@ title: Working Group on Gender
 
   <section class="wgg-banner">
     <img
-      src="/assets/img/gwg1.png"
+      src="{{ '/assets/img/gwg1.png' | relative_url }}"
       alt="Working Group on Gender banner"
     >
   </section>

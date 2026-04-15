@@ -3,7 +3,7 @@ layout: default
 title: Famous Indian Relativists
 ---
 
-<link rel="stylesheet" href="/assets/css/style-relativists.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-relativists.css' | relative_url }}">
 
 <header class="relativists-hero">
   <div class="container">
@@ -41,7 +41,7 @@ title: Famous Indian Relativists
         {% if person.image %}
           <img src="{{ person.image }}" alt="{{ person.name }}">
         {% else %}
-          <img src="/assets/img/dummy-photo.png" alt="{{ person.name }}">
+          <img src="{{ '/assets/img/dummy-photo.png' | relative_url }}" alt="{{ person.name }}">
         {% endif %}
       </div>
     </div>
@@ -80,6 +80,6 @@ title: Famous Indian Relativists
 
 {% endfor %}
 
-</section>    
+</section>
 
 </main>

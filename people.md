@@ -3,7 +3,7 @@ layout: default
 title: People
 ---
 
-<link rel="stylesheet" href="/assets/css/style-meetings.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-meetings.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">
@@ -47,7 +47,7 @@ Browse the current members of IAGRG, representing researchers, faculty members, 
 </div>
 
 <div class="meeting-actions">
-<a href="/members/" class="btn-meeting">
+<a href="{{ '/members/' | relative_url }}" class="btn-meeting">
 View Members ↗
 </a>
 </div>
@@ -71,7 +71,7 @@ Browse council members, office bearers and governing bodies of the Association a
 </div>
 
 <div class="meeting-actions">
-<a href="/council-members/" class="btn-meeting">
+<a href="{{ '/council-members/' | relative_url }}" class="btn-meeting">
 View Directory ↗
 </a>
 </div>
@@ -95,7 +95,7 @@ Profiles of pioneering Indian researchers whose work helped shape general relati
 </div>
 
 <div class="meeting-actions">
-<a href="/famous-indian-relativists/" class="btn-meeting">
+<a href="{{ '/famous-indian-relativists/' | relative_url }}" class="btn-meeting">
 View Profiles ↗
 </a>
 </div>

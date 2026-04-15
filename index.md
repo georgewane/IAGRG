@@ -22,8 +22,8 @@ title: Home
       </p>
 
       <div class="hero-actions">
-        <a href="/members" class="btn-solid">Meet Our Members</a>
-        <a href="/resources" class="btn-outline-light">Explore Resources</a>
+        <a href="{{ '/members' | relative_url }}" class="btn-solid">Meet Our Members</a>
+        <a href="{{ '/resources' | relative_url }}" class="btn-outline-light">Explore Resources</a>
       </div>
 
     </div>
@@ -69,7 +69,7 @@ title: Home
     vibrant scientific community in gravitation, cosmology, and astrophysics.
   </p>
 
-<a href="/about" class="read-link">Learn More →</a>
+<a href="{{ '/about' | relative_url }}" class="read-link">Learn More →</a>
 
 </section>
       <!-- Compact Latest Updates -->
@@ -77,7 +77,7 @@ title: Home
 
         <div class="updates-head">
           <h3>Latest IAGRG News</h3>
-          <a href="/news">View All →</a>
+          <a href="{{ '/news' | relative_url }}">View All →</a>
         </div>
 
         <div class="mini-updates-list">

@@ -3,7 +3,7 @@ layout: default
 title: ICGC Meetings
 ---
 
-<link rel="stylesheet" href="/assets/css/style-meetings.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-meetings.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">
@@ -23,6 +23,7 @@ The International Conference on Gravitation and Cosmology (ICGC) is an internati
 Its format generally includes plenary talks and parallel sessions for contributed papers, with some editions also featuring short plenary presentations.
 
 These meetings are usually held over five to six days and attract around 120 participants, including researchers from several countries.
+
 </div>
 
 </details>
@@ -57,9 +58,11 @@ These meetings are usually held over five to six days and attract around 120 par
 {% if meeting.proceedings %}
 <strong>Proceedings:</strong> {{ meeting.proceedings }}
 {% endif %}
+
 </div>
 
 {% if meeting.website_url or meeting.talks_url %}
+
 <div class="meeting-actions">
 
 {% if meeting.website_url %}

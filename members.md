@@ -3,7 +3,7 @@ layout: default
 title: Members Directory
 ---
 
-<link rel="stylesheet" href="/assets/css/style-members.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-members.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">
@@ -44,7 +44,7 @@ title: Members Directory
 window.memberData = {{ site.data.members | jsonify }};
 </script>
 
-<script src="/assets/js/members.js"></script>
-<script src="/assets/js/mapdata.js"></script>
-<script src="/assets/js/countrymap.js"></script>
+<script src="{{ '/assets/js/members.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/mapdata.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/countrymap.js' | relative_url }}"></script>
 <script src="assets/js/navbar.js"></script>

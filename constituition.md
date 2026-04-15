@@ -3,7 +3,7 @@ layout: default
 title: Constitution of the IAGRG
 ---
 
-<link rel="stylesheet" href="/assets/css/style-constitution.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-constitution.css' | relative_url }}">
 
 <header class="constitution-header">
   <div class="container">

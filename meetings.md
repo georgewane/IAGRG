@@ -3,7 +3,7 @@ layout: default
 title: Meetings & Conferences
 ---
 
-<link rel="stylesheet" href="/assets/css/style-meetings.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-meetings.css' | relative_url }}">
 
 <header class="page-header">
   <div class="container">
@@ -47,7 +47,7 @@ The principal recurring meetings of the Indian gravitation community, featuring 
 </div>
 
 <div class="meeting-actions">
-<a href="/iagrg-meetings/" class="btn-meeting">
+<a href="{{ '/iagrg-meetings/' | relative_url }}" class="btn-meeting">
 View Archive ↗
 </a>
 </div>
@@ -71,7 +71,7 @@ India’s flagship international conference in gravitation and cosmology, bringi
 </div>
 
 <div class="meeting-actions">
-<a href="/icgc-meetings/" class="btn-meeting">
+<a href="{{ '/icgc-meetings/' | relative_url }}" class="btn-meeting">
 View Archive ↗
 </a>
 </div>
@@ -95,7 +95,7 @@ Focused schools, thematic workshops and training programmes that have supported 
 </div>
 
 <div class="meeting-actions">
-<a href="/iagrg-schools/" class="btn-meeting">
+<a href="{{ '/iagrg-schools/' | relative_url }}" class="btn-meeting">
 View Archive ↗
 </a>
 </div>

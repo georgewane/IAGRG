@@ -3,7 +3,7 @@ layout: default
 title: Resources for Researchers
 ---
 
-<link rel="stylesheet" href="/assets/css/style-resources.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-resources.css' | relative_url }}">
 
 <header class="resources-header">
   <div class="container">
@@ -21,7 +21,7 @@ title: Resources for Researchers
 
     <figure class="hub-figure">
       <img
-        src="/assets/img/mega-science_banner_smaller.webp"
+        src="{{ '/assets/img/mega-science_banner_smaller.webp' | relative_url }}"
         alt="From micro to macro: understanding the universe through mega science projects"
       >
 

@@ -3,7 +3,7 @@ layout: default
 title: About IAGRG
 ---
 
-<link rel="stylesheet" href="/assets/css/style-about.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-about.css' | relative_url }}">
 
 <section class="about-hero">
   <div class="container">
@@ -61,7 +61,7 @@ title: About IAGRG
         collaboration within the community.
       </p>
 
-      <a href="/join/" class="about-btn">Become a Member</a>
+      <a href="{{ '/join/' | relative_url }}" class="about-btn">Become a Member</a>
     </div>
 
   </div>
@@ -76,7 +76,7 @@ title: About IAGRG
         Association.
       </p>
 
-      <a href="/constituition/" class="about-btn">Read Constitution</a>
+      <a href="{{ '/constituition/' | relative_url }}" class="about-btn">Read Constitution</a>
     </div>
 
   </div>
@@ -91,7 +91,7 @@ title: About IAGRG
         bearers elected by the members of the Association.
       </p>
 
-      <a href="/council/" class="about-btn">View Council</a>
+      <a href="{{ '/council/' | relative_url }}" class="about-btn">View Council</a>
     </div>
 
   </div>

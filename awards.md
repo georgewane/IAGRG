@@ -3,7 +3,7 @@ layout: default
 title: Awards
 ---
 
-<link rel="stylesheet" href="/assets/css/style-awards.css">
+<link rel="stylesheet" href="{{ '/assets/css/style-awards.css' | relative_url }}">
 
 <header class="awards-header">
   <div class="container">
@@ -29,7 +29,7 @@ title: Awards
 
   <div class="awards-grid">
 
-    <a href="/vr-lecture" class="award-feature-card">
+    <a href="{{ '/vr-lecture' | relative_url }}" class="award-feature-card">
       <span class="award-label">Distinguished Lecture</span>
       <h3>Vaidya–Raychaudhuri Lecture</h3>
       <p>
@@ -39,7 +39,7 @@ title: Awards
       <span class="award-link">Explore →</span>
     </a>
 
-    <a href="/narlikar-thesis-award" class="award-feature-card">
+    <a href="{{ '/narlikar-thesis-award' | relative_url }}" class="award-feature-card">
       <span class="award-label">Doctoral Excellence</span>
       <h3>V. V. Narlikar Best Thesis Award</h3>
       <p>
@@ -48,7 +48,7 @@ title: Awards
       <span class="award-link">Explore →</span>
     </a>
 
-    <a href="/sen-young-researcher-award" class="award-feature-card">
+    <a href="{{ '/sen-young-researcher-award' | relative_url }}" class="award-feature-card">
       <span class="award-label">Early Career</span>
       <h3>N. R. Sen Young Researcher Award</h3>
       <p>
