@@ -1,0 +1,23 @@
+# IAGRG Meetings
+- category: "IAGRG Meeting"
+  year: "2024"
+  title: "33rd IAGRG Meeting"
+  location: "IIT Gandhinagar"
+  topic: "Gravitational Waves and Cosmology"
+  url: "https://events.iitgn.ac.in/2024/iagrg/" 
+
+- category: "IAGRG Meeting"
+  year: "2019"
+  title: "30th IAGRG Meeting"
+  location: "BITS Pilani, Hyderabad"
+  topic: "100 Years of General Relativity"
+  # Old link was broken, so we omit 'url' and use 'summary'
+  summary: "Plenary talks focused on the centenary of the 1919 solar eclipse expedition and recent LIGO detections."
+
+# ICGC Meetings
+- category: "ICGC Meeting"
+  year: "2023"
+  title: "9th ICGC"
+  location: "IIT Guwahati"
+  topic: "Classical and Quantum Gravity"
+  url: "https://event.iitg.ac.in/icgc2023/"

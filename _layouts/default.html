@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | IAGRG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="site-logo">
+            <a href="/">
+            <img src="{{ '/assets/img/logo.jpg' | relative_url }}" alt="IAGRG   Logo">
+            <span>IAGRG</span>
+            </a>
+            </div>
+            
+            <div class="nav-right">
+                <nav class="site-nav">
+                    <ul class="nav-list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li class="dropdown">
+                            <a href="/people" class="dropbtn">People ▾</a>
+                            <div class="dropdown-content">
+                                <a href="/council">IAGRG Council</a>
+                                <a href="/members">Members Directory</a>
+                                <a href="/indian-relativists">Famous Indian Relativists</a>
+                            </div>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="/meetings" class="dropbtn">Activities ▾</a>
+                            <div class="dropdown-content">
+                                <a href="/iagrg-meetings">IAGRG Meetings</a>
+                                <a href="/icgc-meetings">ICGC Meetings</a>
+                                <a href="/iagrg-schools">IAGRG Schools</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href ="/awards" class="dropbtn">Awards ▾</a>
+                            <div class="dropdown-content">
+                                <a href="/vr-lectures">Vaidya-Raychaudhri Lecture</a>
+                                <a href="/vvn">V.V Narlikar Thesis Award</a>
+                                <a href="/nrsen">N.R Sen Young Researcher Award</a>
+                            </div>
+                        </li>
+                        <li><a href="/wgg">WGG</a></li>
+                        <li><a href="/resources">Resources</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href ="https://docs.google.com/forms/d/e/1FAIpQLSfkZTA8h72B3SzKMBhOkj4I3YPryhMwx8wdx6soZ42ABrI5qA/viewform?usp=publish-editor" target ="_blank">Submit Announcement</a></li>
+
+                    </ul>
+                </nav>
+
+                <div class="header-ctas">
+                    <a href="/404" class="btn-header-outline">Donate</a>
+                    <a href="/membership" class="btn-header-solid">Join</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="page-content">
+        {{ content }}
+    </main>
+
+   <footer class="site-footer">
+
+    <!-- PARTNER INSTITUTIONS FIRST
+    <div class="partners-footer">
+        <div class="container">
+
+            <h3>Partner Institutions</h3>
+
+            <div class="partner-logos">
+
+                <a href="https://www.iucaa.in/" target="_blank">
+                    <img src="/assets/img/iucaa.png" alt="IUCAA">
+                </a>
+
+                <a href="https://www.tifr.res.in/" target="_blank">
+                    <img src="/assets/img/tifr.png" alt="TIFR">
+                </a>
+
+                <a href="https://www.prl.res.in/" target="_blank">
+                    <img src="/assets/img/prl.png" alt="PRL">
+                </a>
+
+                <a href="https://www.icts.res.in/" target="_blank">
+                    <img src="/assets/img/icts.png" alt="ICTS">
+                </a>
+
+                <a href="#" target="_blank">
+                    <img src="/assets/img/iiser.png" alt="IISER">
+                </a>
+
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- MAIN FOOTER -->
+    <div class="footer-main container">
+
+        <div class="footer-col">
+            <h4>About IAGRG</h4>
+            <p>
+                The Indian Association for General Relativity and Gravitation
+                promotes research, education, and collaboration in gravitation,
+                cosmology, and related fields.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/membership">Membership</a></li>
+                <li><a href="/news">News & Announcements</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="/wgg">Working Group on Gender</a></li>
+                <li><a href="/members">Members Directory</a></li>
+                <li><a href="#">Submit Announcement</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+         <div class="container">
+            <p>
+                &copy; {{ site.time | date: '%Y' }}
+                Indian Association for General Relativity and Gravitation.
+                Administrative Office: IUCAA, Ganeshkhind, Pune 411007, India.
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

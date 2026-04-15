@@ -1,0 +1,37 @@
+---
+layout: default
+title: Famous Indian Relativists
+---
+
+<div class="container">
+  <header class="page-header">
+    <h1>Famous Indian Relativists</h1>
+    <p>Honoring the pioneers who shaped the foundations of General Relativity, Cosmology, and Astrophysics in India.</p>
+  </header>
+
+  <div class="relativists-grid">
+    {% for person in site.data.relativists %}
+    <article class="relativist-card">
+      <div class="card-header">
+        <div class="avatar-placeholder"></div> 
+        <div class="header-text">
+          <h2>{{ person.name }}</h2>
+          <span class="lifespan">{{ person.lifespan }}</span>
+        </div>
+      </div>
+      
+      <div class="card-body">
+        <p class="interest-area"><strong>Primary Interests:</strong> {{ person.interest }}</p>
+        <p class="bio">{{ person.bio }}</p>
+        
+        <h3>Most Relevant Works</h3>
+        <ul class="works-list">
+          {% for work in person.works %}
+            <li>{{ work }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

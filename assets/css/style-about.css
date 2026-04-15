@@ -1,0 +1,151 @@
+/* ======================================
+   ABOUT PAGE — IAGRG
+====================================== */
+
+/* HERO */
+
+.about-hero{
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color:white;
+  text-align:center;
+  padding:75px 20px 65px;
+  border-bottom:4px solid var(--brand-accent);
+}
+
+.about-tag{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.08);
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+
+.about-hero h1{
+  color:white;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  margin-bottom:14px;
+}
+
+.about-hero p{
+  max-width:760px;
+  margin:auto;
+  line-height:1.8;
+  color:rgba(255,255,255,0.84);
+}
+
+/* MAIN */
+
+.about-wrapper{
+  max-width:1050px;
+  margin:55px auto 80px;
+  display:grid;
+  gap:26px;
+}
+
+/* ======================================
+   HORIZONTAL CARDS
+====================================== */
+
+.about-row{
+  display:grid;
+  grid-template-columns:7px 1fr;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  transition:all 0.22s ease;
+}
+
+.about-row:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 28px rgba(0,0,0,0.08);
+}
+
+.about-row.reverse{
+  grid-template-columns:1fr 7px;
+}
+
+.about-accent{
+  background:var(--brand-accent);
+}
+
+.about-row.reverse .about-accent{
+  order:2;
+}
+
+.about-row.reverse .about-content{
+  order:1;
+}
+
+/* CONTENT */
+
+.about-content{
+  padding:28px 30px;
+}
+
+.about-content h2{
+  margin:0 0 12px;
+  color:var(--brand-dark);
+  font-size:1.45rem;
+}
+
+.about-content p{
+  margin:0 0 14px;
+  color:var(--text-muted);
+  line-height:1.82;
+  font-size:1rem;
+}
+
+/* BUTTONS */
+
+.about-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  background:#eef2f7;
+  color:var(--text-main);
+  transition:all 0.2s ease;
+}
+
+.about-btn:hover{
+  background:var(--brand-dark);
+  color:white;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .about-wrapper{
+    margin:35px auto 60px;
+    gap:18px;
+  }
+
+  .about-row,
+  .about-row.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .about-accent{
+    height:6px;
+    width:100%;
+  }
+
+  .about-content{
+    padding:22px 18px;
+  }
+
+  .about-content h2{
+    font-size:1.2rem;
+  }
+
+  .about-btn{
+    width:100%;
+    text-align:center;
+  }
+}

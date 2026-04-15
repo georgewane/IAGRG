@@ -1,0 +1,36 @@
+---
+layout: default
+title: Members Directory
+---
+
+<div class="container">
+  <header class="page-header">
+    <h1>IAGRG Members Directory</h1>
+    <p>A comprehensive list of our community members and their institutional affiliations.</p>
+  </header>
+
+  <div class="content-card">
+    <input type="text" id="memberSearch" placeholder="Search by name or institution..." class="search-bar">
+
+    <table class="members-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Institution</th>
+          <th>Membership</th>
+          <th>Primary Research Areas</th>
+        </tr>
+      </thead>
+      <tbody id="memberTableBody">
+        {% for member in site.data.members %}
+        <tr>
+          <td><strong>{{ member.name }}</strong><br><small>{{ member.position }}</small></td>
+          <td>{{ member.institution }}</td>
+          <td><span class="badge">{{ member.type }}</span></td>
+          <td>{{ member.research }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>

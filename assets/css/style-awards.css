@@ -1,0 +1,231 @@
+/* ======================================
+  11. AWARDS PAGES
+====================================== */
+
+.award-hero {
+  background: var(--brand-dark);
+  color: white;
+  padding: 70px 20px;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.award-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.award-kicker {
+  color: var(--brand-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.award-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.award-page section {
+  padding: 60px 20px;
+}
+
+.award-about {
+  max-width: 850px;
+}
+
+.award-about hr {
+  margin: 48px 0 34px;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.award-about h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.award-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand-accent);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.award-card h3 {
+  min-height: 3.2em;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.award-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  min-height: 68px;
+}
+
+/* ======================================
+   AWARDS LANDING PAGE
+====================================== */
+
+.awards-landing-hero {
+  background: var(--brand-dark);
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.awards-landing-hero h1 {
+  color: white;
+  font-size: 3.2rem;
+  margin-bottom: 14px;
+}
+
+.awards-kicker {
+  color: var(--brand-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.awards-subtitle {
+  max-width: 700px;
+  font-size: 1.15rem;
+}
+
+.awards-intro {
+  padding: 70px 20px 30px;
+  max-width: 850px;
+}
+
+.awards-grid-section {
+  padding: 20px 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.award-feature-card {
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brand-accent);
+  border-radius: 16px;
+  padding: 28px;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+
+  height: 100%;
+}
+
+.award-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(0,0,0,0.08);
+}
+
+.award-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.award-feature-card h3 {
+  min-height: 3.2em;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.award-link {
+  margin-top: auto;
+  padding-top: 18px;
+
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+/* HEADER */
+
+.awards-header{
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color:white;
+  text-align:center;
+  padding:72px 20px 62px;
+  border-bottom:4px solid var(--brand-accent);
+}
+
+.awards-header h1{
+  color:white;
+  font-size:clamp(2.2rem,5vw,3.2rem);
+  margin-bottom:12px;
+}
+
+.awards-kicker{
+  color:var(--brand-accent);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:0.9rem;
+  font-weight:700;
+}
+
+.awards-subtitle{
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(255,255,255,0.84);
+  line-height:1.8;
+}
+
+/* MAIN */
+
+.awards-page{
+  max-width:1100px;
+  margin:55px auto 80px;
+}
+
+.awards-intro-card{
+  background:white;
+  border:1px solid var(--border);
+  border-left:5px solid var(--brand-accent);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  margin-bottom:30px;
+}
+
+.awards-intro-card h2{
+  margin:0 0 12px;
+}
+
+.awards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}

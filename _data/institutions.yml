@@ -1,0 +1,19 @@
+- state_code: "MH"
+  state_name: "Maharashtra"
+  places:
+    - name: "Inter-University Centre for Astronomy and Astrophysics (IUCAA)"
+      city: "Pune"
+      url: "https://www.iucaa.in"
+    - name: "Tata Institute of Fundamental Research (TIFR)"
+      city: "Mumbai"
+      url: "https://www.tifr.res.in"
+
+- state_code: "KA"
+  state_name: "Karnataka"
+  places:
+    - name: "International Centre for Theoretical Sciences (ICTS)"
+      city: "Bengaluru"
+      url: "https://www.icts.res.in"
+    - name: "Raman Research Institute (RRI)"
+      city: "Bengaluru"
+      url: "https://www.rri.res.in"

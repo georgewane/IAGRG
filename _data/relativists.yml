@@ -1,0 +1,42 @@
+- name: "Prof. Jayant V. Narlikar"
+  lifespan: "1938 – 2025"
+  image: "/assets/img/jvn.webp"
+  interest: "Cosmology, Mach's Principle, Conformal Gravity"
+  bio: "A leading proponent of steady-state cosmology and a pioneer in modifying General Relativity to incorporate Mach's Principle."
+  works:
+    - "Hoyle-Narlikar Theory of Gravity (1964) – A conformal, action-at-a-distance theory of gravity."
+
+# - name: "Prof. Thanu Padmanabhan"
+#   lifespan: "1957 – 2021"
+#   image: "/assets/img/paddy.jpg"
+#   interest: "Quantum Gravity, Cosmology, Structure Formation"
+#   bio: "An internationally acclaimed theoretical physicist known for his thermodynamic approach to gravity."
+#   works:
+#     - "Emergent Gravity Paradigm – Interpreting gravity as an emergent, thermodynamic phenomenon."
+#     - "Gravitation: Foundations and Frontiers (Book, 2010)"
+
+- name: "Prof. Prahlad Chunnilal Vaidya"
+  lifespan: "1918 – 2010"
+  image: "/assets/img/pvaidya.jpeg"
+  interest: "Astrophysics, Exact Solutions in GR"
+  bio: "A pioneer in modeling the exterior gravitational field of radiating stars, providing one of the most important exact solutions to Einstein's equations."
+  works:
+    - "The Vaidya Metric (1951) – Describes the spacetime around a radiating, non-rotating spherical body."
+
+- name: "Prof. Amal Kumar Raychaudhuri"
+  lifespan: "1923 – 2005"
+  image: "/assets/img/AKRaychaudhuri.jpg"
+  interest: "Cosmology, General Relativity, Singularities"
+  bio: "A legendary physicist whose work laid the geometric foundation for the Penrose-Hawking singularity theorems."
+  works:
+    - "The Raychaudhuri Equation (1955) – A fundamental equation describing the kinematics of congruences of trajectories in general relativity."
+    - "Theoretical Cosmology (Book, 1979)"
+
+- name: "Prof. Subrahmanyan Chandrasekhar"
+  lifespan: "1910 – 1995"
+  image: "/assets/img/chandra.jpeg"
+  interest: "Stellar Structure, Black Holes, Radiative Transfer"
+  bio: "Nobel Laureate (1983) who completely solved the mathematical theory of black holes and the stability of white dwarfs."
+  works:
+    - "The Chandrasekhar Limit (1930) – The maximum mass of a stable white dwarf star."
+    - "The Mathematical Theory of Black Holes (Book, 1983)"

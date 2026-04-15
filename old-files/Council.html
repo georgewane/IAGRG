@@ -1,0 +1,290 @@
+---
+layout: default
+title: IAGRG Council
+---
+
+<style>
+  .page-header {
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--brand-accent);
+  }
+  
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 10px; }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0 30px;
+    color: var(--brand-dark);
+  }
+
+  /* Current Leadership Cards */
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .leader-card {
+    background: white;
+    border-top: 4px solid var(--brand-accent);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .leader-role {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .leader-name { font-size: 1.5rem; margin-bottom: 5px; }
+  .leader-email { font-size: 0.9rem; color: var(--brand-accent); font-weight: 500; text-decoration: none; }
+  .leader-email:hover { text-decoration: underline; }
+
+  /* Interactive Archive Accordion */
+  .archive-container {
+    max-width: 900px;
+    margin: 0 auto 80px;
+  }
+
+  details {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  }
+
+  summary {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-light);
+  }
+
+  summary::-webkit-details-marker { display: none; }
+  summary:after { content: "+"; color: var(--brand-accent); font-size: 1.5rem; }
+  details[open] summary:after { content: "−"; }
+
+  .term-content {
+    padding: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .term-leadership {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .term-leadership strong { color: var(--brand-dark); }
+  
+  .term-members {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    columns: 2; /* Splits the member list into two columns */
+  }
+</style>
+
+<header class="page-header">
+  <div class="container">
+    <h1>IAGRG Council</h1>
+    <p>The elected council overseeing the activities and governance of IAGRG.</p>
+  </div>
+</header>
+
+<main class="container">
+  
+  <h2 class="section-title">Current Office Bearers (2022 — 2024)</h2>
+  
+  <div class="leadership-grid">
+    <div class="leader-card">
+      <span class="leader-role">President</span>
+      <h3 class="leader-name">Sumati Surya</h3>
+      <a href="mailto:ssurya@rri.res.in" class="leader-email">ssurya@rri.res.in</a>
+    </div>
+
+    <div class="leader-card">
+      <span class="leader-role">Secretary</span>
+      <h3 class="leader-name">Anjan Ananda Sen</h3>
+      <a href="mailto:aasen@jmi.ac.in" class="leader-email">aasen@jmi.ac.in</a>
+    </div>
+  </div>
+
+  <div class="leadership-grid">
+    <div class="leader-card" style="grid-column: 1 / -1; text-align: left;">
+      <span class="leader-role">Council Members</span>
+      <ul style="columns: 2; margin-top: 15px; line-height: 2;">
+        <li><strong>S. Shankaranarayanan</strong> (shanki@phy.iitb.ac.in)</li>
+        <li><strong>Rajesh Nayak</strong> (rajesh@iiserkol.ac.in)</li>
+        <li><strong>Ayan Chatterjee</strong> (ayan.theory@gmail.com)</li>
+        <li><strong>K. G. Arun</strong> (kgarun@cmi.ac.in)</li>
+        <li><strong>Atri Deshamukhya</strong> (atri.deshamukhya@gmail.com)</li>
+        <li><strong>Sudipta Sarkar</strong> (sudiptas@iitgn.ac.in)</li>
+        <li><strong>Patrick Das Gupta</strong> <em>(Ex Officio)</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border: 0; border-top: 2px solid #eee; margin: 60px 0;">
+
+  <h2 class="section-title">Past Office Bearers Archive</h2>
+  
+  <div class="archive-container">
+
+    <details>
+      <summary>Term: 2020 — 2022</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>President:</strong> Patrick Das Gupta</div>
+          <div><strong>Secretary:</strong> L. Sriramkumar</div>
+        </div>
+        <ul class="term-members">
+          <li>Sukanta Bose</li>
+          <li>Suneeta Vardarajan</li>
+          <li>Somasri Sen</li>
+          <li>S. Shankaranarayanan</li>
+          <li>Rajesh Nayak</li>
+          <li>Ayan Chatterjee</li>
+          <li>Sayan Kar (Ex Officio)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 2018 — 2020</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>President:</strong> Sayan Kar</div>
+          <div><strong>Secretary:</strong> L. Sriramkumar</div>
+        </div>
+        <ul class="term-members">
+          <li>Jasjeet Bagla</li>
+          <li>Golam Hossain</li>
+          <li>Sayan Chakrabarti</li>
+          <li>Sukanta Bose</li>
+          <li>Suneeta Vardarajan</li>
+          <li>Somasri Sen</li>
+          <li>Tarun Souradeep (Ex Officio)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 2016 — 2018</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>President:</strong> Tarun Souradeep</div>
+          <div><strong>Secretary:</strong> Sumati Surya</div>
+        </div>
+        <ul class="term-members">
+          <li>Archana Pai</li>
+          <li>Anjan A Sen</li>
+          <li>Pravabati Chingangbam</li>
+          <li>Jasjeet Bagla</li>
+          <li>Golam Hossain</li>
+          <li>Sayan Chakrabarti</li>
+          <li>Ghanashyam Date (Ex Officio)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 2010 — 2016</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>2014-2016 President:</strong> Ghanashyam Date | <strong>Sec:</strong> Sumati Surya</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>2012-2014 President:</strong> Narayan Banerjee | <strong>Sec:</strong> Sayan Kar</div>
+        </div>
+        <div class="term-leadership" style="border-bottom: none;">
+          <div><strong>2010-2012 President:</strong> Pankaj Joshi | <strong>Sec:</strong> Sayan Kar</div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 2000 — 2010</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>2008-2010 President:</strong> Sanjeev Dhurandhar | <strong>Sec:</strong> Ghanashyam Date</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>2006-2008 President:</strong> Bala Iyer | <strong>Sec:</strong> Ghanashyam Date</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>2004-2006 President:</strong> A. K. Kembhavi | <strong>Sec:</strong> Narayan Banerjee</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>2002-2004 President:</strong> L.K. Patel | <strong>Sec:</strong> Narayan Banerjee</div>
+        </div>
+        <div class="term-leadership" style="border-bottom: none;">
+          <div><strong>2000-2002 President:</strong> Asit Banerjee | <strong>Sec:</strong> Ramesh S. Tikekar</div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 1990 — 2000</summary>
+      <div class="term-content">
+        <div class="term-leadership">
+          <div><strong>1998-2000 President:</strong> J. Krishna Rao | <strong>Sec:</strong> Ramesh S. Tikekar</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>1996-1998 President:</strong> A. R. Prasanna | <strong>Sec:</strong> B. R. Iyer</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>1994-1996 President:</strong> Naresh K. Dadhich | <strong>Sec:</strong> B. R. Iyer</div>
+        </div>
+        <div class="term-leadership">
+          <div><strong>1992-1994 President:</strong> S. Mukherjee | <strong>Sec:</strong> S. V. Dhurandhar</div>
+        </div>
+        <div class="term-leadership" style="border-bottom: none;">
+          <div><strong>1990-1992 President:</strong> N. Mukunda | <strong>Sec:</strong> S. V. Dhurandhar</div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Term: 1969 — 1990 (The Early Years)</summary>
+      <div class="term-content">
+        <ul style="line-height: 2;">
+          <li><strong>1988-1990:</strong> Pres: N. Panchapakesan | Sec: A. K. Kembhavi</li>
+          <li><strong>1986-1988:</strong> Pres: Sriranjan Banerjee | Sec: A. K. Kembhavi</li>
+          <li><strong>1984-1986:</strong> Pres: C. V. Vishveshwara | Sec: Naresh K. Dadhich</li>
+          <li><strong>1982-1984:</strong> Pres: Jayant V. Narlikar | Sec: Naresh K. Dadhich</li>
+          <li><strong>1980-1982:</strong> Pres: A. K. Raychaudhuri | Sec: L. Radhakrishna</li>
+          <li><strong>1978-1980:</strong> Pres: S. I. Husain | Sec: L. Radhakrishna</li>
+          <li><strong>1976-1978:</strong> Pres: P. C. Vaidya | Sec: J. Krishna Rao</li>
+          <li><strong>1974-1976:</strong> Pres: A. Gangopadhya | Sec: J. Krishna Rao</li>
+          <li><strong>1972-1974:</strong> Pres: R. M. Mishra | Sec: J. Krishna Rao</li>
+          <li><strong>1970-1972:</strong> Founder Pres: V. V. Narlikar | Sec: J. Krishna Rao</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</main>

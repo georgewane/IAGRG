@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<header class="award-hero">
+  <div class="container">
+    <p class="award-kicker">IAGRG Awards</p>
+    <h1>{{ page.title }}</h1>
+    <p class="award-subtitle">{{ page.subtitle }}</p>
+  </div>
+</header>
+
+<main class="award-page">
+
+  <section class="award-about container">
+    <h2>About</h2>
+    {{ content }}
+  </section>
+
+  {% if page.data_file %}
+  <section class="award-archive container">
+    <h2>Archive</h2>
+
+    {% assign records = site.data[page.data_file] %}
+
+    <div class="award-grid">
+      {% for item in records %}
+      <div class="award-card">
+        <h3>{{ item.name }}</h3>
+        <p class="award-meta">{{ item.year }}</p>
+        {% if item.title %}
+        <p>{{ item.title }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</main>

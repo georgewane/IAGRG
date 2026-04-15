@@ -1,0 +1,41 @@
+- title: "INSPIRE-HEP"
+  url: "https://inspirehep.net/"
+  description: "The trusted community hub for High-Energy Physics, Gravitation, and Cosmology literature, author profiles, and job listings."
+  category: "Literature & Databases"
+  tags: ["Database", "Jobs"]
+  level: "All Levels"
+
+- title: "Living Reviews in Relativity"
+  url: "https://link.springer.com/journal/41114"
+  description: "Peer-reviewed, open-access review articles summarizing the state-of-the-art in all areas of general relativity."
+  category: "Literature & Databases"
+  tags: ["Journal", "Review"]
+  level: "Advanced"
+
+- title: "Einstein Toolkit"
+  url: "https://einsteintoolkit.org/"
+  description: "A community-driven software platform of core computational tools to advance and support research in relativistic astrophysics."
+  category: "Software & Computing"
+  tags: ["Open Source", "Simulation"]
+  level: "Intermediate/Advanced"
+
+- title: "Gravitational Wave Open Science Center (GWOSC)"
+  url: "https://gwosc.org/"
+  description: "Access to open data from gravitational-wave observatories, along with tutorials and software to learn how to analyze the data."
+  category: "Software & Computing"
+  tags: ["Data", "Tutorials"]
+  level: "Beginner/Intermediate"
+
+- title: "Hyperspace@GU"
+  url: "https://hyperspace.uni-frankfurt.de/"
+  description: "A bulletin board for general relativity, featuring job announcements, conference listings, and community news."
+  category: "Career & Community"
+  tags: ["Jobs", "Conferences"]
+  level: "All Levels"
+
+# - title: "Sean Carroll's Spacetime and Geometry Notes"
+#   url: "https://arxiv.org/abs/gr-qc/9712019"
+#   description: "A highly regarded, accessible introduction to general relativity for early-stage graduate students."
+#   category: "Educational Material"
+#   tags: ["Lecture Notes", "PDF"]
+#   level: "Beginner"

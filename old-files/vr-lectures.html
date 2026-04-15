@@ -1,0 +1,177 @@
+---
+layout: default
+title: Vaidya-Raychaudhuri Lectures
+---
+
+<style>
+  .page-header {
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--brand-accent);
+  }
+  
+  .page-header h1 { color: white; font-size: 3rem; margin-bottom: 10px; }
+  
+  .archive-container {
+    max-width: 1000px;
+    margin: 60px auto 80px;
+  }
+
+  /* Accordion Styling */
+  details {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
+  }
+
+  summary {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    padding: 20px 30px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.2s ease;
+  }
+  
+  summary:hover { background-color: #f1f3f5; }
+
+  /* Plus/Minus Animation */
+  summary::-webkit-details-marker { display: none; }
+  summary:after { content: "+"; color: var(--brand-accent); font-size: 1.8rem; line-height: 1; }
+  details[open] summary { border-bottom: 1px solid #eee; }
+  details[open] summary:after { content: "−"; }
+
+  .details-content {
+    padding: 30px;
+    background-color: white;
+  }
+
+  /* Card Grid inside the Accordion */
+  .lecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .lecture-card {
+    background: white;
+    border: 1px solid #eee;
+    border-top: 4px solid var(--brand-dark);
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .lecture-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-top-color: var(--brand-accent);
+  }
+
+  .lecture-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: var(--brand-accent);
+    color: var(--brand-dark);
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  .lecture-speaker {
+    font-size: 1.4rem;
+    color: var(--brand-dark);
+    margin-bottom: 10px;
+  }
+
+  .lecture-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+  }
+
+  .lecture-meta strong { color: var(--text-main); }
+
+  .lecture-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--brand-dark);
+    line-height: 1.4;
+  }
+
+  .read-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--brand-accent);
+    text-decoration: none;
+  }
+  
+  .read-link:hover { text-decoration: underline; }
+</style>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Vaidya-Raychaudhuri Lectures</h1>
+    <p>Honoring excellence in Gravitation and Cosmology</p>
+  </div>
+</header>
+
+<main class="container">
+  
+  <div class="archive-container">
+    {% for period in site.data.vr_lectures %}
+      
+      <details {% if forloop.first %}open{% endif %}>
+        <summary>{{ period.decade }}</summary>
+        
+        <div class="details-content">
+          <div class="lecture-grid">
+            
+            {% for lecture in period.lectures %}
+              <div class="lecture-card">
+                <div class="lecture-number">#{{ lecture.number }}</div>
+                
+                <h3 class="lecture-speaker">{{ lecture.speaker }}</h3>
+                
+                <div class="lecture-meta">
+                  <strong>Date:</strong> {{ lecture.date }}<br>
+                  <strong>Venue:</strong> {{ lecture.venue }}
+                </div>
+                
+                <div class="lecture-title">
+                  "{{ lecture.title }}"
+                </div>
+                
+                {% if lecture.link %}
+                  <a href="{{ lecture.link }}" class="read-link">Read Paper/Slides →</a>
+                {% endif %}
+              </div>
+            {% endfor %}
+            
+          </div>
+        </div>
+      </details>
+      
+    {% endfor %}
+  </div>
+
+</main>

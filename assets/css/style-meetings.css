@@ -1,0 +1,306 @@
+/* ======================================
+   SHARED MEETINGS PAGES
+====================================== */
+
+/* HEADER */
+
+.page-header {
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color: white;
+  text-align: center;
+  padding: 68px 20px 60px;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.page-header h1 {
+  color: white;
+  font-size: clamp(2.2rem, 5vw, 3.3rem);
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.84);
+}
+
+/* MAIN WRAPPER */
+
+.archive-container {
+  max-width: 1050px;
+  margin: 55px auto 80px;
+}
+
+/* ACCORDION BLOCK */
+
+.decade-block {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.decade-summary {
+  padding: 20px 26px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  background: var(--bg-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decade-summary:hover {
+  background: #f1f3f5;
+}
+
+.decade-summary::-webkit-details-marker {
+  display: none;
+}
+
+.decade-summary::after {
+  content: "+";
+  color: var(--brand-accent);
+  font-size: 1.7rem;
+}
+
+.decade-block[open] .decade-summary::after {
+  content: "−";
+}
+
+.details-content {
+  padding: 26px;
+}
+
+/* CARD GRID */
+
+.meeting-grid {
+  display: grid;
+  gap: 22px;
+}
+
+/* MEETING CARD */
+
+.meeting-card {
+  background: white;
+  border: 1px solid #edf0f2;
+  border-left: 5px solid var(--brand-accent);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border-bottom: 1px dashed #e4e7ea;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+
+.meeting-title {
+  margin: 0 0 6px;
+  color: var(--brand-dark);
+  font-size: 1.28rem;
+}
+
+.meeting-date {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.meeting-badge {
+  background: var(--brand-dark);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* THEME */
+
+.theme-text {
+  font-size: 1.04rem;
+  color: var(--brand-dark);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* META */
+
+.meeting-meta {
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.meeting-meta strong {
+  color: var(--text-main);
+}
+
+/* SOC SECTION */
+
+.soc-details {
+  margin-top: 18px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.soc-summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--brand-dark);
+  padding: 6px 10px;
+}
+
+.soc-summary::-webkit-details-marker {
+  display: none;
+}
+
+.soc-summary::before {
+  content: "▶ ";
+  color: var(--brand-accent);
+}
+
+.soc-details[open] .soc-summary::before {
+  content: "▼ ";
+}
+
+.soc-list {
+  border-top: 1px solid #dfe3e8;
+  padding: 12px 10px 8px 18px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.soc-list ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  columns: 2;
+}
+
+/* ACTION BUTTONS */
+
+.meeting-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.btn-meeting {
+  padding: 9px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  background: #eef2f7;
+  color: var(--text-main);
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-meeting:hover {
+  background: var(--brand-dark);
+  color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .details-content {
+    padding: 18px;
+  }
+
+  .meeting-card {
+    padding: 18px;
+  }
+
+  .meeting-title {
+    font-size: 1.1rem;
+  }
+
+  .decade-summary {
+    font-size: 1.12rem;
+    padding: 18px;
+  }
+
+  .soc-list ul {
+    columns: 1;
+  }
+}
+
+/* Collapsable about sections*/
+
+/* ABOUT BLOCK */
+
+.about-block {
+  max-width: 1050px;
+  margin: 40px auto 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 24px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  background: var(--bg-light);
+}
+
+.about-summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-summary::after {
+  content: " ▼";
+  color: var(--brand-accent);
+}
+
+.about-block[open] .about-summary::after {
+  content: " ▲";
+}
+
+.about-content {
+  padding: 22px 24px;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+/* Meetings Landing */
+
+.meetings-landing-grid{
+  gap: 30px;
+  margin-top: 28px;
+}
+
+.meetings-landing-grid .meeting-card{
+  padding: 28px;
+}
+
+/* Peoples Landing Page */
+
+.people-landing-grid{
+  gap: 30px;
+  margin-top: 32px;
+}
+
+.people-landing-grid .meeting-card{
+  padding: 28px;
+}

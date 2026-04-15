@@ -1,0 +1,175 @@
+- decade: "1991 — 1997"
+  meetings:
+    - number: 34
+      title: "GR-15"
+      date: "Dec 16–21, 1997"
+      venue: "IUCAA, Pune"
+
+    - number: 33
+      title: "Discussion Meeting on Gravitational Radiation and Quantum General Relativity"
+      date: "Dec 11–14, 1997"
+      venue: "Raman Research Institute, Bangalore"
+
+    - number: 32
+      title: "Discussion Meeting on Physics of Black Holes"
+      date: "Dec 8–10, 1997"
+      venue: "Indian Institute of Science, Bangalore"
+
+    - number: 31
+      title: "Workshop on Modern Trends in Gravitation and Cosmology"
+      date: "Sept 29–Oct 3, 1997"
+      venue: "CUSAT, Cochin"
+
+    - number: 30
+      title: "Workshop on Introductory General Relativity and Applications"
+      date: "Jan 27–29, 1997"
+      venue: "Tezpur University"
+
+    - number: 29
+      title: "Golden Jubilee Conference on Gravitation and Particle Physics"
+      date: "Dec 1996"
+      venue: "PRL Ahmedabad"
+
+    - number: 28
+      title: "Mini-workshop on Gravitational Collapse and Cosmic Censorship"
+      date: "Dec 2–24, 1995"
+      venue: "IUCAA, Pune"
+
+    - number: 27
+      title: "Workshop on Gravitational Waves"
+      date: "Dec 9–12, 1995"
+      venue: "IUCAA, Pune"
+
+    - number: 26
+      title: "Third Inter-University Graduate School of Gravitation and Cosmology"
+      date: "Dec 1994"
+      venue: "Mysore University"
+
+- decade: "1981 — 1990"
+  meetings:
+    - number: 25
+      title: "Mini-workshop on Gravity Waves"
+      date: "May 31–June 4, 1993"
+      venue: "IUCAA, Pune"
+
+    - number: 24
+      title: "Second Inter-University Graduate School of Gravitation and Cosmology"
+      date: "Oct 14–Nov 2, 1992"
+      venue: "North Bengal University, Siliguri"
+
+    - number: 23
+      title: "Quantum Gravity, Gravitational Radiation and Large Scale Structure in the Universe"
+      date: "Dec 21–Jan 4, 1991"
+      venue: "CUSAT, Cochin"
+
+    - number: 22
+      title: "Informal Discussion Meeting by Abhay Ashtekar"
+      date: "Dec 1991"
+      venue: "IUCAA, Pune"
+
+    - number: 21
+      title: "Mini-workshop on Relativistic Astrophysics"
+      date: "Jan 20–25, 1991"
+      venue: "PRL Ahmedabad"
+
+    - number: 20
+      title: "Workshop on Gravitation and Gravitational Radiation"
+      date: "June 24–29, 1991"
+      venue: "H.N.B. University, Srinagar Garhwal"
+
+    - number: 19
+      title: "Mini-school on Cosmic Strings"
+      date: "Aug 2–9, 1990"
+      venue: "IUCAA, Pune"
+
+    - number: 18
+      title: "First Inter-University Graduate School of Gravitation and Cosmology"
+      date: "1989"
+      venue: "IUCAA-IAT, Pune"
+
+    - number: 17
+      title: "Silver Jubilee Institute on General Relativity and Cosmology"
+      date: "1989"
+      venue: "Mysore"
+
+    - number: 16
+      title: "Workshop on Exact Solutions of Einstein Equations"
+      date: "Jan 15–20, 1989"
+      venue: "IUCAA, Pune"
+
+- decade: "1975 — 1980"
+  meetings:
+    - number: 15
+      title: "Workshop on General Relativity"
+      date: "Dec 22–Jan 4, 1988"
+      venue: "Jadavpur University, Calcutta"
+
+    - number: 14
+      title: "Quantum Gravity and the Early Universe"
+      date: "1987"
+      venue: "Delhi University"
+
+    - number: 13
+      title: "South Zone Winter School in General Relativity"
+      date: "1986"
+      venue: "Mysore"
+
+    - number: 12
+      title: "Gravitation, Quantum Fields and Superstrings"
+      date: "1986"
+      venue: "IIT Madras"
+
+    - number: 11
+      title: "Instructional Conference on Geometric Methods in General Relativity"
+      date: "Apr 20–May 10, 1986"
+      venue: "Aligarh Muslim University"
+
+    - number: 10
+      title: "Gravitation, Gauge Theories and the Early Universe"
+      date: "1985"
+      venue: "IISc Bangalore"
+
+    - number: 9
+      title: "Summer Institute on General Relativity and Cosmology"
+      date: "1984"
+      venue: "American College, Madurai"
+
+    - number: 8
+      title: "Summer School on General Relativity and Cosmology"
+      date: "June 18–July 14, 1984"
+      venue: "Ravishankar University, Raipur"
+
+    - number: 7
+      title: "Preparatory Workshop on Gravitation and Particle Physics"
+      date: "1984"
+      venue: "PRL Ahmedabad"
+
+    - number: 6
+      title: "Summer School on General Relativity and Cosmology"
+      date: "1983"
+      venue: "Udaipur"
+
+    - number: 5
+      title: "Summer School on General Relativity"
+      date: "1983"
+      venue: "Shivaji University, Kolhapur"
+
+    - number: 4
+      title: "Workshop on Gravitation and Relativistic Astrophysics"
+      date: "1982"
+      venue: "PRL Ahmedabad"
+
+    - number: 3
+      title: "Einstein Centenary Symposium"
+      date: "1979"
+      venue: "Calcutta"
+
+    - number: 2
+      title: "International Symposium to Celebrate Albert Einstein Birth Centenary"
+      date: "Jan 29–Feb 3, 1979"
+      venue: "PRL Ahmedabad"
+
+    - number: 1
+      title: "International Conference on Relativity and Unified Field Theories"
+      date: "1975"
+      venue: "Calcutta"

@@ -1,0 +1,61 @@
+- decade: "2011 — Present"
+  meetings:
+    - number: 9
+      title: "ICGC 2019"
+      date: "December 10–13, 2019"
+      venue: "IISER Mohali"
+      proceedings: "To be made available"
+
+    - number: 8
+      title: "ICGC 2015"
+      date: "December 14–18, 2015"
+      venue: "IISER Mohali"
+      proceedings: "Plenary Talks"
+
+    - number: 7
+      title: "ICGC 2011"
+      date: "December 14–19, 2011"
+      venue: "Goa"
+      proceedings: "Plenary Talks"
+
+- decade: "2001 — 2010"
+  meetings:
+    - number: 6
+      title: "ICGC 2007"
+      date: "December 17–21, 2007"
+      venue: "IUCAA, Pune"
+      proceedings: "Journal of Physics: Conference Series"
+
+    - number: 5
+      title: "ICGC 2004"
+      date: "January 5–10, 2004"
+      venue: "CUSAT, Cochin"
+      proceedings: "Special Issue of Pramana"
+
+- decade: "1991 — 2000"
+  meetings:
+    - number: 4
+      title: "ICGC 2000"
+      date: "January 4–7, 2000"
+      venue: "IIT Kharagpur"
+      proceedings: "Special Issue of Pramana"
+
+    - number: 3
+      title: "ICGC 1995"
+      date: "December 13–19, 1995"
+      venue: "IUCAA, Pune"
+      proceedings: "Gravitation and Cosmology (Kluwer, 1997)"
+
+    - number: 2
+      title: "ICGC 1991"
+      date: "December 13–18, 1991"
+      venue: "PRL Ahmedabad"
+      proceedings: "Advances in Gravitation and Cosmology (1993)"
+
+- decade: "1981 — 1990"
+  meetings:
+    - number: 1
+      title: "ICGC 1987"
+      date: "December 1987"
+      venue: "Goa"
+      proceedings: "Highlights in Gravitation and Cosmology (1988)"

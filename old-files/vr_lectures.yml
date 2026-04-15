@@ -1,0 +1,174 @@
+# _data/vr_lectures.yml
+
+- number: 26
+  date: "2025"
+  venue: "Azim Premji University, Bengaluru"
+  speaker: "Dipankar Bhattacharya"
+  title: "VR Endowment Award Lecture"
+
+- number: 25
+  date: "2024"
+  venue: "33rd IAGRG meeting, BITS Pilani"
+  speaker: "Kandaswamy Subramanian"
+  title: "VR Endowment Award Lecture"
+
+- number: 24
+  date: "October 26, 2023"
+  venue: "Ashoka University"
+  speaker: "Varun Sahni"
+  title: "Dark Matter, Dark Energy and the Cosmic Web"
+
+- number: 23
+  date: "December 19, 2022"
+  venue: "Department of Physical Sciences, IISER Kolkata"
+  speaker: "Archana Pai"
+  title: "Diversifying the net to fish the short duration massive black hole mergers"
+
+- number: 22
+  date: "October 22, 2021"
+  venue: "Department of Physical Sciences, IISER Mohali"
+  speaker: "Ashoke Sen"
+  title: "Classical gravitational radiation from soft theorem"
+
+- number: 21
+  date: "December 20, 2020"
+  venue: "Discipline of Physics, IIT Gandhinagar"
+  speaker: "Abhas Mitra (on behalf of Kamalendu Dev Krori)"
+  title: "The Life and Science of Kamalendu Dev Krori, the Unsung Indian Educationist and Relativist"
+
+- number: 20
+  date: "January 3, 2019"
+  venue: "Department of Physics, BITS Pilani, Hyderabad Campus"
+  speaker: "N. D. Hari Dass"
+  title: "Low energy theorems for electromagnetic and gravitational radiation"
+  link: "vr_lectures/NDHariDass.pdf"
+
+- number: 19
+  date: "November 22, 2018"
+  venue: "Department of Physics, Gurukula Kangri Vishwavidyalaya, Haridwar"
+  speaker: "Ajit K. Kembhavi"
+  title: "To be made available"
+
+- number: 18
+  date: "May 20, 2017"
+  venue: "Department of Physics, IIT Guwahati"
+  speaker: "Narayan Banerjee"
+  title: "Towards Singularities ..."
+  link: "vr_lectures/NarayanBanerjee.pdf"
+
+- number: 17
+  date: "September 22, 2016"
+  venue: "Physics Department, Lucknow University"
+  speaker: "A. R. Prasanna"
+  title: "Gravitational Waves - A New Window to Cosmos"
+  link: "vr_lectures/PrasannaLecture.pdf"
+
+- number: 16
+  date: "March 19, 2015"
+  venue: "Raman Research Institute, Bengaluru"
+  speaker: "Bala Iyer"
+  title: "Chipping in to detect and locate the elusive gravitational wave sources: Looking back and looking forward"
+  link: "vr_lectures/BalaIyer.pdf"
+
+- number: 15
+  date: "January 7, 2014"
+  venue: "Shree Shivaji Science College, Nagpur"
+  speaker: "M. Sami"
+  title: "Why is Universe so dark?"
+  link: "vr_lectures/Sami.pdf"
+
+- number: 14
+  date: "March 8, 2013"
+  venue: "Hemwati Nandan Bahuguna Garhwal University, Srinagar"
+  speaker: "Pankaj S. Joshi"
+  title: "The Rainbows of Gravity"
+  link: "vr_lectures/PankajJoshi.pdf"
+
+- number: 13
+  date: "November 14, 2011"
+  venue: "St. Xavier's College, Kolkata"
+  speaker: "Sanjeev Dhurandhar"
+  title: "Astronomy of the 21st century: Gravitational Wave Astronomy"
+  link: "vr_lectures/Dhurandhar.pdf"
+
+- number: 12
+  date: "January 20, 2011"
+  venue: "Harish-Chandra Research Institute, Allahabad"
+  speaker: "Asit Banerjee"
+  title: "Absence of Horizon in the Gravitational Collapse with Radiation"
+  link: "vr_lectures/AsitBanerjee.pdf"
+
+- number: 11
+  date: "January 28, 2009"
+  venue: "Saha Institute of Nuclear Physics, Kolkata"
+  speaker: "T. Padmanabhan"
+  title: "Gravity: the Inside Story"
+  link: "vr_lectures/TPadmanabhan.pdf"
+
+- number: 10
+  date: "February 8, 2007"
+  venue: "Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi"
+  speaker: "Sriranjan Banerji"
+  title: "Pasting Together of Space-Time Slices"
+  link: "vr_lectures/SriranjanBanerji.pdf"
+
+- number: 9
+  date: "December 7, 2004"
+  venue: "University of Rajasthan, Jaipur"
+  speaker: "S. Mukherjee"
+  title: "Cold Compact Stars: A Laboratory for New Physics"
+  link: "vr_lectures/Mukherjee.pdf"
+
+- number: 8
+  date: "December 12, 2002"
+  venue: "IUCAA, Pune"
+  speaker: "Rajaram Nityananda"
+  title: "Gravity and Light"
+  link: "vr_lectures/Nityananda.pdf"
+
+- number: 7
+  date: "January 30, 2001"
+  venue: "Central India Research Institute, Nagpur"
+  speaker: "N. K. Dadhich"
+  title: "Subtle is the Gravity"
+  link: "vr_lectures/Dadhich.pdf"
+
+- number: 6
+  date: "January 20, 1999"
+  venue: "D.D.U. Gorakhpur University"
+  speaker: "S. M. Chitre"
+  title: "The Illusive Universe"
+
+- number: 5
+  date: "December 21, 1997"
+  venue: "IUCAA, Pune"
+  speaker: "R. Cowsik"
+  title: "Accretion Powered Sources in Astrophysics"
+
+- number: 4
+  date: "February 17, 1996"
+  venue: "IMSc, Chennai"
+  speaker: "C. V. Vishveshwara"
+  title: "On the Black Hole Trail...: A Personal Journey"
+  link: "vr_lectures/Vishveshwara.pdf"
+
+- number: 3
+  date: "February 18, 1994"
+  venue: "IUCAA, Pune"
+  speaker: "N. Panchapakesan"
+  title: "Does a Hole Squeal?"
+  link: "vr_lectures/Panchapakesan.pdf"
+
+- number: 2
+  date: "December 11, 1991"
+  venue: "Vallabha Vidyanagar"
+  speaker: "J. V. Narlikar"
+  title: "Gravity as a Physical Interaction"
+  link: "vr_lectures/Narlikar.pdf"
+
+- number: 1
+  date: "November 7, 1989"
+  venue: "Darjeeling"
+  speaker: "N. Mukunda"
+  title: "Many Views of the Summit"
+  link: "vr_lectures/Mukunda.pdf"

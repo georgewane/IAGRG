@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Constitution & Long Document Layout
+   ========================================================================== */
+
+.document-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+  margin: 60px auto;
+}
+
+/* Sticky Sidebar */
+
+.document-sidebar {
+  position: sticky;
+  top: 110px; /* below sticky navbar */
+  align-self: start;
+
+  margin-top: 14px; /* fixes slightly high initial placement */
+
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 4px solid var(--brand-accent);
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.document-sidebar h3 {
+  font-size: 1.1rem;
+  margin: 0 0 18px;
+  color: var(--brand-dark);
+  line-height: 1.25;
+}
+
+.document-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-nav li {
+  margin-bottom: 10px;
+}
+
+.document-nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.document-nav a:hover {
+  color: var(--brand-accent);
+  transform: translateX(2px);
+}
+
+/* Main Text Content */
+
+.document-content {
+  background: white;
+  padding: 42px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  line-height: 1.85;
+}
+
+/* Section Headings */
+
+.document-content h2 {
+  font-size: 1.5rem;
+  color: var(--brand-dark);
+
+  margin-top: 42px;
+  margin-bottom: 15px;
+
+  padding-top: 110px; /* sticky scroll offset */
+  margin-top: -70px;  /* sticky scroll offset */
+
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.document-content h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.document-content p,
+.document-content ul {
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.document-content ul {
+  padding-left: 22px;
+}
+
+.document-content li {
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 980px) {
+
+  .document-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 40px auto;
+  }
+
+  .document-sidebar {
+    position: static;
+    top: auto;
+    margin-top: 0;
+    padding: 24px;
+  }
+
+  .document-content {
+    padding: 28px;
+  }
+}
+
+/* ==========================================================================
+   Header Banner
+   ========================================================================== */
+
+.constitution-header{
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color: white;
+  text-align: center;
+  padding: 72px 20px 62px;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.constitution-header h1{
+  color: white;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 12px;
+}
+
+.constitution-header p{
+  max-width: 760px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.84);
+  line-height: 1.8;
+}

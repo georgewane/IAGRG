@@ -1,0 +1,285 @@
+- decade: "2021 — Present"
+  meetings:
+    - number: 34
+      date: "TBA"
+      venue: "Integral University"
+      theme: "TBA"
+      website_url: "https://example.com/iagrg34"
+      talks_url: "https://example.com/iagrg34/talks"
+      soc_chair: "Sayan Kar (IIT Kgp)"
+      soc_members: []
+
+    - number: 33
+      date: "Jan 2025"
+      venue: "BITS Pilani"
+      theme: "TBA"
+      website_url: "https://example.com/iagrg33"
+      talks_url: "https://example.com/iagrg33/talks"
+      soc_chair: "(Not specified)"
+      soc_members:
+        - "Madhavan Varadarajan (RRI)"
+        - "Ayan Chatterjee (CUHP)"
+        - "Susmita Adhikari (IISER Pune)"
+        - "Manjari Bagchi (IMSc)"
+        - "Anupreeta More (IUCAA)"
+        - "Dhiraj Hazra (IMSc)"
+        - "Archana Pai (IIT Bombay)"
+        - "Koushik Dutta (IISER Kolkata)"
+        - "Anshuman Maharana (HRI)"
+        - "Kinjalk Lochan (IISER Mohali)"
+        - "Atri Deshamukhya (Assam University)"
+        - "Sajal Mukherjee (BITS Pilani)"
+
+    - number: 32
+      date: "Dec 19 - 21, 2022"
+      venue: "IISER Kolkata"
+      theme: "Tensions in standard cosmology"
+      website_url: "https://example.com/iagrg32"
+      talks_url: "https://example.com/iagrg32/talks"
+      soc_chair: "Anjan A. Sen (CTP, JMI, Delhi)"
+      soc_members:
+        - "Parameswaran Ajith (ICTS, Bangalore)"
+        - "Narayan Banerjee (IISER Kolkata)"
+        - "Suchetana Chatterjee (Presidency Univ., Kolkata)"
+        - "Shantunu Desai (IIT Hyderabad)"
+        - "Harvinder Kaur Jassal (IISER Mohali)"
+        - "Bhaswati Mookerjea (TIFR, Mumbai)"
+        - "S. Shankaranarayanan (IIT Bombay)"
+
+- decade: "2011 — 2020"
+  meetings:
+    - number: 31
+      date: "Dec 19–20, 2020"
+      venue: "IIT Gandhinagar"
+      theme: "Quasinormal Modes from Black Holes"
+      proceedings: "To be made available"
+      website_url: "https://example.com/iagrg31"
+      talks_url: "https://example.com/iagrg31/talks"
+      soc_chair: "Sukanta Bose (IUCAA)"
+      soc_members:
+        - "Sudipta Das (Visva-Bharati University)"
+        - "Alok Laddha (CMI Chennai)"
+        - "Arun Mangalam (IIA Bangaluru)"
+        - "Sudipta Sarkar (IIT Gandhinagar)"
+        - "T. R. Seshadri (Delhi University)"
+        - "Umakant Rapol (IISER Pune)"
+        - "L. Resmi (IIST, Thiruvananthapuram)"
+
+    - number: 30
+      date: "Jan 3–5, 2019"
+      venue: "BITS Pilani, Hyderabad"
+      theme: "New Eras in Cosmology and Multi-messenger Astronomy"
+      proceedings: "To be made available"
+      website_url: "https://example.com/iagrg30"
+      talks_url: "https://example.com/iagrg30/talks"
+      soc_chair: "K G Arun (CMI)"
+      soc_members:
+        - "Rajesh Nayak (IISER Kolkata)"
+        - "Sumati Surya (RRI)"
+        - "Amitabh Virmani (CMI)"
+        - "Sudip Bhattacharyya (TIFR)"
+        - "Tarun Deep Saini (IISc)"
+        - "Sayan Chakrabarti (IIT Guwahati)"
+        - "Rahul Nigam (BITS Hyderabad)"
+
+    - number: 29
+      date: "May 18–20, 2017"
+      venue: "IIT Guwahati"
+      theme: "The Era of Gravitational Waves"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg29"
+      talks_url: "https://example.com/iagrg29/talks"
+
+    - number: 28
+      date: "Mar 18–20, 2015"
+      venue: "Raman Research Institute, Bangaluru"
+      theme: "Celebrating the Centenary Year of General Relativity"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg28"
+      talks_url: "https://example.com/iagrg28/talks"
+
+    - number: 27
+      date: "Mar 7–9, 2013"
+      venue: "H.N. Bahuguna Garhwal University, Srinagar (Uttarakhand)"
+      theme: "The 27th IAGRG Conference"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg27"
+      talks_url: "https://example.com/iagrg27/talks"
+
+    - number: 26
+      date: "Jan 19–21, 2011"
+      venue: "Harish-Chandra Research Institute, Allahabad"
+      theme: "Sangam: Confluence of Gravitation and Cosmology"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg26"
+      talks_url: "https://example.com/iagrg26/talks"
+
+- decade: "2001 — 2010"
+  meetings:
+    - number: 25
+      date: "Jan 28–31, 2009"
+      venue: "Saha Institute of Nuclear Physics, Kolkata"
+      theme: "From Black Holes to the Universe: Gravity at Work"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg25"
+      talks_url: "https://example.com/iagrg25/talks"
+
+    - number: 24
+      date: "Feb 5–8, 2007"
+      venue: "Centre for Theoretical Physics, Jamia Millia Islamia, New Delhi"
+      theme: "Recent Advances in Gravitation and Cosmology"
+      proceedings: "Plenary Talks"
+      website_url: "https://example.com/iagrg24"
+      talks_url: "https://example.com/iagrg24/talks"
+
+    - number: 23
+      date: "Dec 8, 2004"
+      venue: "University of Rajasthan, Jaipur"
+      theme: "Proceedings of the 23rd International Conference of the IAGRG"
+      proceedings: "Ed. R. S. Tikekar, S. Mukherjee & Narayan Banerjee"
+      website_url: "https://example.com/iagrg23"
+      talks_url: "https://example.com/iagrg23/talks"
+
+    - number: 22
+      date: "Dec 12, 2002"
+      venue: "IUCAA, Pune"
+      website_url: "https://example.com/iagrg22"
+      talks_url: "https://example.com/iagrg22/talks"
+
+    - number: 21
+      date: "Jan 30, 2001"
+      venue: "Central India Research Institute, Nagpur"
+      website_url: "https://example.com/iagrg21"
+      talks_url: "https://example.com/iagrg21/talks"
+
+- decade: "1991 — 2000"
+  meetings:
+    - number: 20
+      date: "Feb 20, 1999"
+      venue: "D. D. U. Gorakhpur University"
+      website_url: "https://example.com/iagrg20"
+      talks_url: "https://example.com/iagrg20/talks"
+
+    - number: 19
+      date: "Dec 21, 1997"
+      venue: "IUCAA, Pune"
+      website_url: "https://example.com/iagrg19"
+      talks_url: "https://example.com/iagrg19/talks"
+
+    - number: 18
+      date: "Feb 15–17, 1996"
+      venue: "The Institute of Mathematical Sciences, Chennai"
+      theme: "Classical and Quantum Aspects of Gravitation and Cosmology"
+      proceedings: "IMSc Report 117, Madras"
+      website_url: "https://example.com/iagrg18"
+      talks_url: "https://example.com/iagrg18/talks"
+
+    - number: 17
+      date: "Feb 16, 1994"
+      venue: "IUCAA, Pune"
+      website_url: "https://example.com/iagrg17"
+      talks_url: "https://example.com/iagrg17/talks"
+
+    - number: 16
+      date: "Dec 10, 1991"
+      venue: "Sardar Patel University, Vallabha Vidyanagar"
+      website_url: "https://example.com/iagrg16"
+      talks_url: "https://example.com/iagrg16/talks"
+
+- decade: "1981 — 1990"
+  meetings:
+    - number: 15
+      date: "Nov 6, 1989"
+      venue: "North Bengal University, Siliguri"
+      theme: "Gravitation and Cosmology"
+      proceedings: "S. Mukherjee, A.R. Prasanna & A.K. Kembhavi (Wiley Eastern, 1992)"
+      website_url: "https://example.com/iagrg15"
+      talks_url: "https://example.com/iagrg15/talks"
+
+    - number: 14
+      date: "Jan 24, 1987"
+      venue: "Andhra University, Waltair"
+      website_url: "https://example.com/iagrg14"
+      talks_url: "https://example.com/iagrg14/talks"
+
+    - number: 13
+      date: "Dec 27, 1985"
+      venue: "University of Burdwan, Burdwan"
+      theme: "Classical and Quantum Aspects of Gravitation"
+      proceedings: "S. Banerji, A.K. Raychaudhuri, J.V. Narlikar, et al. (1987)"
+      website_url: "https://example.com/iagrg13"
+      talks_url: "https://example.com/iagrg13/talks"
+
+    - number: 12
+      date: "Nov 10, 1983"
+      venue: "Poona University, Pune"
+      website_url: "https://example.com/iagrg12"
+      talks_url: "https://example.com/iagrg12/talks"
+
+    - number: 11
+      date: "Jan 21, 1982"
+      venue: "Gujarat University, Ahmedabad"
+      website_url: "https://example.com/iagrg11"
+      talks_url: "https://example.com/iagrg11/talks"
+
+- decade: "1969 — 1980"
+  meetings:
+    - number: 10
+      date: "Dec 23, 1979"
+      venue: "Bangalore (Institution Not Specified)"
+      website_url: "https://example.com/iagrg10"
+      talks_url: "https://example.com/iagrg10/talks"
+
+    - number: 9
+      date: "Feb 2, 1979"
+      venue: "Physical Research Laboratory, Ahmedabad"
+      website_url: "https://example.com/iagrg9"
+      talks_url: "https://example.com/iagrg9/talks"
+
+    - number: 8
+      date: "Jan 1, 1978"
+      venue: "Centre for Salt and Marine Chemical Research Institute, Bhavnagar"
+      website_url: "https://example.com/iagrg8"
+      talks_url: "https://example.com/iagrg8/talks"
+
+    - number: 7
+      date: "Dec 28, 1976"
+      venue: "Banaras Hindu University, Varanasi"
+      website_url: "https://example.com/iagrg7"
+      talks_url: "https://example.com/iagrg7/talks"
+
+    - number: 6
+      date: "Dec 29, 1975"
+      venue: "S. N. Bose Institute of Physical Sciences, Calcutta"
+      website_url: "https://example.com/iagrg6"
+      talks_url: "https://example.com/iagrg6/talks"
+
+    - number: 5
+      date: "Dec 28, 1974"
+      venue: "Indian Institute of Technology, Bombay"
+      website_url: "https://example.com/iagrg5"
+      talks_url: "https://example.com/iagrg5/talks"
+
+    - number: 4
+      date: "Jan 5, 1974"
+      venue: "The Institute of Science, Nagpur"
+      website_url: "https://example.com/iagrg4"
+      talks_url: "https://example.com/iagrg4/talks"
+
+    - number: 3
+      date: "Nov 3, 1972"
+      venue: "Indian National Science Academy, Delhi"
+      website_url: "https://example.com/iagrg3"
+      talks_url: "https://example.com/iagrg3/talks"
+
+    - number: 2
+      date: "Nov 15, 1971"
+      venue: "Banaras Hindu University, Varanasi"
+      website_url: "https://example.com/iagrg2"
+      talks_url: "https://example.com/iagrg2/talks"
+
+    - number: 1
+      date: "Feb 1969"
+      venue: "Physical Research Laboratory, Ahmedabad"
+      website_url: "https://example.com/iagrg1"
+      talks_url: "https://example.com/iagrg1/talks"

@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Constitution & Long Document Layout
+   ========================================================================== */
+.document-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  align-items: start;
+  margin: 60px auto;
+}
+
+/* Sticky Sidebar */
+.document-sidebar {
+  position: sticky;
+  top: 100px; /* Stays fixed below your sticky header */
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid var(--brand-accent);
+}
+
+.document-sidebar h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: var(--brand-dark);
+}
+
+.document-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-nav li {
+  margin-bottom: 10px;
+}
+
+.document-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.document-nav a:hover {
+  color: var(--brand-accent);
+}
+
+/* Main Text Content */
+.document-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  line-height: 1.8;
+}
+
+/* Adds space so the sticky header doesn't cover the title when clicked */
+.document-content h2 {
+  font-size: 1.5rem;
+  color: var(--brand-dark);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-top: 100px; /* Scroll padding offset */
+  margin-top: -60px;  /* Scroll padding offset */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.document-content h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.document-content p, .document-content ul {
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.document-content ul {
+  padding-left: 20px;
+}
+
+.document-content li {
+  margin-bottom: 10px;
+}

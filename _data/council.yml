@@ -1,0 +1,137 @@
+current:
+  term: "2024 — 2026"
+
+  president:
+    name: "Pravabati Chingangbam"
+    institution: "Indian Institute of Astrophysics"
+
+  secretary:
+    name: "S. Shankaranarayanan"
+    institution: "IIT Bombay"
+
+  members:
+    - name: "Aseem Paranjape"
+      institution: "IUCAA"
+
+    - name: "Harvinder Kaur Jassal"
+      institution: "IISER Mohali"
+
+    - name: "Indranil Chattopadhyay"
+      institution: "Aryabhatta Research Institute of Observational Sciences"
+
+    - name: "Kartik Prabhu"
+      institution: "Raman Research Institute"
+
+    - name: "Koushik Dutta"
+      institution: "IISER Kolkata"
+
+    - name: "Sriramkumar L"
+      institution: "IIT Madras"
+
+    - name: "Sudipta Das"
+      institution: "Visva-Bharati University"
+    
+    - name: "Sumati Surya"
+      institution: "Raman Research Institute"
+      exofficio: true
+
+archive:
+  - term: "2022 — 2024"
+    leadership:
+      - label: "President:"
+        text: "Sumati Surya | Secretary: Anjan Ananda Sen"
+    members:
+      - "S. Shankaranarayanan"
+      - "Rajesh Nayak"
+      - "Ayan Chatterjee"
+      - "K. G. Arun"
+      - "Atri Deshamukhya"
+      - "Sudipta Sarkar"
+      - "Patrick Das Gupta (Ex Officio)"
+
+  - term: "2020 — 2022"
+    leadership:
+      - label: "President:"
+        text: "Patrick Das Gupta | Secretary: L. Sriramkumar"
+    members:
+      - "Sukanta Bose"
+      - "Suneeta Vardarajan"
+      - "Somasri Sen"
+      - "S. Shankaranarayanan"
+      - "Rajesh Nayak"
+      - "Ayan Chatterjee"
+      - "Sayan Kar (Ex Officio)"
+
+  - term: "2018 — 2020"
+    leadership:
+      - label: "President:"
+        text: "Sayan Kar | Secretary: L. Sriramkumar"
+    members:
+      - "Jasjeet Bagla"
+      - "Golam Hossain"
+      - "Sayan Chakrabarti"
+      - "Sukanta Bose"
+      - "Suneeta Vardarajan"
+      - "Somasri Sen"
+      - "Tarun Souradeep (Ex Officio)"
+
+  - term: "2016 — 2018"
+    leadership:
+      - label: "President:"
+        text: "Tarun Souradeep | Secretary: Sumati Surya"
+    members:
+      - "Archana Pai"
+      - "Anjan A Sen"
+      - "Pravabati Chingangbam"
+      - "Jasjeet Bagla"
+      - "Golam Hossain"
+      - "Sayan Chakrabarti"
+      - "Ghanashyam Date (Ex Officio)"
+
+  - term: "2010 — 2016"
+    leadership:
+      - label: ""
+        text: "2014–2016 President: Ghanashyam Date | Secretary: Sumati Surya"
+      - label: ""
+        text: "2012–2014 President: Narayan Banerjee | Secretary: Sayan Kar"
+      - label: ""
+        text: "2010–2012 President: Pankaj Joshi | Secretary: Sayan Kar"
+
+  - term: "2000 — 2010"
+    leadership:
+      - label: ""
+        text: "2008–2010 President: Sanjeev Dhurandhar | Secretary: Ghanashyam Date"
+      - label: ""
+        text: "2006–2008 President: Bala Iyer | Secretary: Ghanashyam Date"
+      - label: ""
+        text: "2004–2006 President: A. K. Kembhavi | Secretary: Narayan Banerjee"
+      - label: ""
+        text: "2002–2004 President: L.K. Patel | Secretary: Narayan Banerjee"
+      - label: ""
+        text: "2000–2002 President: Asit Banerjee | Secretary: Ramesh S. Tikekar"
+
+  - term: "1990 — 2000"
+    leadership:
+      - label: ""
+        text: "1998–2000 President: J. Krishna Rao | Secretary: Ramesh S. Tikekar"
+      - label: ""
+        text: "1996–1998 President: A. R. Prasanna | Secretary: B. R. Iyer"
+      - label: ""
+        text: "1994–1996 President: Naresh K. Dadhich | Secretary: B. R. Iyer"
+      - label: ""
+        text: "1992–1994 President: S. Mukherjee | Secretary: S. V. Dhurandhar"
+      - label: ""
+        text: "1990–1992 President: N. Mukunda | Secretary: S. V. Dhurandhar"
+
+  - term: "1969 — 1990 (The Early Years)"
+    members:
+      - "1988–1990: President: N. Panchapakesan | Secretary: A. K. Kembhavi"
+      - "1986–1988: President: Sriranjan Banerjee | Secretary: A. K. Kembhavi"
+      - "1984–1986: President: C. V. Vishveshwara | Secretary: Naresh K. Dadhich"
+      - "1982–1984: President: Jayant V. Narlikar | Secretary: Naresh K. Dadhich"
+      - "1980–1982: President: A. K. Raychaudhuri | Secretary: L. Radhakrishna"
+      - "1978–1980: President: S. I. Husain | Secretary: L. Radhakrishna"
+      - "1976–1978: President: P. C. Vaidya | Secretary: J. Krishna Rao"
+      - "1974–1976: President: A. Gangopadhya | Secretary: J. Krishna Rao"
+      - "1972–1974: President: R. M. Mishra | Secretary: J. Krishna Rao"
+      - "1970–1972: Founder President: V. V. Narlikar | Secretary: J. Krishna Rao"

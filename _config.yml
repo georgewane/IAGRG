@@ -1,0 +1,65 @@
+# ==================================================
+# IAGRG Website Configuration
+# Indian Association for General Relativity and Gravitation
+# ==================================================
+
+title: IAGRG
+email: admin@iagrg.in
+
+description: >
+  Official website of the Indian Association for General
+  Relativity and Gravitation. News, conferences, job opportunities,
+  meetings, schools, and community updates.
+
+baseurl: ""
+url: "https://www.iagrg.in"
+
+timezone: Asia/Kolkata
+lang: en
+
+# ==================================================
+# BUILD SETTINGS
+# ==================================================
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+paginate: 15
+paginate_path: "/news/page:num/"
+
+# ==================================================
+# DEFAULT FRONT MATTER
+# ==================================================
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+# ==================================================
+# SOCIAL / OPTIONAL
+# ==================================================
+
+organization_name: Indian Association for General Relativity and Gravitation
+author: IAGRG
+
+# ==================================================
+# EXCLUDE FROM BUILD
+# ==================================================
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - script.py
+  - credentials.json
+  - responses.csv

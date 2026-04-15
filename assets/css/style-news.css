@@ -1,0 +1,134 @@
+/* ======================================
+   NEWS PAGE
+====================================== */
+
+/* HERO */
+
+.news-header{
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color:white;
+  text-align:center;
+  padding:68px 20px 60px;
+  border-bottom:4px solid var(--brand-accent);
+  margin-bottom:55px;
+}
+
+.news-header h1{
+  color:white;
+  font-size:clamp(2.2rem,5vw,3.2rem);
+  margin-bottom:10px;
+}
+
+.news-subtitle{
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(255,255,255,0.84);
+  line-height:1.8;
+}
+
+/* MAIN */
+
+.news-page{
+  max-width:1050px;
+  margin:0 auto 80px;
+  padding:0 20px;
+}
+
+/* FILTER */
+
+.filter-tabs{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.filter-tab{
+  border:none;
+  background:#eef2f7;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.filter-tab.active{
+  background:var(--brand-dark);
+  color:white;
+}
+
+/* FEED */
+
+.news-feed{
+  display:grid;
+  gap:22px;
+}
+
+/* CARD */
+
+.news-card{
+  background:white;
+  border:1px solid var(--border);
+  border-left:5px solid var(--brand-accent);
+  border-radius:12px;
+  padding:24px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+  transition:0.2s ease;
+}
+
+.news-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(0,0,0,0.06);
+}
+
+.news-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  border-bottom:1px dashed #e4e7ea;
+  padding-bottom:14px;
+  margin-bottom:14px;
+}
+
+.news-title{
+  margin:0 0 12px;
+  font-size:1.3rem;
+}
+
+.news-title a{
+  text-decoration:none;
+  color:var(--brand-dark);
+}
+
+.news-excerpt{
+  color:var(--text-muted);
+  line-height:1.8;
+}
+
+.read-more{
+  display:inline-block;
+  margin-top:14px;
+  font-weight:700;
+  text-decoration:none;
+  color:var(--brand-dark);
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+  .news-header{
+    padding:58px 18px;
+    margin-bottom:35px;
+  }
+
+  .news-card{
+    padding:18px;
+  }
+
+  .news-meta{
+    gap:10px;
+  }
+}

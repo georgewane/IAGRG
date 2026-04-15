@@ -1,0 +1,178 @@
+/* ======================================
+   MEMBERS DIRECTORY
+====================================== */
+
+.members-layout{
+  display:grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap:34px;
+  margin:55px 0 80px;
+  align-items:start;
+}
+
+/* PANELS */
+
+.map-panel,
+.members-panel{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.045);
+}
+
+.map-panel h2,
+.members-panel h2{
+  margin:0 0 18px;
+  padding-bottom:12px;
+  font-size:1.42rem;
+  color:var(--brand-dark);
+  border-bottom:1px dashed #e5e7eb;
+}
+
+/* MAP */
+
+.map-wrapper{
+  width:100%;
+  min-height:560px;
+  background:linear-gradient(180deg,#fafbfd,#f4f6f9);
+  border:1px solid #eef1f4;
+  border-radius:14px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.map-wrapper object{
+  width:100%;
+  height:520px;
+}
+
+.map-note{
+  margin-top:16px;
+  font-size:0.94rem;
+  color:var(--text-muted);
+  line-height:1.7;
+}
+
+/* MEMBER LIST */
+
+.member-list{
+  display:grid;
+  gap:14px;
+  max-height:640px;
+  overflow-y:auto;
+  padding-right:4px;
+}
+
+/* Scrollbar */
+
+.member-list::-webkit-scrollbar{
+  width:8px;
+}
+
+.member-list::-webkit-scrollbar-track{
+  background:#f2f4f7;
+  border-radius:10px;
+}
+
+.member-list::-webkit-scrollbar-thumb{
+  background:#c8d0d9;
+  border-radius:10px;
+}
+
+/* EMPTY */
+
+.empty-state{
+  margin:0;
+  padding:18px;
+  background:var(--bg-light);
+  border-radius:10px;
+  color:var(--text-muted);
+  line-height:1.75;
+}
+
+/* INSTITUTION CARD */
+
+.institution-card{
+  background:#fafbfc;
+  border:1px solid #edf0f2;
+  border-left:4px solid var(--brand-accent);
+  border-radius:12px;
+  padding:16px 18px;
+  transition:all .18s ease;
+}
+
+.institution-card:hover{
+  background:#ffffff;
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.045);
+}
+
+.institution-name{
+  font-size:1rem;
+  font-weight:700;
+  color:var(--brand-dark);
+  margin-bottom:10px;
+}
+
+/* MEMBER NAMES */
+
+.member-sublist{
+  margin:0;
+  padding-left:18px;
+}
+
+.member-sublist li{
+  margin:6px 0;
+  line-height:1.55;
+  color:var(--text-main);
+}
+
+/* MOBILE */
+
+@media (max-width:1024px){
+
+  .members-layout{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .member-list{
+    max-height:none;
+    overflow:visible;
+  }
+
+  .map-wrapper object{
+    height:430px;
+  }
+}
+
+@media (max-width:768px){
+
+  .map-panel,
+  .members-panel{
+    padding:22px;
+    border-radius:14px;
+  }
+
+  .map-panel h2,
+  .members-panel h2{
+    font-size:1.2rem;
+  }
+
+  .map-wrapper{
+    padding:12px;
+    min-height:auto;
+  }
+
+  .map-wrapper object{
+    height:350px;
+  }
+
+  .institution-card{
+    padding:14px;
+  }
+
+}

@@ -1,0 +1,241 @@
+/* ======================================
+   PREMIUM MEMBERS DIRECTORY
+====================================== */
+
+/* PAGE LAYOUT */
+
+.members-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 34px;
+  margin: 55px 0 80px;
+  align-items: start;
+}
+
+/* PANELS */
+
+.map-panel,
+.members-panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.045);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-panel:hover,
+.members-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+}
+
+/* HEADINGS */
+
+.map-panel h2,
+.members-panel h2 {
+  margin: 0 0 18px;
+  font-size: 1.45rem;
+  color: var(--brand-dark);
+  line-height: 1.2;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+/* MAP AREA */
+
+.map-wrapper {
+  width: 100%;
+  min-height: 560px;
+  background: linear-gradient(180deg, #fafbfd, #f4f6f9);
+  border: 1px solid #eef1f4;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-wrapper object {
+  width: 100%;
+  height: 520px;
+}
+
+/* MAP HELP TEXT */
+
+.map-note {
+  margin-top: 16px;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* MEMBER PANEL */
+
+.member-list {
+  display: grid;
+  gap: 14px;
+}
+
+/* MEMBER CARD */
+
+.member-card {
+  background: #fafbfc;
+  border: 1px solid #edf0f2;
+  border-left: 4px solid var(--brand-accent);
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition: all 0.18s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  background: white;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.045);
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 6px;
+}
+
+.member-inst {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+  margin: 0;
+  padding: 18px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* OPTIONAL COUNT BADGE */
+
+.state-count {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(252,163,17,0.12);
+  color: #9a6400;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* SCROLLABLE MEMBER LIST (for large states) */
+
+.members-panel .member-list {
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Nice scrollbar */
+
+.members-panel .member-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.members-panel .member-list::-webkit-scrollbar-track {
+  background: #f2f4f7;
+  border-radius: 10px;
+}
+
+.members-panel .member-list::-webkit-scrollbar-thumb {
+  background: #c9d1da;
+  border-radius: 10px;
+}
+
+.members-panel .member-list::-webkit-scrollbar-thumb:hover {
+  background: #aeb8c4;
+}
+
+/* MOBILE */
+
+@media (max-width: 1024px) {
+  .members-layout {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .map-wrapper {
+    min-height: auto;
+  }
+
+  .map-wrapper object {
+    height: 440px;
+  }
+
+  .members-panel .member-list {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-panel,
+  .members-panel {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .map-panel h2,
+  .members-panel h2 {
+    font-size: 1.22rem;
+  }
+
+  .map-wrapper {
+    padding: 12px;
+  }
+
+  .map-wrapper object {
+    height: 360px;
+  }
+
+  .member-card {
+    padding: 14px;
+  }
+
+  .member-name {
+    font-size: 0.96rem;
+  }
+
+  .member-inst {
+    font-size: 0.9rem;
+  }
+}
+
+.institution-card{
+  background:#fafbfc;
+  border:1px solid #edf0f2;
+  border-left:4px solid var(--brand-accent);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:14px;
+}
+
+.institution-name{
+  font-weight:700;
+  color:var(--brand-dark);
+  margin-bottom:10px;
+  font-size:1rem;
+}
+
+.member-sublist{
+  margin:0;
+  padding-left:18px;
+}
+
+.member-sublist li{
+  margin:6px 0;
+  color:var(--text-main);
+}

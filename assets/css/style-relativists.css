@@ -1,0 +1,207 @@
+/* ======================================
+   FAMOUS INDIAN RELATIVISTS PAGE
+====================================== */
+
+/* HERO */
+
+.relativists-hero {
+  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+  color: white;
+  text-align: center;
+  padding: 72px 20px 64px;
+  border-bottom: 4px solid var(--brand-accent);
+}
+
+.relativists-hero h1 {
+  color: white;
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.relativists-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.84);
+}
+
+/* INTRO */
+
+.legacy-intro {
+  max-width: 920px;
+  margin: 48px auto 26px;
+  text-align: center;
+}
+
+.legacy-intro p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+/* LIST */
+
+.relativists-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 50px 0 80px;
+}
+
+/* CARD */
+
+.relativist-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.045);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.relativist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.06);
+}
+
+.card-topline {
+  height: 4px;
+  background: var(--brand-accent);
+}
+
+/* INNER */
+
+.card-inner {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  padding: 28px;
+  align-items: start;
+}
+
+/* LEFT */
+
+.left-column {
+  display: flex;
+  justify-content: center;
+}
+
+.relativist-photo-slot {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #d9dee6;
+  background: #eef2f7;
+}
+
+.relativist-photo-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT */
+
+.right-column {
+  min-width: 0;
+}
+
+/* HEADER */
+
+.header-text h2 {
+  margin: 0 0 8px;
+  font-size: 1.42rem;
+  line-height: 1.2;
+  color: var(--brand-dark);
+}
+
+.lifespan {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* FIELD */
+
+.interest-area {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 9px 14px;
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+
+  color: #9a6400;
+  background: rgba(252,163,17,0.12);
+}
+
+/* BIO */
+
+.bio {
+  margin: 0 0 20px;
+  line-height: 1.82;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* WORKS */
+
+.works-block {
+  border-top: 1px solid #e8edf3;
+  padding-top: 18px;
+}
+
+.works-block h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: var(--brand-dark);
+}
+
+.works-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.works-list li {
+  margin-bottom: 10px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .relativists-grid {
+    gap: 22px;
+  }
+
+  .card-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .left-column {
+    justify-content: flex-start;
+  }
+
+  .relativist-photo-slot {
+    width: 86px;
+    height: 86px;
+  }
+
+  .header-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .bio {
+    font-size: 0.97rem;
+  }
+}

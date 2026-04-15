@@ -1,0 +1,33 @@
+---
+layout: default
+title: News & Announcements
+---
+
+<div class="container">
+  <header class="page-header">
+    <h1>News & Announcements</h1>
+    <p>Latest updates, conference alerts, and job opportunities from the IAGRG community.</p>
+  </header>
+
+  <div class="news-feed">
+    
+    {% for post in site.posts %}
+    <article class="news-card">
+      
+      <div class="news-meta">
+        <span class="news-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        <span class="news-category badge-{{ post.category | downcase }}">{{ post.category }}</span>
+      </div>
+      
+      <h2 class="news-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      
+      <div class="news-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
+      </div>
+      
+      <a href="{{ post.url }}" class="read-more">Read Full Update →</a>
+    </article>
+    {% endfor %}
+
+  </div>
+</div>
