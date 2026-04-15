@@ -11,8 +11,8 @@ description: >
   Relativity and Gravitation. News, conferences, job opportunities,
   meetings, schools, and community updates.
 
-baseurl: ""
-url: "https://www.iagrg.in"
+url: "https://georgewane.github.io"
+baseurl: "/IAGRG"
 
 timezone: Asia/Kolkata
 lang: en
