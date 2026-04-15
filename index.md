@@ -4,7 +4,7 @@ title: Home
 ---
 
 <!-- HERO -->
-<section class="hero-immersive" style="background-image: url('/assets/img/eht-hero.jpg');">
+<section class="hero-immersive" style="background-image: url('{{ '/assets/img/eht-hero.jpg' | relative_url }}');">
   <div class="hero-gradient">
     <div class="hero-content container">
 
