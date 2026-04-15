@@ -29,7 +29,7 @@ title: Awards
 
   <div class="awards-grid">
 
-    <a href="{{ '/vr-lecture' | relative_url }}" class="award-feature-card">
+    <a href="{{ '/vr-lectures' | relative_url }}" class="award-feature-card">
       <span class="award-label">Distinguished Lecture</span>
       <h3>Vaidya–Raychaudhuri Lecture</h3>
       <p>
@@ -39,7 +39,7 @@ title: Awards
       <span class="award-link">Explore →</span>
     </a>
 
-    <a href="{{ '/narlikar-thesis-award' | relative_url }}" class="award-feature-card">
+    <a href="{{ '/vvn' | relative_url }}" class="award-feature-card">
       <span class="award-label">Doctoral Excellence</span>
       <h3>V. V. Narlikar Best Thesis Award</h3>
       <p>
@@ -48,7 +48,7 @@ title: Awards
       <span class="award-link">Explore →</span>
     </a>
 
-    <a href="{{ '/sen-young-researcher-award' | relative_url }}" class="award-feature-card">
+    <a href="{{ '/nrsen' | relative_url }}" class="award-feature-card">
       <span class="award-label">Early Career</span>
       <h3>N. R. Sen Young Researcher Award</h3>
       <p>
