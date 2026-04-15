@@ -39,7 +39,7 @@ title: Famous Indian Relativists
     <div class="left-column">
       <div class="relativist-photo-slot">
         {% if person.image %}
-          <img src="{{ person.image }}" alt="{{ person.name }}">
+          <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
         {% else %}
           <img src="{{ '/assets/img/dummy-photo.png' | relative_url }}" alt="{{ person.name }}">
         {% endif %}
