@@ -1,38 +1,72 @@
+<!-- _layouts/award.html -->
 ---
 layout: default
 ---
 
-<header class="award-hero">
-  <div class="container">
+<header class="award-hero-premium">
+  <div class="container award-hero-inner">
     <p class="award-kicker">IAGRG Awards</p>
     <h1>{{ page.title }}</h1>
-    <p class="award-subtitle">{{ page.subtitle }}</p>
+    {% if page.subtitle %}
+      <p class="award-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
   </div>
 </header>
 
-<main class="award-page">
+<main class="award-page-shell">
 
-  <section class="award-about container">
-    <h2>About</h2>
-    {{ content }}
+  <!-- ABOUT -->
+  <section class="award-about-wrap">
+    <div class="container">
+      <div class="award-about-card">
+        <div class="award-section-label">About the Award</div>
+        <div class="award-richtext">
+          {{ content }}
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- ARCHIVE -->
   {% if page.data_file %}
-  <section class="award-archive container">
-    <h2>Archive</h2>
+  <section class="award-archive-wrap">
+    <div class="container">
 
-    {% assign records = site.data[page.data_file] %}
-
-    <div class="award-grid">
-      {% for item in records %}
-      <div class="award-card">
-        <h3>{{ item.name }}</h3>
-        <p class="award-meta">{{ item.year }}</p>
-        {% if item.title %}
-        <p>{{ item.title }}</p>
-        {% endif %}
+      <div class="section-heading-row">
+        <div>
+          <p class="section-kicker">Archive</p>
+          <h2>Past Recipients</h2>
+        </div>
       </div>
-      {% endfor %}
+
+      {% assign records = site.data[page.data_file] %}
+
+      <div class="award-grid-premium">
+        {% for item in records %}
+        <article class="award-card-premium">
+
+          <div class="award-card-topline"></div>
+
+          <div class="award-card-body">
+
+            <div class="award-meta-row">
+              {% if item.year %}
+              <span class="award-year-pill">{{ item.year }}</span>
+              {% endif %}
+            </div>
+
+            <h3>{{ item.name }}</h3>
+
+            {% if item.title %}
+            <p class="award-work">{{ item.title }}</p>
+            {% endif %}
+
+          </div>
+
+        </article>
+        {% endfor %}
+      </div>
+
     </div>
   </section>
   {% endif %}
