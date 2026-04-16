@@ -1,68 +1,115 @@
 ---
-layout: award
+layout: default
 title: Vaidya–Raychaudhuri Endowment Lecture Awards
-subtitle: Recognising excellence in research and teaching of General Relativity and its applications
 ---
 
-Instituted as a tribute to two doyens of Indian relativity research,
-**P. C. Vaidya** and **A. K. Raychaudhuri**, this distinguished lecture
-recognises exceptional contributions in both research and teaching of
-General Relativity and its applications to astrophysics and cosmology.
+<link rel="stylesheet" href="{{ '/assets/css/style-awards.css' | relative_url }}">
 
-The awardee is invited to deliver the Vaidya–Raychaudhuri Lecture,
-traditionally designed to be accessible to the wider gravitation community.
+<header class="award-hero">
+  <div class="container">
+    <p class="award-kicker">IAGRG Awards</p>
 
-The first lecture was delivered at the **15th IAGRG Meeting in 1989**,
-and it has remained an integral part of IAGRG activities ever since.
+    <h1>Vaidya–Raychaudhuri Endowment Lecture Awards</h1>
 
-Since the **26th IAGRG Meeting in 2011**, the lecture has been held annually:
-during IAGRG meetings in alternate years, and between meetings at venues
-decided by the General Body Meeting.
+    <p class="award-subtitle">
+      Recognising excellence in research and teaching of General Relativity and its applications
+    </p>
+  </div>
+</header>
 
----
+<!-- ABOUT SECTION -->
+<section class="archive-container">
 
-## Lecture Archive
+  <details class="about-block" open>
+    <summary class="about-summary">About this Lecture Series</summary>
 
-<div class="vr-archive">
+    <div class="about-content">
 
-{% for period in site.data.vr_lectures %}
+      <p>
+        Instituted as a tribute to two doyens of Indian relativity research,
+        <strong>P. C. Vaidya</strong> and <strong>A. K. Raychaudhuri</strong>,
+        this distinguished lecture recognises exceptional contributions in both
+        research and teaching of General Relativity and its applications to
+        astrophysics and cosmology.
+      </p>
 
-<details {% if forloop.first %}open{% endif %}>
-<summary>{{ period.decade }}</summary>
+      <p>
+        The awardee is invited to deliver the
+        <strong>Vaidya–Raychaudhuri Lecture</strong>, traditionally designed to be
+        accessible to the wider gravitation community.
+      </p>
 
-<div class="vr-details-content">
+      <p>
+        The first lecture was delivered at the
+        <strong>15th IAGRG Meeting in 1989</strong>, and it has remained an
+        integral part of IAGRG activities ever since.
+      </p>
 
-<div class="vr-grid">
+      <p>
+        Since the <strong>26th IAGRG Meeting in 2011</strong>, the lecture has
+        been held annually: during IAGRG meetings in alternate years, and between
+        meetings at venues decided by the General Body Meeting.
+      </p>
 
-{% for lecture in period.lectures %}
+    </div>
+  </details>
 
-<div class="vr-card">
+</section>
 
-<div class="vr-number">#{{ lecture.number }}</div>
+<!-- ARCHIVE SECTION -->
+<section class="archive-container">
 
-<h3>{{ lecture.speaker }}</h3>
+  <div class="archive-card">
 
-<p class="vr-meta">
-<strong>Year:</strong> {{ lecture.date }}<br>
-<strong>Venue:</strong> {{ lecture.venue }}
-</p>
+    <div class="archive-header">
+      <h2>Lecture Archive</h2>
+    </div>
 
-<p class="vr-title">
-{{ lecture.title }}
-</p>
+    <div class="vr-archive">
 
-{% if lecture.link %}
-<a href="{{ lecture.link }}" class="vr-link">Read More →</a>
-{% endif %}
+      {% for period in site.data.vr_lectures %}
 
-</div>
+      <details {% if forloop.first %}open{% endif %}>
+        <summary>{{ period.decade }}</summary>
 
-{% endfor %}
+        <div class="vr-details-content">
 
-</div>
-</div>
-</details>
+          <div class="vr-grid">
 
-{% endfor %}
+            {% for lecture in period.lectures %}
 
-</div>
+            <article class="vr-card">
+
+              <div class="vr-number">#{{ lecture.number }}</div>
+
+              <h3>{{ lecture.speaker }}</h3>
+
+              <p class="vr-meta">
+                <strong>Year:</strong> {{ lecture.date }}<br>
+                <strong>Venue:</strong> {{ lecture.venue }}
+              </p>
+
+              <p class="vr-title">
+                {{ lecture.title }}
+              </p>
+
+              {% if lecture.link %}
+              <a href="{{ lecture.link }}" class="vr-link">Read More →</a>
+              {% endif %}
+
+            </article>
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+      </details>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>

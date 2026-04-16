@@ -1,46 +1,91 @@
 ---
-layout: award
+layout: default
 title: N. R. Sen Young Researcher Award
-subtitle: Recognising outstanding early-career contributions in gravitational physics
 ---
 
-The **N. R. Sen Young Researcher Award** recognises young researchers for
-outstanding contributions to gravitational physics.
+<link rel="stylesheet" href="{{ '/assets/css/style-awards.css' | relative_url }}">
 
-The award was instituted at the **27th General Body Meeting of IAGRG**,
-held on 8 March 2013 at HNB Garhwal University, Srinagar.
+<header class="award-hero">
+  <div class="container">
+    <p class="award-kicker">IAGRG Awards</p>
 
-The IAGRG Council was entrusted with naming the award and framing the
-nomination and selection procedures.
+    <h1>N. R. Sen Young Researcher Award</h1>
 
-The award carries an honorarium and citation, and the recipient is
-typically invited to participate in the IAGRG meeting and deliver a lecture.
+    <p class="award-subtitle">
+      Recognising outstanding early-career contributions in gravitational physics
+    </p>
+  </div>
+</header>
 
-This honour reflects IAGRG’s commitment to encouraging promising young
-scientists and recognising excellence at an early career stage.
+<!-- ABOUT SECTION -->
+<section class="archive-container">
 
----
+  <details class="about-block" open>
+    <summary class="about-summary">About this Award</summary>
 
-## Award Archive
+    <div class="about-content">
 
-<div class="award-grid">
+      <p>
+        The <strong>N. R. Sen Young Researcher Award</strong> recognises young
+        researchers for outstanding contributions to gravitational physics.
+      </p>
 
-{% for item in site.data.nrsen_awards %}
+      <p>
+        The award was instituted at the <strong>27th General Body Meeting of IAGRG</strong>,
+        held on 8 March 2013 at HNB Garhwal University, Srinagar.
+      </p>
 
-<div class="award-card">
+      <p>
+        The IAGRG Council was entrusted with naming the award and framing the
+        nomination and selection procedures.
+      </p>
 
-<div class="award-badge">{{ item.year }}</div>
+      <p>
+        The award carries an honorarium and citation, and the recipient is
+        typically invited to participate in the IAGRG meeting and deliver a lecture.
+      </p>
 
-<h3>{{ item.winner }}</h3>
+      <p>
+        This honour reflects IAGRG’s commitment to encouraging promising young
+        scientists and recognising excellence at an early career stage.
+      </p>
 
-<p class="award-meta">{{ item.affiliation }}</p>
+    </div>
+  </details>
 
-<p class="citation-text">
-{{ item.citation }}
-</p>
+</section>
 
-</div>
+<!-- ARCHIVE SECTION -->
+<section class="archive-container">
 
-{% endfor %}
+  <div class="archive-card">
 
-</div>
+    <div class="archive-header">
+      <h2>Award Archive</h2>
+    </div>
+
+    <div class="award-grid">
+
+      {% for item in site.data.nrsen_awards %}
+
+      <article class="award-card">
+
+        <div class="award-badge">{{ item.year }}</div>
+
+        <h3>{{ item.winner }}</h3>
+
+        <p class="award-meta">{{ item.affiliation }}</p>
+
+        <p class="citation-text">
+          {{ item.citation }}
+        </p>
+
+      </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
