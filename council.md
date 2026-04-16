@@ -3,7 +3,7 @@ layout: default
 title: IAGRG Council
 ---
 
-<header class="page-header">
+<header class="member-hero">
   <div class="container">
     <h1>IAGRG Council</h1>
     <p>The elected council overseeing the activities and governance of IAGRG.</p>
