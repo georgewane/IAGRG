@@ -1,5 +1,5 @@
 current:
-  term: "2024 — 2026"
+  term: "2026 — 2028"
 
   president:
     name: "Pravabati Chingangbam"
@@ -25,17 +25,29 @@ current:
     - name: "Koushik Dutta"
       institution: "IISER Kolkata"
 
-    - name: "Sriramkumar L"
-      institution: "IIT Madras"
-
     - name: "Sudipta Das"
       institution: "Visva-Bharati University"
-    
-    - name: "Sumati Surya"
-      institution: "Raman Research Institute"
-      exofficio: true
+
+    - name: "Sriramkumar L"
+      institution: "IIT Madras"
+      ex Officio: True
 
 archive:
+  - term: "2024 — 2026"
+    leadership:
+      - label: "President:"
+        text: "Sriramkumar L | Secretary: Anjan Ananda Sen"
+    members:
+      - "Narayan Banerjee"
+      - "Rajesh Nayak"
+      - "Aseem Paranjape"
+      - "K. G. Arun"
+      - "Atri Deshamukhya"
+      - "Sudipta Sarkar"
+      - "Koushik Dutta"
+      - "Harvinder Kaur Jassal"
+      - "Patrick Das Gupta (Ex Officio)"
+
   - term: "2022 — 2024"
     leadership:
       - label: "President:"
