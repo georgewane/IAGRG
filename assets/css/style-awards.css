@@ -1,210 +1,438 @@
-/* ======================================
-   PREMIUM AWARD PAGES — IAGRG
-====================================== */
+/* =====================================================
+   IAGRG AWARDS SYSTEM
+   Final Production Stylesheet
+   Clean • Balanced • Responsive • Prestigious
+   Covers:
+   - Awards Landing
+   - N.R. Sen Award
+   - V.V. Narlikar Thesis Award
+   - Vaidya–Raychaudhuri Lecture Awards
+===================================================== */
 
-/* HERO */
 
-.award-hero-premium{
-  background: linear-gradient(135deg, var(--brand-dark), #10243f);
+/* =====================================================
+   1. GLOBAL CONTAINERS
+===================================================== */
+
+.archive-container,
+.awards-page{
+  width:min(1220px, calc(100% - 48px));
+  margin-inline:auto;
+}
+
+.archive-container{
+  margin-block:64px;
+}
+
+
+/* =====================================================
+   2. HERO SECTIONS
+===================================================== */
+
+.award-hero,
+.awards-header,
+.awards-landing-hero{
+  background:linear-gradient(135deg,var(--brand-dark),#10243f);
   color:#fff;
+  text-align:center;
+  padding:78px 20px 66px;
   border-bottom:4px solid var(--brand-accent);
-  padding:90px 20px 82px;
 }
 
-.award-hero-inner{
-  max-width:950px;
+.award-hero h1,
+.awards-header h1,
+.awards-landing-hero h1{
+  color:#fff;
+  font-size:clamp(2.25rem,5vw,3.5rem);
+  margin:0 0 12px;
 }
 
-.award-kicker{
+.award-kicker,
+.awards-kicker{
   color:var(--brand-accent);
   text-transform:uppercase;
   letter-spacing:2px;
-  font-size:0.85rem;
-  font-weight:700;
+  font-size:.84rem;
+  font-weight:800;
   margin-bottom:14px;
 }
 
-.award-hero-premium h1{
-  color:#fff;
-  font-size:clamp(2.3rem,5vw,3.7rem);
-  line-height:1.15;
-  margin:0 0 18px;
-}
-
-.award-subtitle{
-  font-size:1.15rem;
+.award-subtitle,
+.awards-subtitle{
+  max-width:760px;
+  margin:0 auto;
+  color:rgba(255,255,255,.86);
   line-height:1.8;
-  max-width:780px;
-  color:rgba(255,255,255,0.88);
-  margin:0;
+  font-size:1.06rem;
 }
 
-/* MAIN */
 
-.award-page-shell{
-  background:#f8fafc;
-}
+/* =====================================================
+   3. UNIVERSAL CARD FOUNDATION
+===================================================== */
 
-/* ABOUT */
-
-.award-about-wrap{
-  padding:58px 20px 26px;
-}
-
-.award-about-card{
+.about-block,
+.archive-card,
+.award-card,
+.award-feature-card,
+.vr-archive details{
   background:#fff;
   border:1px solid var(--border);
-  border-left:5px solid var(--brand-accent);
-  border-radius:16px;
-  padding:34px;
-  box-shadow:0 10px 28px rgba(0,0,0,0.05);
-  max-width:900px;
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,.04);
 }
 
-.award-section-label{
-  color:var(--brand-accent);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:0.78rem;
+
+/* =====================================================
+   4. ABOUT COLLAPSIBLE BLOCK
+===================================================== */
+
+.about-block{
+  overflow:hidden;
+}
+
+.about-summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 24px;
+  background:var(--bg-light);
   font-weight:700;
-  margin-bottom:18px;
+  font-size:1.05rem;
+  color:var(--brand-dark);
 }
 
-.award-richtext{
+.about-summary::-webkit-details-marker{
+  display:none;
+}
+
+.about-summary::after{
+  content:"▲";
+  float:right;
+  color:var(--brand-accent);
+}
+
+.about-block:not([open]) .about-summary::after{
+  content:"▼";
+}
+
+.about-content{
+  padding:24px;
   line-height:1.9;
-  color:var(--text);
-  font-size:1.04rem;
+  color:var(--text-muted);
 }
 
-.award-richtext p:first-child{
-  margin-top:0;
+
+/* =====================================================
+   5. ARCHIVE WRAPPER
+===================================================== */
+
+.archive-card{
+  padding:24px 20px;
 }
 
-.award-richtext hr{
-  border:0;
-  border-top:1px solid var(--border);
-  margin:38px 0;
+.archive-header{
+  padding-bottom:18px;
+  margin-bottom:26px;
+  border-bottom:1px solid var(--border);
 }
 
-.award-richtext strong{
-  color:var(--brand-dark);
-}
-
-/* ARCHIVE */
-
-.award-archive-wrap{
-  padding:18px 20px 84px;
-}
-
-.section-heading-row{
-  margin-bottom:28px;
-}
-
-.section-kicker{
-  color:var(--brand-accent);
-  text-transform:uppercase;
-  letter-spacing:1.8px;
-  font-size:0.78rem;
-  font-weight:700;
-  margin:0 0 10px;
-}
-
-.section-heading-row h2{
+.archive-header h2{
   margin:0;
-  font-size:clamp(1.7rem,3vw,2.35rem);
-  color:var(--brand-dark);
 }
 
-/* GRID */
 
-.award-grid-premium{
+/* =====================================================
+   6. GENERAL GRID SYSTEM
+===================================================== */
+
+.award-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
-  gap:26px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
   align-items:stretch;
 }
 
-/* CARD */
 
-.award-card-premium{
-  position:relative;
-  background:linear-gradient(180deg,#ffffff 0%, #fbfcfe 100%);
-  border:1px solid rgba(0,0,0,0.06);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 12px 28px rgba(0,0,0,0.05);
-  transition:transform .22s ease, box-shadow .22s ease;
-  height:100%;
-}
+/* =====================================================
+   7. STANDARD AWARD CARD
+   (N.R. Sen / generic archives)
+===================================================== */
 
-.award-card-premium:hover{
-  transform:translateY(-5px);
-  box-shadow:0 18px 34px rgba(0,0,0,0.08);
-}
-
-.award-card-topline{
-  height:4px;
-  background:linear-gradient(90deg,var(--brand-accent),#e9c86b);
-}
-
-.award-card-body{
-  padding:26px;
+.award-card{
+  padding:24px;
+  border-top:4px solid var(--brand-accent);
   display:flex;
   flex-direction:column;
-  height:100%;
+  min-height:355px;
+  transition:.22s ease;
 }
 
-.award-meta-row{
+.award-card:hover,
+.award-feature-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 28px rgba(0,0,0,.07);
+}
+
+.award-card h3{
+  min-height:58px;
+  margin:0 0 14px;
+  line-height:1.35;
+  font-size:1.25rem;
+}
+
+.award-meta{
+  min-height:56px;
+  margin-bottom:18px;
+  color:var(--text-muted);
+  font-size:.96rem;
+  line-height:1.65;
+}
+
+.citation-text{
+  flex-grow:1;
+  line-height:1.72;
+  font-style:italic;
+  color:#475569;
+}
+
+
+/* =====================================================
+   8. BADGES
+===================================================== */
+
+.award-badge{
+  display:inline-block;
+  background:var(--brand-accent);
+  color:var(--brand-dark);
+  font-size:.82rem;
+  font-weight:800;
+  padding:7px 14px;
+  border-radius:999px;
   margin-bottom:16px;
 }
 
-.award-year-pill{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#f3f6fa;
-  color:var(--brand-dark);
-  font-size:0.82rem;
-  font-weight:700;
-  letter-spacing:.4px;
+
+/* =====================================================
+   9. V.V. NARLIKAR THESIS GRID
+===================================================== */
+
+.thesis-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+  align-items:stretch;
 }
 
-.award-card-premium h3{
+.thesis-card{
+  display:flex;
+  flex-direction:column;
+  min-height:340px;
+}
+
+.thesis-card h3{
+  min-height:58px;
   margin:0 0 14px;
+  line-height:1.35;
+}
+
+.thesis-card .award-meta{
+  min-height:56px;
+  margin-bottom:18px;
+}
+
+.thesis-title{
+  flex-grow:1;
+  font-style:italic;
+  line-height:1.7;
+  color:#374151;
+  margin-bottom:18px;
+}
+
+.submitted-to{
+  margin-top:auto;
+  padding-top:14px;
+  border-top:1px dashed var(--border);
+  color:var(--text-muted);
+  line-height:1.65;
+  font-size:.95rem;
+}
+
+
+/* =====================================================
+   10. VAIDYA–RAYCHAUDHURI LECTURES
+===================================================== */
+
+.vr-archive{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.vr-archive details{
+  overflow:hidden;
+}
+
+.vr-archive summary{
+  cursor:pointer;
+  list-style:none;
+  padding:22px 28px;
+  background:var(--bg-light);
+  font-weight:700;
   font-size:1.22rem;
-  line-height:1.45;
   color:var(--brand-dark);
 }
 
-.award-work{
-  margin:0;
-  color:var(--text-muted);
-  line-height:1.75;
-  font-size:0.98rem;
+.vr-archive summary::-webkit-details-marker{
+  display:none;
 }
 
-/* RESPONSIVE */
+.vr-archive summary::after{
+  content:"+";
+  float:right;
+  color:var(--brand-accent);
+  font-size:1.6rem;
+}
 
-@media (max-width: 768px){
+.vr-archive details[open] summary::after{
+  content:"−";
+}
 
-  .award-hero-premium{
-    padding:72px 20px 62px;
-  }
+.vr-details-content{
+  padding:28px;
+}
 
-  .award-about-card{
-    padding:24px;
-  }
+.vr-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
 
-  .award-grid-premium{
+.vr-card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:4px solid var(--brand-accent);
+  border-radius:14px;
+  padding:24px;
+}
+
+.vr-number{
+  position:absolute;
+  top:-14px;
+  right:18px;
+  background:var(--brand-accent);
+  color:var(--brand-dark);
+  padding:5px 12px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:800;
+}
+
+.vr-card h3{
+  margin:0 0 12px;
+  line-height:1.35;
+}
+
+.vr-meta{
+  font-size:.95rem;
+  color:var(--text-muted);
+  line-height:1.7;
+  border-bottom:1px dashed var(--border);
+  padding-bottom:12px;
+  margin-bottom:14px;
+}
+
+.vr-title{
+  line-height:1.65;
+}
+
+.vr-link{
+  display:inline-block;
+  margin-top:16px;
+  font-weight:700;
+  color:var(--brand-dark);
+}
+
+
+/* =====================================================
+   11. AWARDS LANDING PAGE
+===================================================== */
+
+.awards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.award-feature-card{
+  display:flex;
+  flex-direction:column;
+  padding:28px;
+  border-top:4px solid var(--brand-accent);
+  text-decoration:none;
+  color:inherit;
+}
+
+.award-label{
+  color:var(--brand-accent);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:.78rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.award-link{
+  margin-top:auto;
+  padding-top:18px;
+  font-weight:700;
+}
+
+
+/* =====================================================
+   12. RESPONSIVE
+===================================================== */
+
+@media (max-width:900px){
+
+  .thesis-grid{
     grid-template-columns:1fr;
-    gap:18px;
   }
 
-  .award-card-body{
+  .award-grid,
+  .awards-grid,
+  .vr-grid{
+    grid-template-columns:1fr;
+  }
+
+  .archive-card,
+  .vr-details-content{
     padding:22px;
   }
+}
 
-  .award-subtitle{
-    font-size:1rem;
+@media (max-width:640px){
+
+  .award-hero,
+  .awards-header,
+  .awards-landing-hero{
+    padding:62px 18px 56px;
+  }
+
+  .award-card,
+  .thesis-card{
+    padding:20px;
+    min-height:auto;
+  }
+
+  .about-content{
+    padding:20px;
+  }
+
+  .award-card h3,
+  .thesis-card h3,
+  .award-meta,
+  .thesis-card .award-meta{
+    min-height:auto;
   }
 }
