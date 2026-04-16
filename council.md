@@ -3,6 +3,8 @@ layout: default
 title: IAGRG Council
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/style-members.css' | relative_url }}">
+
 <header class="member-hero">
   <div class="container">
     <h1>IAGRG Council</h1>
