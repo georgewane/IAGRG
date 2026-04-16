@@ -5,7 +5,7 @@ title: Members Directory
 
 <link rel="stylesheet" href="{{ '/assets/css/style-members.css' | relative_url }}">
 
-<header class="page-header">
+<header class="member-hero">
   <div class="container">
     <h1>Members Directory</h1>
     <p>
