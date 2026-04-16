@@ -16,14 +16,15 @@
     - "Major contributions to Lovelock Gravity and Einstein–Gauss–Bonnet theories."
     - "Extensive work on gravitational collapse, spacetime singularities, and cosmological models."
 
-# - name: "Prof. Thanu Padmanabhan"
-#   lifespan: "1957 – 2021"
-#   image: "/assets/img/paddy.jpg"
-#   interest: "Quantum Gravity, Cosmology, Structure Formation"
-#   bio: "An internationally acclaimed theoretical physicist known for his thermodynamic approach to gravity."
-#   works:
-#     - "Emergent Gravity Paradigm – Interpreting gravity as an emergent, thermodynamic phenomenon."
-#     - "Gravitation: Foundations and Frontiers (Book, 2010)"
+- name: "Prof. Thanu Padmanabhan"
+  lifespan: "1957 – 2021"
+  image: "/assets/img/paddy.jpg"
+  interest: "Quantum Gravity, Cosmology, Structure Formation"
+  bio: "An internationally acclaimed theoretical physicist known for his thermodynamic approach to gravity."
+  works:
+    - "Emergent Gravity Paradigm – Interpreting gravity as an emergent, thermodynamic phenomenon."
+    - "Gravitation: Foundations and Frontiers (Book, 2010)"
+
 - name: "Prof. C. V. Vishveshwara"
   lifespan: "1938 – 2017"
   image: "/assets/img/cvvishu.jpeg"
