@@ -330,7 +330,7 @@ h4 {
 /* ----------------------------------
    Dim overlay behind open drawer
 ---------------------------------- */
-
+/* 
 .nav-overlay {
   display: none;
   position: fixed;
@@ -343,7 +343,7 @@ h4 {
   display: block;
 }
 
-
+ */
 
 /* ==================================================
    4. HERO SECTION
