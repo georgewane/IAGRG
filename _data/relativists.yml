@@ -6,6 +6,16 @@
   works:
     - "Hoyle-Narlikar Theory of Gravity (1964) – A conformal, action-at-a-distance theory of gravity."
 
+- name: "Prof. Naresh Dadhich"
+  lifespan: "1944 – 2025"
+  image: "/assets/img/NareshD.jpeg"
+  interest: "General Relativity, Black Hole Physics, Cosmology, Higher-Dimensional Gravity"
+  bio: "One of India’s most distinguished relativists, known for deep contributions to gravitation, black hole physics, and cosmology. He made influential advances in higher-dimensional gravity, Lovelock theories, and the fundamental structure of spacetime."
+  works:
+    - "Dadhich–Molina Black Hole Solutions – Important exact solutions in higher-dimensional gravity."
+    - "Major contributions to Lovelock Gravity and Einstein–Gauss–Bonnet theories."
+    - "Extensive work on gravitational collapse, spacetime singularities, and cosmological models."
+
 # - name: "Prof. Thanu Padmanabhan"
 #   lifespan: "1957 – 2021"
 #   image: "/assets/img/paddy.jpg"
