@@ -71,7 +71,7 @@ Browse council members, office bearers and governing bodies of the Association a
 </div>
 
 <div class="meeting-actions">
-<a href="{{ '/council-members/' | relative_url }}" class="btn-meeting">
+<a href="{{ '/council/' | relative_url }}" class="btn-meeting">
 View Directory ↗
 </a>
 </div>
@@ -95,7 +95,7 @@ Profiles of pioneering Indian researchers whose work helped shape general relati
 </div>
 
 <div class="meeting-actions">
-<a href="{{ '/famous-indian-relativists/' | relative_url }}" class="btn-meeting">
+<a href="{{ '/indian-relativists/' | relative_url }}" class="btn-meeting">
 View Profiles ↗
 </a>
 </div>
