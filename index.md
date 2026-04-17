@@ -156,7 +156,7 @@ title: Home
     <div class="timeline-curve-wrap">
 
       <svg class="timeline-curve-svg"
-           viewBox="0 0 1200 290"
+           viewBox="0 0 1200 250"
            preserveAspectRatio="xMidYMid meet">
 
         <!-- Curved Main Path -->
@@ -171,7 +171,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">1905</text>
 
-          <foreignObject x="14" y="-92" width="140" height="68" class="timeline-tip">
+          <foreignObject x="20" y="8" width="150" height="90" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>1905</strong>
               <span>Special Relativity</span>
@@ -184,7 +184,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">1915</text>
 
-          <foreignObject x="-72" y="-82" width="144" height="68" class="timeline-tip">
+          <foreignObject x="18" y="-96" width="150" height="90" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>1915</strong>
               <span>General Relativity</span>
@@ -193,11 +193,11 @@ title: Home
         </g>
 
         <!-- Node 3 -->
-        <g class="timeline-node" transform="translate(560,94)">
+        <g class="timeline-node" transform="translate(560,76)">
           <circle r="10"></circle>
           <text y="42">1919</text>
 
-          <foreignObject x="-72" y="-88" width="144" height="68" class="timeline-tip">
+          <foreignObject x="18" y="18" width="150" height="90" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>1919</strong>
               <span>Eclipse Test</span>
@@ -210,7 +210,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">1963</text>
 
-          <foreignObject x="-72" y="-108" width="144" height="68" class="timeline-tip">
+          <foreignObject x="18" y="-96" width="150" height="90" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>1963</strong>
               <span>Kerr Solution</span>
@@ -223,7 +223,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">2015</text>
 
-          <foreignObject x="-154" y="-108" width="144" height="68" class="timeline-tip">
+          <foreignObject x="-158" y="18" width="150" height="90" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>2015</strong>
               <span>LIGO Detection</span>
