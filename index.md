@@ -162,6 +162,7 @@ title: Home
   </div>
 
 {% for era in site.data.timeline %}
+
 <div id="{{ era.id }}" class="tab-pane {% if forloop.first %}active{% endif %}">
 <div class="ht-wrapper">
 <div class="container">
