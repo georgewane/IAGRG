@@ -193,7 +193,7 @@ title: Home
         </g>
 
         <!-- Node 3 -->
-        <g class="timeline-node" transform="translate(560,96)">
+        <g class="timeline-node" transform="translate(560,106)">
           <circle r="10"></circle>
           <text y="42">1919</text>
 
