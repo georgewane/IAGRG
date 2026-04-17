@@ -171,7 +171,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">1905</text>
 
-          <foreignObject x="-70" y="-92" width="140" height="68" class="timeline-tip">
+          <foreignObject x="14" y="-92" width="140" height="68" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>1905</strong>
               <span>Special Relativity</span>
@@ -193,7 +193,7 @@ title: Home
         </g>
 
         <!-- Node 3 -->
-        <g class="timeline-node" transform="translate(560,106)">
+        <g class="timeline-node" transform="translate(560,94)">
           <circle r="10"></circle>
           <text y="42">1919</text>
 
@@ -206,7 +206,7 @@ title: Home
         </g>
 
         <!-- Node 4 -->
-        <g class="timeline-node" transform="translate(850,154)">
+        <g class="timeline-node" transform="translate(850,158)">
           <circle r="10"></circle>
           <text y="42">1963</text>
 
@@ -223,7 +223,7 @@ title: Home
           <circle r="10"></circle>
           <text y="42">2015</text>
 
-          <foreignObject x="-72" y="-108" width="144" height="68" class="timeline-tip">
+          <foreignObject x="-154" y="-108" width="144" height="68" class="timeline-tip">
             <div xmlns="http://www.w3.org/1999/xhtml" class="timeline-tip-box">
               <strong>2015</strong>
               <span>LIGO Detection</span>
