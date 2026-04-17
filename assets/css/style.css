@@ -1516,6 +1516,57 @@ h4 {
 /* ==========================================================================
    Horizontal Swipeable Timeline Ribbon
    ========================================================================== */
+/* ==========================================================================
+   Timeline Tabs Navigation
+   ========================================================================== */
+.timeline-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  background-color: transparent;
+  border: 2px solid var(--border);
+  color: var(--text-muted);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  border-color: var(--brand-accent);
+  color: var(--brand-dark);
+}
+
+.tab-btn.active {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: white;
+  box-shadow: 0 4px 10px rgba(10, 17, 40, 0.2);
+}
+
+/* Tab Content Visibility */
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .ht-wrapper {
   width: 100%;
   overflow-x: auto;
