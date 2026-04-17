@@ -1519,146 +1519,174 @@ h4 {
 /* ==========================================================================
    Timeline Tabs Navigation
    ========================================================================== */
-.timeline-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 40px;
+/* ===================================== */
+/* HOMEPAGE MINI CURVE TIMELINE          */
+/* Replaces old ribbon timeline          */
+/* ===================================== */
+
+.timeline-ribbon-section{
+  padding: 60px 0;
 }
 
-.tab-btn {
-  background-color: transparent;
-  border: 2px solid var(--border);
+.timeline-intro{
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+.timeline-intro h2{
+  margin-bottom: 14px;
+}
+
+.timeline-lead{
+  border-left: none !important;
+  max-width: 700px;
+  margin: 0 auto;
   color: var(--text-muted);
-  padding: 10px 24px;
-  border-radius: 30px;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.tab-btn:hover {
-  border-color: var(--brand-accent);
-  color: var(--brand-dark);
+/* Curve Area */
+
+.timeline-curve-wrap{
+ overflow-x:auto;
+ overflow-y:visible;
+ position:relative;
 }
 
-.tab-btn.active {
-  background-color: var(--brand-dark);
-  border-color: var(--brand-dark);
-  color: white;
-  box-shadow: 0 4px 10px rgba(10, 17, 40, 0.2);
-}
-
-/* Tab Content Visibility */
-.tab-pane {
+.timeline-curve-wrap::-webkit-scrollbar{
   display: none;
-  animation: fadeIn 0.4s ease;
 }
 
-.tab-pane.active {
+.timeline-curve-svg{
+  width: 100%;
+  min-width: 980px;
+  height: auto;
   display: block;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Main Path */
+
+.timeline-main-path{
+  fill: none;
+  stroke: var(--brand-accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  animation: drawCurve 2s ease forwards;
 }
 
-.ht-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  padding-bottom: 20px;
-  /* Smooth scrolling for touch devices */
-  -webkit-overflow-scrolling: touch;
-  /* Hide scrollbar for a cleaner app-like look */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* Nodes */
+
+.timeline-node{
+  cursor: pointer;
 }
 
-.ht-wrapper::-webkit-scrollbar { 
-  display: none; 
+.timeline-node circle{
+  fill: var(--bg-light);
+  stroke: var(--brand-dark);
+  stroke-width: 4;
+  transition: all 0.25s ease;
 }
 
-.ht-list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  /* Ensures items don't shrink and forces horizontal scroll */
-  flex-wrap: nowrap; 
+.timeline-node text{
+  text-anchor: middle;
+  font-size: 0.95rem;
+  font-weight: 700;
+  fill: var(--brand-dark);
+  pointer-events: none;
 }
 
-/* The Continuous Horizontal Line */
-.ht-list::before {
-  content: '';
-  position: absolute;
-  top: 42px; /* Aligns exactly with the dots */
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--brand-accent);
-  z-index: 0;
+/* Tooltip */
+
+.timeline-tip{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  pointer-events: none;
 }
 
-.ht-item {
-  flex: 0 0 160px; /* Fixed width for each milestone card */
+.timeline-tip-box{
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 
-.ht-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px;
-  transition: transform 0.2s ease;
-}
-
-.ht-link:hover {
-  transform: translateY(-5px);
-}
-
-.ht-year {
-  font-family: var(--font-heading);
-  font-weight: 800;
+.timeline-tip-box strong{
+  display:block;
+  font-size: 0.9rem;
   color: var(--brand-dark);
-  font-size: 1.25rem;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 
-.ht-dot {
-  width: 24px;
-  height: 24px;
-  background: var(--bg-light);
-  border: 4px solid var(--brand-dark);
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: all 0.2s ease;
-}
-
-.ht-link:hover .ht-dot {
-  border-color: var(--brand-accent);
-  background: var(--brand-dark);
-}
-
-.ht-title {
-  font-size: 0.85rem;
+.timeline-tip-box span{
+  display:block;
+  font-size: 0.8rem;
+  line-height: 1.35;
   color: var(--text-muted);
-  line-height: 1.4;
-  font-weight: 600;
-  padding: 0 10px;
 }
 
-.ht-link:hover .ht-title {
-  color: var(--brand-dark);
+/* Hover */
+
+.timeline-node:hover circle{
+  transform: scale(1.18);
+  fill: var(--brand-dark);
+  stroke: var(--brand-accent);
 }
 
+.timeline-node:hover text{
+  fill: var(--brand-dark);
+}
+
+.timeline-node:hover .timeline-tip{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bottom CTA */
+
+.timeline-bottom{
+  text-align: center;
+  margin-top: 22px;
+}
+
+.timeline-link{
+  font-weight: 700;
+}
+
+/* Animation */
+
+@keyframes drawCurve{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+  .timeline-ribbon-section{
+    padding: 52px 0;
+  }
+
+  .timeline-intro{
+    margin-bottom: 24px;
+  }
+
+  .timeline-curve-svg{
+    min-width: 900px;
+  }
+
+  .timeline-tip{
+    display: none;
+  }
+}
 /* Responsive */
 
 @media (max-width: 768px) {
