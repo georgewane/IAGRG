@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Horizontal Swipeable Timeline Ribbon
+   ========================================================================== */
+.ht-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  /* Smooth scrolling for touch devices */
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar for a cleaner app-like look */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ht-wrapper::-webkit-scrollbar { 
+  display: none; 
+}
+
+.ht-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /* Ensures items don't shrink and forces horizontal scroll */
+  flex-wrap: nowrap; 
+}
+
+/* The Continuous Horizontal Line */
+.ht-list::before {
+  content: '';
+  position: absolute;
+  top: 42px; /* Aligns exactly with the dots */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--brand-accent);
+  z-index: 0;
+}
+
+.ht-item {
+  flex: 0 0 160px; /* Fixed width for each milestone card */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ht-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.ht-link:hover {
+  transform: translateY(-5px);
+}
+
+.ht-year {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--brand-dark);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.ht-dot {
+  width: 24px;
+  height: 24px;
+  background: var(--bg-light);
+  border: 4px solid var(--brand-dark);
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.ht-link:hover .ht-dot {
+  border-color: var(--brand-accent);
+  background: var(--brand-dark);
+}
+
+.ht-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.ht-link:hover .ht-title {
+  color: var(--brand-dark);
+}
