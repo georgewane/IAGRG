@@ -1524,14 +1524,19 @@ h4 {
 /* Replaces old ribbon timeline          */
 /* ===================================== */
 
+/* ===================================== */
+/* FINAL POLISHED MINI CURVE TIMELINE    */
+/* Integrated refined version            */
+/* ===================================== */
+
 .timeline-ribbon-section{
-  padding: 60px 0;
+  padding: 48px 0 32px;
 }
 
 .timeline-intro{
   text-align: center;
   max-width: 760px;
-  margin: 0 auto 36px;
+  margin: 0 auto 14px;
 }
 
 .timeline-intro h2{
@@ -1548,9 +1553,12 @@ h4 {
 /* Curve Area */
 
 .timeline-curve-wrap{
- overflow-x:auto;
- overflow-y:visible;
- position:relative;
+  overflow-x: auto;
+  overflow-y: visible;
+  position: relative;
+  margin-top: -12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
 .timeline-curve-wrap::-webkit-scrollbar{
@@ -1583,19 +1591,20 @@ h4 {
 
 .timeline-node{
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .timeline-node circle{
   fill: var(--bg-light);
   stroke: var(--brand-dark);
-  stroke-width: 4;
+  stroke-width: 5;
   transition: all 0.25s ease;
 }
 
 .timeline-node text{
   text-anchor: middle;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 800;
   fill: var(--brand-dark);
   pointer-events: none;
 }
@@ -1619,14 +1628,14 @@ h4 {
 }
 
 .timeline-tip-box strong{
-  display:block;
+  display: block;
   font-size: 0.9rem;
   color: var(--brand-dark);
   margin-bottom: 3px;
 }
 
 .timeline-tip-box span{
-  display:block;
+  display: block;
   font-size: 0.8rem;
   line-height: 1.35;
   color: var(--text-muted);
@@ -1635,9 +1644,9 @@ h4 {
 /* Hover */
 
 .timeline-node:hover circle{
-  transform: scale(1.18);
-  fill: var(--brand-dark);
-  stroke: var(--brand-accent);
+  transform: scale(1.22);
+  fill: var(--brand-accent);
+  stroke: var(--brand-dark);
 }
 
 .timeline-node:hover text{
@@ -1673,11 +1682,11 @@ h4 {
 @media (max-width: 768px){
 
   .timeline-ribbon-section{
-    padding: 52px 0;
+    padding: 44px 0 28px;
   }
 
   .timeline-intro{
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
 
   .timeline-curve-svg{
