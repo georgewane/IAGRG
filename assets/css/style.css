@@ -1562,6 +1562,7 @@ h4 {
   min-width: 980px;
   height: auto;
   display: block;
+  overflow: visible;
 }
 
 /* Main Path */
