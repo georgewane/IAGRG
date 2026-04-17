@@ -1619,26 +1619,29 @@ h4 {
 }
 
 .timeline-tip-box{
-  background: white;
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.98);
+  border: 1px solid rgba(15,23,42,0.08);
   border-radius: 14px;
   padding: 10px 12px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 28px rgba(15,23,42,0.10);
   text-align: center;
 }
 
 .timeline-tip-box strong{
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 800;
   color: var(--brand-dark);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
 }
 
 .timeline-tip-box span{
   display: block;
-  font-size: 0.8rem;
-  line-height: 1.35;
-  color: var(--text-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #334155;
 }
 
 /* Hover */
