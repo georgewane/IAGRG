@@ -141,3 +141,31 @@ title: Home
 
   </div>
 </section>
+
+<!-- TIMELINE RIBBON -->
+<section class="timeline-ribbon-section bg-light" style="padding: 60px 0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2>A Century of General Relativity</h2>
+      <p class="lead-text" style="border-left: none; max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+        Swipe to explore key milestones. Click any event to view the full history and details.
+      </p>
+    </div>
+  </div>
+
+  <div class="ht-wrapper">
+    <div class="container">
+      <ul class="ht-list">
+        {% for event in site.data.timeline %}
+        <li class="ht-item">
+          <a href="/resources#year-{{ event.year }}" class="ht-link">
+            <span class="ht-year">{{ event.year }}</span>
+            <span class="ht-dot"></span>
+            <span class="ht-title">{{ event.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
