@@ -141,3 +141,68 @@ title: Home
 
   </div>
 </section>
+<section class="timeline-ribbon-section bg-light" style="padding: 60px 0;">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h2>A Century of General Relativity</h2>
+      <p class="lead-text" style="border-left: none; max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+        Select an era below and swipe to explore key milestones. Click any event for full details.
+      </p>
+    </div>
+
+    <div class="timeline-tabs">
+      {% for era in site.data.timeline %}
+        <button class="tab-btn {% if forloop.first %}active{% endif %}" onclick="openEra(event, '{{ era.id }}')">
+          {{ era.period }}
+        </button>
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% for era in site.data.timeline %}
+
+<div id="{{ era.id }}" class="tab-pane {% if forloop.first %}active{% endif %}">
+<div class="ht-wrapper">
+<div class="container">
+<ul class="ht-list">
+{% for event in era.events %}
+<li class="ht-item">
+<a href="/resources#year-{{ event.year }}" class="ht-link">
+<span class="ht-year">{{ event.year }}</span>
+<span class="ht-dot"></span>
+<span class="ht-title">{{ event.title }}</span>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+{% endfor %}
+
+</section>
+
+<script>
+function openEra(evt, eraName) {
+  var i, tabcontent, tablinks;
+  
+  // Hide all tab panes
+  tabcontent = document.getElementsByClassName("tab-pane");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].classList.remove("active");
+  }
+  
+  // Remove 'active' class from all buttons
+  tablinks = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+  
+  // Show the current tab and add 'active' class to the button
+  document.getElementById(eraName).style.display = "block";
+  document.getElementById(eraName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+</script>
