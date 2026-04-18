@@ -85,7 +85,7 @@ title: Home
           {% assign latest_news = site.posts | where: "category", "news" %}
 
           {% for post in latest_news limit:4 %}
-          <a href="{{ post.url }}" class="mini-update-item">
+          <a href="{{ post.url | relative_url }}" class="mini-update-item">
 
             <span class="update-date">
               {{ post.date | date: "%b %d, %Y" }}
