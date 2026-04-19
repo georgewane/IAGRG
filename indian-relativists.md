@@ -27,7 +27,8 @@ title: Famous Indian Relativists
 
 <section class="relativists-grid">
 
-{% for person in site.data.relativists %}
+{% assign sorted_people = site.data.relativists | sort: "born" %}
+{% for person in sorted_people %}
 
 <article class="relativist-card">
 
