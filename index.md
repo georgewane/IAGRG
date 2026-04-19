@@ -76,14 +76,14 @@ title: Home
   // Segment anchors (start, cp1, cp2, end):
   var segs = [
     // seg 0: M60,120 C130,40 200,200 310,120
-    {p0:[60,120], p1:[130,40],  p2:[200,200], p3:[310,120]},
+    {p0:[60,120],  p1:[130,78], p2:[210,162], p3:[310,120]},
     // seg 1: S460,40 560,120  → cp1 reflected from p2 of seg0
     // reflection of [200,200] about [310,120] = [420,40]
-    {p0:[310,120], p1:[420,40],  p2:[460,40],  p3:[560,120]},
+    {p0:[310,120], p1:[410,78], p2:[455,78],  p3:[560,120]},
     // seg 2: S700,200 800,120 → reflection of [460,40] about [560,120] = [660,200]
-    {p0:[560,120], p1:[660,200], p2:[700,200], p3:[800,120]},
+    {p0:[560,120], p1:[665,162],p2:[700,162], p3:[800,120]},
     // seg 3: S920,40 960,120  → reflection of [700,200] about [800,120] = [900,40]
-    {p0:[800,120], p1:[900,40],  p2:[920,40],  p3:[960,120]},
+    {p0:[800,120], p1:[900,78], p2:[915,78],  p3:[960,120]},
   ];
 
   function cubicPt(seg, t){
@@ -132,7 +132,7 @@ title: Home
   // Draw path
   var pathEl=document.createElementNS(ns,'path');
   pathEl.setAttribute('class','tl-path');
-  pathEl.setAttribute('d','M60,120 C130,40 200,200 310,120 S460,40 560,120 S700,200 800,120 S920,40 960,120');
+  pathEl.setAttribute('d','M60,120 C130,78 210,162 310,120 S455,78 560,120 S700,162 800,120 S915,78 960,120');
   svg.appendChild(pathEl);
 
   // Render nodes — tooltips above path (appended last so they're on top)
