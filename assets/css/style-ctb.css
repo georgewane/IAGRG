@@ -1,0 +1,577 @@
+/* ============================================================
+   COSMIC TIMELINE — timeline.css
+   Stylesheet for the full-page draggable timeline experience.
+   Linked from timeline.html via <link rel="stylesheet">.
+============================================================ */
+
+
+/* ============================================================
+   RESET & BASE
+============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  color: #dde6ff;
+  background: linear-gradient(180deg,
+    #060308  0%,
+    #080d1c 20%,
+    #0a1535 50%,
+    #060308 100%
+  );
+}
+
+
+/* ============================================================
+   SCENE — full-viewport root container
+============================================================ */
+#scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1400px;
+  perspective-origin: 50% 45%;
+}
+
+
+/* ============================================================
+   GRID — subtle perspective floor, very faint
+============================================================ */
+.grid {
+  position: absolute;
+  inset: 0;
+  opacity: .032;
+  background-image:
+    linear-gradient(rgba(180,200,255,.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180,200,255,.6) 1px, transparent 1px);
+  background-size: 80px 80px;
+  transform: perspective(900px) rotateX(74deg) scale(2);
+  transform-origin: center bottom;
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   ERA NEBULA CLOUDS — three soft radial blobs.
+   Positioned via JS relative to viewport.
+   filter: blur gives soft diffuse edges.
+============================================================ */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  opacity: 0;
+  transition: opacity 2.5s ease;
+}
+.nebula.visible { opacity: 1; }
+
+/* Foundation era — warm brand gold */
+#neb-left {
+  width: 500px; height: 360px;
+  background: radial-gradient(circle, rgba(252,163,17,.10) 0%, transparent 70%);
+}
+/* Theory era — cool indigo */
+#neb-mid {
+  width: 580px; height: 420px;
+  background: radial-gradient(circle, rgba(90,70,190,.13) 0%, transparent 70%);
+}
+/* Observation era — teal */
+#neb-right {
+  width: 560px; height: 400px;
+  background: radial-gradient(circle, rgba(30,130,170,.13) 0%, transparent 70%);
+}
+
+
+/* ============================================================
+   AMBIENT LAYER — distant twinkling stars.
+   Parallaxes on mousemove via JS.
+============================================================ */
+#ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+#ambient span {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle var(--dur, 4s) infinite ease-in-out var(--delay, 0s);
+}
+
+
+/* ============================================================
+   TITLE BLOCK — fixed, centered at top
+============================================================ */
+.title {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+.title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #eef2ff;
+  text-shadow: 0 0 80px rgba(140,170,255,.2);
+}
+.title p {
+  margin-top: 7px;
+  font-family: Inter, sans-serif;
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4a62a0;
+}
+
+
+/* ============================================================
+   VIEWPORT — clips world canvas, drag cursor
+============================================================ */
+#viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#viewport.dragging { cursor: grabbing; }
+
+
+/* ============================================================
+   WORLD — the 4000 × 1100 px draggable canvas.
+   Moved exclusively via transform: translate3d().
+============================================================ */
+#world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+
+/* ============================================================
+   SVG LAYER — animated connector line
+============================================================ */
+#worldSvg {
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Animated dash flow on the connector line */
+.connector-line {
+  stroke: rgba(252,163,17,.22);
+  stroke-dasharray: 8 10;
+  filter: drop-shadow(0 0 6px rgba(120,190,255,.35));
+  animation: dashFlow 16s linear infinite;
+}
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -200; }
+}
+
+
+/* ============================================================
+   STAR BUTTONS
+============================================================ */
+.star {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-clip: padding-box;
+  transform: translate(-50%, -50%);
+  transition:
+    transform .25s cubic-bezier(.2,.8,.4,1),
+    box-shadow .25s ease,
+    filter .2s ease;
+  z-index: 5;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  left: -12px; right: -12px;
+  top: -12px;  bottom: -12px;
+  border-radius: 50%;
+}
+
+.star:hover {
+  transform: translate(-50%, -50%) scale(1.55);
+  filter: brightness(1.15);
+  z-index: 8;
+}
+
+.star:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(120,200,255,.35);
+}
+
+/* Sizes */
+.large  { width: 17px; height: 17px; }
+.medium { width: 12px; height: 12px; }
+.small  { width:  8px; height:  8px; }
+
+/* ── Foundation: warm luminous brand gold ── */
+.foundation {
+  background: radial-gradient(circle at 35% 35%, #fff8e0, #fca311);
+  box-shadow:
+    0 0  6px 1px rgba(252,163,17,.9),
+    0 0 18px 4px rgba(252,163,17,.5),
+    0 0 42px 8px rgba(252,163,17,.2);
+}
+.foundation:hover {
+  box-shadow:
+    0 0  8px  2px rgba(252,163,17,1),
+    0 0 30px  8px rgba(252,163,17,.7),
+    0 0 65px 14px rgba(252,163,17,.35);
+}
+
+/* ── Black hole: dark core, crisp cyan ring ── */
+.blackhole {
+  background: radial-gradient(circle at 40% 40%, #1a2a40, #04090f);
+  border: 1.5px solid rgba(90,185,255,.7);
+  box-shadow:
+    0 0  6px 1px rgba(70,170,255,.6),
+    0 0 18px 4px rgba(50,140,220,.25);
+}
+/* Accretion ring */
+.blackhole::before {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width:  calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 50%;
+  border: 1px solid rgba(70,170,255,.18);
+}
+/* Outer fade ring */
+.blackhole::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width:  calc(100% + 22px);
+  height: calc(100% + 22px);
+  border-radius: 50%;
+  border: 1px solid rgba(70,170,255,.06);
+  animation: horizonPulse 4.5s ease-in-out infinite;
+}
+
+@keyframes horizonPulse {
+  0%,100% { opacity: .7; }
+  50%      { opacity: 0; }
+}
+
+.blackhole:hover {
+  box-shadow:
+    0 0  8px  2px rgba(100,200,255,.95),
+    0 0 32px  8px rgba(50,140,220,.55);
+}
+
+/* ── Gravitational wave: pale cyan, expanding pulse ring ── */
+.wave {
+  background: radial-gradient(circle at 35% 35%, #f0ffff, #90ecf4);
+  box-shadow:
+    0 0  6px 1px rgba(90,235,255,.8),
+    0 0 20px 4px rgba(70,215,235,.35);
+}
+.wave::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 1.5px solid rgba(90,235,255,.5);
+  animation: wavePulse 2.6s ease-out infinite;
+}
+
+@keyframes wavePulse {
+  0%   { transform: translate(-50%,-50%) scale(1); opacity: .8; }
+  100% { transform: translate(-50%,-50%) scale(3); opacity: 0; }
+}
+
+.wave:hover {
+  box-shadow:
+    0 0  8px  2px rgba(110,245,255,1),
+    0 0 34px  8px rgba(70,215,235,.6);
+}
+
+/* ── Cosmology: soft violet nebula glow ── */
+.cosmo {
+  background: radial-gradient(circle at 35% 35%, #ece6ff, #a880ee);
+  box-shadow:
+    0 0  6px  1px rgba(160,120,255,.8),
+    0 0 20px  4px rgba(130,90,235,.35),
+    0 0 48px 10px rgba(90,60,195,.18);
+}
+.cosmo:hover {
+  box-shadow:
+    0 0  8px  2px rgba(185,145,255,1),
+    0 0 34px  8px rgba(130,90,235,.65),
+    0 0 65px 14px rgba(90,60,195,.3);
+}
+
+/* ── Theory: cool geometric white-blue node ── */
+.theory {
+  background: radial-gradient(circle at 35% 35%, #ffffff, #c0e4ff);
+  box-shadow:
+    0 0  5px 1px rgba(170,215,255,.8),
+    0 0 14px 3px rgba(130,195,255,.35);
+}
+.theory:hover {
+  box-shadow:
+    0 0  7px 2px rgba(195,225,255,1),
+    0 0 24px 6px rgba(130,195,255,.65);
+}
+
+
+/* ============================================================
+   YEAR LABELS
+============================================================ */
+.starlabel {
+  position: absolute;
+  transform: translateX(-50%);
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  color: rgba(120,150,210,.5);
+  pointer-events: none;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+.starlabel.active {
+  color: rgba(190,215,255,.85);
+}
+
+
+/* ============================================================
+   TOOLTIP
+============================================================ */
+.tooltip {
+  position: fixed;
+  padding: 8px 13px;
+  background: rgba(5,9,22,.97);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 8px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .12s;
+  z-index: 30;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+.tooltip strong {
+  color: #fca311;
+  font-weight: 500;
+  margin-right: 7px;
+}
+
+
+/* ============================================================
+   DETAIL PANEL
+============================================================ */
+.panel {
+  position: fixed;
+  top: 0;
+  right: -480px;
+  width: 440px;
+  max-width: 95vw;
+  height: 100%;
+  background: rgba(4,8,20,.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255,255,255,.06);
+  transition: right .38s cubic-bezier(.4,0,.2,1);
+  z-index: 20;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(70,90,150,.3) transparent;
+}
+.panel.open { right: 0; }
+
+.panel-inner { padding: 32px 32px 52px; }
+
+/* Image / graphic placeholder */
+.panel-img {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0b1226, #101b34, #090f1e);
+  border: 1px solid rgba(255,255,255,.05);
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.panel-img-icon { opacity: .22; pointer-events: none; }
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 18px; right: 20px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  color: #6a80b0;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.close-btn:hover { background: rgba(255,255,255,.09); color: #eef2ff; }
+
+/* Year badge */
+.p-year {
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fca311;
+  border: 1px solid rgba(252,163,17,.28);
+  border-radius: 4px;
+  padding: 3px 9px;
+  margin-bottom: 13px;
+}
+
+/* Event title */
+.p-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #edf1ff;
+  margin-bottom: 4px;
+}
+
+/* Separator */
+.p-sep {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,.08) 0%, transparent 100%);
+  margin: 18px 0;
+}
+
+/* Description — Lora for academic warmth */
+.p-desc {
+  font-family: Lora, Georgia, serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #96aace;
+  margin-bottom: 22px;
+}
+
+/* Tag pills */
+.ptags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px; }
+.tag {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: .4px;
+  border: 1px solid rgba(255,255,255,.08);
+  color: #6880ac;
+  background: rgba(255,255,255,.025);
+}
+
+/* Action buttons */
+.p-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+
+.btn-p {
+  padding: 9px 20px;
+  border-radius: 7px;
+  background: rgba(252,163,17,.1);
+  border: 1px solid rgba(252,163,17,.32);
+  color: #fca311;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  transition: background .2s, border-color .2s;
+}
+.btn-p:hover {
+  background: rgba(252,163,17,.2);
+  border-color: rgba(252,163,17,.6);
+}
+
+.btn-s {
+  padding: 9px 18px;
+  border-radius: 7px;
+  border: 1px solid rgba(255,255,255,.09);
+  color: #6878a8;
+  text-decoration: none;
+  font-size: 13px;
+  transition: border-color .2s, color .2s;
+}
+.btn-s:hover { border-color: rgba(255,255,255,.2); color: #b0bede; }
+
+/* Next milestone */
+.p-next {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.05);
+  font-size: 11.5px;
+  color: #3d5080;
+  line-height: 1.5;
+}
+.p-next span { color: #5870a0; }
+
+
+/* ============================================================
+   VIGNETTE — subtle edge darkening
+============================================================ */
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center,
+    transparent 45%,
+    rgba(0,0,0,.18) 72%,
+    rgba(0,0,0,.45) 100%);
+  z-index: 1;
+}
+
+
+/* ============================================================
+   HINT BAR
+============================================================ */
+.hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(80,110,170,.42);
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   KEYFRAMES
+============================================================ */
+@keyframes twinkle {
+  0%, 100% { opacity: var(--base-op, .3); transform: scale(1); }
+  50%       { opacity: 1;                  transform: scale(1.9); }
+}
