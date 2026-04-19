@@ -1520,194 +1520,428 @@ h4 {
 /* ==========================================================================
    Horizontal Swipeable Timeline Ribbon
    ========================================================================== */
-/* ==========================================================================
-   Timeline Tabs Navigation
-   ========================================================================== */
-/* ===================================== */
-/* HOMEPAGE MINI CURVE TIMELINE          */
-/* Replaces old ribbon timeline          */
-/* ===================================== */
+/* ======================================
+   COSMIC TIMELINE BRIDGE
+   Replaces old timeline-ribbon-section
+====================================== */
 
-/* ===================================== */
-/* FINAL POLISHED MINI CURVE TIMELINE    */
-/* Integrated refined version            */
-/* ===================================== */
-
-.timeline-ribbon-section{
-  padding: 48px 0 32px;
+@keyframes ctbTwinkle {
+  0%,100%  { opacity: 0; }
+  50%      { opacity: var(--op, 0.5); }
 }
 
-.timeline-intro{
+@keyframes ctbDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.cosmic-timeline-bridge {
+  position: relative;
+  padding: 72px 0 52px;
+  background: linear-gradient(180deg,
+    #050b1a  0%,
+    #0a1535 40%,
+    #0d1e42 70%,
+    #0f2238 100%);
+  overflow: hidden;
+}
+
+.ctb-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ctb-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.ctb-head {
   text-align: center;
-  max-width: 760px;
-  margin: 0 auto 14px;
+  margin-bottom: 48px;
 }
 
-.timeline-intro h2{
-  margin-bottom: 14px;
+.ctb-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+  margin-bottom: 16px;
 }
 
-.timeline-lead{
-  border-left: none !important;
-  max-width: 700px;
+.ctb-title {
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-family: var(--font-heading);
+  color: #e8eef8;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.ctb-sub {
+  font-size: 1rem;
+  color: #7d96b4;
+  max-width: 580px;
   margin: 0 auto;
-  color: var(--text-muted);
+  line-height: 1.75;
 }
 
-/* Curve Area */
-
-.timeline-curve-wrap{
+/* Scroll wrapper */
+.ctb-scroll-wrap {
   overflow-x: auto;
   overflow-y: visible;
-  position: relative;
-  margin-top: -12px;
-  -webkit-overflow-scrolling: touch;
+  padding: 28px 0 12px;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
-.timeline-curve-wrap::-webkit-scrollbar{
+.ctb-scroll-wrap::-webkit-scrollbar {
   display: none;
 }
 
-.timeline-curve-svg{
-  width: 100%;
-  min-width: 980px;
-  height: auto;
+.ctb-svg {
   display: block;
+  width: 100%;
+  min-width: 960px;
   overflow: visible;
 }
 
-/* Main Path */
-
-.timeline-main-path{
+/* Animated path */
+.ctb-path {
   fill: none;
-  stroke: var(--brand-accent);
-  stroke-width: 4;
+  stroke: url(#tlgrd);
+  stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-
-  stroke-dasharray: 1800;
-  stroke-dashoffset: 1800;
-  animation: drawCurve 2s ease forwards;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: ctbDraw 2.6s cubic-bezier(.4,0,.2,1) .2s forwards;
 }
 
 /* Nodes */
-
-.timeline-node{
+.ctb-node {
   cursor: pointer;
-  transition: all 0.25s ease;
 }
 
-.timeline-node circle{
-  fill: var(--bg-light);
-  stroke: var(--brand-dark);
-  stroke-width: 5;
-  transition: all 0.25s ease;
-}
-
-.timeline-node text{
-  text-anchor: middle;
-  font-size: 0.95rem;
-  font-weight: 800;
-  fill: var(--brand-dark);
-  pointer-events: none;
-}
-
-/* Tooltip */
-
-.timeline-tip{
+.ctb-halo {
+  fill: none;
+  stroke: var(--brand-accent);
+  stroke-width: 10;
   opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-  pointer-events: none;
+  transition: opacity .3s ease;
 }
 
-.timeline-tip-box{
-  background: rgba(255,255,255,0.98);
-  border: 2px solid rgba(15,23,42,0.08);
-  border-radius: 14px;
-  padding: 10px 12px;
-  /* box-shadow: 0 16px 28px rgba(15,23,42,0.10); */
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 72px;
-  box-sizing: border-box;
+.ctb-node:hover .ctb-halo {
+  opacity: 0.15;
 }
 
-.timeline-tip-box strong{
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--brand-dark);
-  margin-bottom: 4px;
-  letter-spacing: 0.01em;
+.ctb-dot {
+  fill: #0a1535;
+  stroke: var(--brand-accent);
+  stroke-width: 2.5;
+  transition: all .25s ease;
+  filter: drop-shadow(0 0 5px rgba(252,163,17,0.45));
 }
 
-.timeline-tip-box span{
-  display: block;
-  font-size: 0.86rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #334155;
-}
-
-/* Hover */
-
-.timeline-node:hover circle{
-  transform: scale(1.22);
+.ctb-node:hover .ctb-dot {
   fill: var(--brand-accent);
-  stroke: var(--brand-dark);
+  stroke: #fff;
+  filter: drop-shadow(0 0 14px rgba(252,163,17,0.9));
 }
 
-.timeline-node:hover text{
-  fill: var(--brand-dark);
+.ctb-year {
+  text-anchor: middle;
+  font-size: 10.5px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  fill: #6e89a8;
+  transition: fill .25s;
 }
 
-.timeline-node:hover .timeline-tip{
+.ctb-node:hover .ctb-year {
+  fill: var(--brand-accent);
+}
+
+/* Tooltip card */
+.ctb-tip {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transform: translateY(8px);
+}
+
+.ctb-node:hover .ctb-tip {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Bottom CTA */
-
-.timeline-bottom{
-  text-align: center;
-  margin-top: 22px;
+.ctb-tip rect:first-child {
+  fill: rgba(8,15,40,0.97);
+  stroke: rgba(252,163,17,0.28);
+  stroke-width: 1;
 }
 
-.timeline-link{
+.ctb-tip-bar {
+  fill: var(--brand-accent);
+}
+
+.ctb-tip-yr {
+  fill: var(--brand-accent);
+  font-size: 10px;
+  font-family: var(--font-body);
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-/* Animation */
-
-@keyframes drawCurve{
-  to{
-    stroke-dashoffset: 0;
-  }
+.ctb-tip-tx {
+  fill: #b8cce0;
+  font-size: 11px;
+  font-family: var(--font-body);
+  font-weight: 500;
 }
 
+/* CTA */
+.ctb-cta {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.ctb-btn {
+  display: inline-block;
+  border: 1px solid rgba(252,163,17,0.35);
+  color: var(--brand-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 11px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.ctb-btn:hover {
+  background: rgba(252,163,17,0.08);
+  border-color: rgba(252,163,17,0.65);
+  color: var(--brand-accent);
+}
+
+#ctb {
+  background:linear-gradient(180deg,#050b1a 0%,#0a1535 40%,#0d1e42 70%,#10243a 100%);
+  padding:64px 0 48px;
+  overflow:hidden;
+  position:relative;
+  font-family:'Inter',sans-serif
+}
+
+#stars {position:absolute;inset:0;
+  pointer-events:none
+}
+
+.star {position:absolute;
+  background:#fff;
+  border-radius:50%;
+  animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s);
+  opacity:0
+}
+
+@keyframes twinkle {
+  0%,100%{opacity:0}50%{opacity:var(--op,0.5)}
+}
+
+.ctb-inner {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px
+}
+
+.ctb-head {
+  text-align:center;
+  margin-bottom:44px
+}
+
+.ctb-eyebrow {display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#fca311;margin-bottom:14px
+}
+
+.ctb-title {
+  font-size:2.6rem;
+  font-weight:300;
+  color:#e8eef8;
+  line-height:1.15;
+  margin:0 0 14px;
+  font-family:Georgia,serif
+}
+
+.ctb-sub {
+  font-size:0.97rem;
+  color:#8da0bc;
+  max-width:600px;
+  margin:0 auto;
+  line-height:1.75
+}
+
+.ctb-scroll {
+  overflow-x:auto;
+  overflow-y:visible;
+  padding:96px 0 40px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch
+}
+
+.ctb-scroll::-webkit-scrollbar {
+  display:none
+}
+
+.ctb-svg {
+  display:block;
+  min-width:1020px;
+  overflow:visible}
+
+.tl-path {
+  fill:none;
+  stroke:url(#tlgrd);
+  stroke-width:2.5;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:3200;
+  stroke-dashoffset:3200;
+  animation:drawPath 2.6s cubic-bezier(.4,0,.2,1) .3s forwards
+}
+
+@keyframes drawPath {
+  to{stroke-dashoffset:0}
+}
+
+.tl-node {
+  cursor:pointer
+}
+
+.tl-halo {
+  fill:none;
+  stroke:#fca311;
+  stroke-width:10;
+  opacity:0;
+  transition:opacity .3s
+}
+
+.tl-node:hover .tl-halo {
+  opacity:0.15
+}
+
+.tl-dot {
+  fill:#0a1535;
+  stroke:#fca311;
+  stroke-width:2.5;
+  transition:all .25s ease;
+  filter:drop-shadow(0 0 5px rgba(252,163,17,0.5))
+}
+
+.tl-node:hover .tl-dot {
+  fill:#fca311;
+  stroke:#fff;
+  filter:drop-shadow(0 0 14px rgba(252,163,17,0.9))
+}
+
+.tl-year {
+  text-anchor:middle;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;fill:#6e89a8;
+  transition:fill .25s
+}
+
+.tl-node:hover .tl-year {
+  fill:#fca311
+}
+
+.tl-tip {
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease
+}
+
+.tl-node:hover .tl-tip {
+  opacity:1
+}
+
+.tl-tip-bg {
+  fill:rgba(8,15,40,0.97);
+  stroke:rgba(252,163,17,0.3);
+  stroke-width:1
+}
+
+.tl-tip-bar {
+  fill:#fca311
+}
+
+.tl-tip-yr {
+  fill:#fca311;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.5px
+}
+
+.tl-tip-tx {
+  fill:#b8cce0;
+  font-size:11px;
+  font-weight:500
+}
+
+.ctb-cta {
+  text-align:center;
+  margin-top:24px
+}
+
+.ctb-btn {
+  display:inline-block;
+  border:1px solid rgba(252,163,17,0.35);
+  color:#fca311;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;padding:11px 28px;
+  border-radius:4px;
+  text-decoration:none;
+  transition:all .2s;
+  background:transparent;
+  cursor:pointer
+}
+
+.ctb-btn:hover {
+  background:rgba(252,163,17,0.08);
+  border-color:rgba(252,163,17,0.65)
+}
 /* Mobile */
 
-@media (max-width: 768px){
-
-  .timeline-ribbon-section{
-    padding: 44px 0 28px;
+@media (max-width: 768px) {
+  .cosmic-timeline-bridge {
+    padding: 52px 0 40px;
   }
 
-  .timeline-intro{
-    margin-bottom: 18px;
+  .ctb-title {
+    font-size: 2rem;
   }
 
-  .timeline-curve-svg{
-    min-width: 900px;
+  .ctb-sub {
+    font-size: 0.94rem;
   }
 
-  .timeline-tip{
-    display: none;
+  .ctb-scroll-wrap {
+    padding: 20px 0 8px;
+  }
+
+  .ctb-tip {
+    display: none; /* tooltips hidden on mobile — years still visible */
   }
 }
 /* Responsive */
