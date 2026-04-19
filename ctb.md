@@ -307,7 +307,7 @@ if (e.image) {
   pimg.style.display = 'none';
   pimgIcon.style.display = 'block';
   pimgIcon.innerHTML = iconMap[e.cls] || '';
-}g
+}
   document.getElementById('pimgIcon').innerHTML = iconMap[e.cls] || '';
   document.getElementById('py').textContent = e.year;
   document.getElementById('pt').textContent = e.title;
