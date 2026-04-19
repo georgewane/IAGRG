@@ -24,6 +24,7 @@ title: News & Announcements
     <button class="filter-tab" data-filter="job">Jobs</button>
     <button class="filter-tab" data-filter="conference">Conferences</button>
     <button class="filter-tab" data-filter="news">News</button>
+    <button class="filter-tab" data-filter="wgg">WGG</button>
   </div>
 
   <div class="news-feed">
@@ -38,6 +39,7 @@ title: News & Announcements
           {% when "job" %}Jobs
           {% when "conference" %}Conferences
           {% when "news" %}News
+          {% when "wgg" %}WGG
         {% endcase %}
         </span>
 
@@ -48,14 +50,14 @@ title: News & Announcements
       </div>
 
       <h2 class="news-title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
 
       <p class="news-excerpt">
         {{ post.excerpt | strip_html | truncatewords: 34 }}
       </p>
 
-      <a href="{{ post.url }}" class="read-more">Read More →</a>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
 
     </article>
     {% endfor %}
@@ -63,3 +65,26 @@ title: News & Announcements
   </div>
 
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".filter-tab");
+  const cards = document.querySelectorAll(".news-card");
+
+tabs.forEach(tab => {
+tab.addEventListener("click", () => {
+tabs.forEach(t => t.classList.remove("active"));
+tab.classList.add("active");
+
+      const filter = tab.dataset.filter;
+
+      cards.forEach(card => {
+        card.style.display =
+          filter === "all" || card.dataset.category === filter
+          ? ""
+          : "none";
+      });
+    });
+
+});
+});
+</script>
