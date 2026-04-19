@@ -58,7 +58,14 @@
                             </div>
                         </li>
                         <li><a href="{{ '/wgg' | relative_url }}">WGG</a></li>
-                        <li><a href="{{ '/resources' | relative_url }}">Resources</a></li>
+                        <li class="dropdown">
+                            <a href ="{{ '/resources' | relative_url }}" class="dropbtn">Resources ▾</a>
+                            <div class="dropdown-content">
+                                <a href="{{ '/ctb' | relative_url }}" target="_blank" rel="noopener noreferrer">100 years of GR</a>
+                                <a href="{{ '/resources' | relative_url }}" target="_blank" rel="noopener noreferrer">Comprehensive Guides</a>
+                                <a href="{{ '/quick-resources' | relative_url }}" target="_blank" rel="noopener noreferrer">Quick Links</a>
+                            </div>
+                        </li>
                         <li><a href="{{ '/news' | relative_url }}">News</a></li>
                         <li><a href ="https://docs.google.com/forms/d/e/1FAIpQLSfkZTA8h72B3SzKMBhOkj4I3YPryhMwx8wdx6soZ42ABrI5qA/viewform?usp=publish-editor" target ="_blank">Submit Announcement</a></li>
                     </ul>
