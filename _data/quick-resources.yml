@@ -1,0 +1,55 @@
+- title: "INSPIRE-HEP"
+  url: "https://inspirehep.net/"
+  curator: "INSPIRE Collaboration"
+  description: "The trusted community hub for High-Energy Physics, Gravitation, and Cosmology literature, author profiles, and job listings."
+  category: "Literature & Databases"
+  tags: ["Database", "Jobs"]
+  level: "All Levels"
+
+- title: "Living Reviews in Relativity"
+  url: "https://link.springer.com/journal/41114"
+  curator: "Springer Nature"
+  description: "Peer-reviewed, open-access review articles summarizing the state-of-the-art in all areas of general relativity."
+  category: "Literature & Databases"
+  tags: ["Journal", "Review"]
+  level: "Advanced"
+
+- title: "Luca Bombelli Topics in Relativity"
+  url: "https://www.phy.olemiss.edu/~luca/Topics/list.html"
+  curator: "Luca Bombelli"
+  description: "A curated collection of online resources, lecture notes, software, and reference links across topics in relativity and gravitation."
+  category: "Literature & Databases"
+  tags: ["Links", "Reference"]
+  level: "All Levels"
+
+- title: "NASA/IPAC Extragalactic Database – Level 5"
+  url: "https://ned.ipac.caltech.edu/level5/"
+  curator: "NASA/IPAC, Caltech"
+  description: "A classic collection of pedagogical review articles and reference material in astronomy, cosmology, and extragalactic astrophysics."
+  category: "Literature & Databases"
+  tags: ["Reviews", "Archive"]
+  level: "Intermediate/Advanced"
+
+- title: "Einstein Toolkit"
+  url: "https://einsteintoolkit.org/"
+  curator: "Einstein Toolkit Consortium"
+  description: "A community-driven software platform of core computational tools to advance and support research in relativistic astrophysics."
+  category: "Software & Computing"
+  tags: ["Open Source", "Simulation"]
+  level: "Intermediate/Advanced"
+
+- title: "Gravitational Wave Open Science Center (GWOSC)"
+  url: "https://gwosc.org/"
+  curator: "LIGO Laboratory / Virgo / KAGRA"
+  description: "Access to open data from gravitational-wave observatories, along with tutorials and software to learn how to analyze the data."
+  category: "Software & Computing"
+  tags: ["Data", "Tutorials"]
+  level: "Beginner/Intermediate"
+
+- title: "Hyperspace@GU"
+  url: "https://hyperspace.uni-frankfurt.de/"
+  curator: "Goethe University Frankfurt"
+  description: "A bulletin board for general relativity, featuring job announcements, conference listings, and community news."
+  category: "Career & Community"
+  tags: ["Jobs", "Conferences"]
+  level: "All Levels"
