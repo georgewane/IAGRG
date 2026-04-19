@@ -69,7 +69,7 @@ observer.observe(ctb);
       </svg>
     </div>
     <div class="ctb-cta">
-      <a href="/timeline" class="ctb-btn">View Full Timeline →</a>
+      <a href="{{'/ctb' | relative_url }}" class="ctb-btn">View Full Timeline →</a>
     </div>
   </div>
 </div>
