@@ -169,19 +169,18 @@
 /* ==========================================
    CURATOR LINE
 ========================================== */
-
 .resource-curator{
-  margin: 0.35rem 0 0.7rem;
-  font-size: 0.92rem;
-  line-height: 1.4;
-  color: rgba(255,255,255,0.72);
-  font-style: italic;
+  margin:0.35rem 0 0.7rem;
+  font-size:0.92rem;
+  line-height:1.4;
+  color:var(--text-muted);
+  font-style:italic;
 }
 
-/* Optional stronger curator name */
 .resource-curator strong{
-  color: rgba(255,255,255,0.88);
-  font-style: normal;
+  color:var(--brand-dark);
+  font-style:normal;
+  font-weight:700;
 }
 
 /* =====================================================
