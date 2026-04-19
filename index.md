@@ -30,6 +30,24 @@ title: Home
 
   </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const ctb = document.getElementById("ctb");
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+ctb.classList.add("visible");
+}
+});
+}, {
+threshold: 0.15
+});
+
+observer.observe(ctb);
+});
+</script>
+
 <!-- COSMIC TIMELINE BRIDGE -->
 <div id="ctb">
   <div id="stars"></div>
@@ -229,7 +247,6 @@ title: Home
 
 })();
 </script>
-
 <!-- MAIN SECTION -->
 <section class="home-main-section bg-light">
   <div class="container grid-layout">
