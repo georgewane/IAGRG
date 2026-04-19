@@ -56,9 +56,16 @@ layout: none
     <div class="close-btn" id="closeBtn">&times;</div>
     <div class="panel-inner">
       <div class="panel-img">
-        <svg class="panel-img-icon" id="pimgIcon" width="80" height="80"
-             viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-      </div>
+  <img id="pimg" src="" alt="">
+  
+  <svg class="panel-img-icon"
+       id="pimgIcon"
+       width="80"
+       height="80"
+       viewBox="0 0 80 80"
+       fill="none"
+       xmlns="http://www.w3.org/2000/svg"></svg>
+</div>  
       <div class="p-year"  id="py"></div>
       <h2  class="p-title" id="pt"></h2>
       <div class="p-sep"></div>
@@ -287,26 +294,65 @@ svg.appendChild(poly);
      closePanel():
        - Removes .open to slide the panel out
   ============================================================ */
-  function openPanel(e) {
-    document.getElementById('pimgIcon').innerHTML = iconMap[e.cls] || '';
-    document.getElementById('py').textContent     = e.year;
-    document.getElementById('pt').textContent     = e.title;
-    document.getElementById('pd').textContent     = e.desc;
+ function openPanel(e) {
+  const pimg = document.getElementById('pimg');
+const pimgIcon = document.getElementById('pimgIcon');
 
-    const tagList = tagMap[e.cls] || ['Physics'];
-    document.getElementById('ptags').innerHTML =
-      tagList.map(t => `<span class="tag">${t}</span>`).join('');
+if (e.image) {
+  pimg.src = "{{ '/assets/img/ctbimg/' | relative_url }}" + e.image;
+  pimg.alt = e.title;
+  pimg.style.display = 'block';
+  pimgIcon.style.display = 'none';
+} else {
+  pimg.style.display = 'none';
+  pimgIcon.style.display = 'block';
+  pimgIcon.innerHTML = iconMap[e.cls] || '';
+}g
+  document.getElementById('pimgIcon').innerHTML = iconMap[e.cls] || '';
+  document.getElementById('py').textContent = e.year;
+  document.getElementById('pt').textContent = e.title;
+  document.getElementById('pd').textContent = e.desc;
 
-    const idx  = events.indexOf(e);
-    const next = events[idx + 1];
-    const pnext = document.getElementById('pnext');
-    pnext.innerHTML = next
-      ? `Next milestone &rarr; <span>${next.year} — ${next.title}</span>`
-      : 'You have reached the present frontier.';
+  const tagList = tagMap[e.cls] || ['Physics'];
 
-    panel.classList.add('open');
-    panel.scrollTop = 0;
+  document.getElementById('ptags').innerHTML =
+    tagList.map(t => `<span class="tag">${t}</span>`).join('');
+
+  /* ---------- LINKS ---------- */
+  const paperBtn = document.getElementById('paperBtn');
+  const moreBtn  = document.getElementById('moreBtn');
+
+  if (e.paper) {
+    paperBtn.href = e.paper;
+    paperBtn.target = '_blank';
+    paperBtn.rel = 'noopener noreferrer';
+    paperBtn.style.display = 'inline-block';
+  } else {
+    paperBtn.style.display = 'none';
   }
+
+  if (e.more) {
+    moreBtn.href = e.more;
+    moreBtn.target = '_blank';
+    moreBtn.rel = 'noopener noreferrer';
+    moreBtn.style.display = 'inline-block';
+  } else {
+    moreBtn.style.display = 'none';
+  }
+
+  /* ---------- NEXT ---------- */
+  const idx = events.indexOf(e);
+  const next = events[idx + 1];
+
+  const pnext = document.getElementById('pnext');
+
+  pnext.innerHTML = next
+    ? `Next milestone &rarr; <span>${next.year} — ${next.title}</span>`
+    : 'You have reached the present frontier.';
+
+  panel.classList.add('open');
+  panel.scrollTop = 0;
+}
 
   function closePanel() { panel.classList.remove('open'); }
 
