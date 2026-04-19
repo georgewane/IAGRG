@@ -1,103 +1,142 @@
 - year: 1915
-  title: The Field Equations
-  desc: In November 1915, Einstein presents his General Theory of Relativity to the Prussian Academy of Sciences — ten coupled nonlinear partial differential equations that rewrite gravity not as a force but as the curvature of spacetime geometry. It is one of the greatest intellectual achievements in the history of science.
+  title: "The Field Equations"
+  desc: "In November 1915, Einstein presents his General Theory of Relativity to the Prussian Academy of Sciences — ten coupled nonlinear partial differential equations that rewrite gravity not as a force but as the curvature of spacetime geometry. It is one of the greatest intellectual achievements in the history of science."
   x: 260
   y: 520
-  size: large
-  cls: foundation
+  size: "large"
+  cls: "foundation"
+  paper: "https://einsteinpapers.press.princeton.edu/vol6-trans/351"
+  more: "http://www.scholarpedia.org/article/General_relativity"
+  image: "einstein-eqns.webp"
 
 - year: 1916
-  title: Schwarzschild Solution
-  desc: Karl Schwarzschild, writing from the Russian front during World War I, derives the first exact solution to Einstein's field equations. It describes spacetime outside a perfectly spherical mass and predicts a critical radius — the Schwarzschild radius — within which nothing, not even light, can escape.
+  title: "Schwarzschild Solution"
+  desc: "Karl Schwarzschild, writing from the Russian front during World War I, derives the first exact solution to Einstein's field equations. It describes spacetime outside a perfectly spherical mass and predicts a critical radius — the Schwarzschild radius — within which nothing, not even light, can escape."
   x: 520
   y: 230
-  size: medium
-  cls: foundation
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1002/andp.19163591602"
+  more: "http://www.scholarpedia.org/article/Black_hole"
+  image: "schwarzschild.png"
 
 - year: 1919
-  title: Solar Eclipse Confirmation
-  desc: Arthur Eddington leads expeditions to Príncipe and Sobral to photograph stars near the Sun during a total solar eclipse. The measured deflection of starlight matches Einstein's GR prediction precisely — not Newton's. The result makes international front-page news and transforms Einstein into a global icon.
+  title: "Solar Eclipse Confirmation"
+  desc: "Arthur Eddington leads expeditions to Príncipe and Sobral to photograph stars near the Sun during a total solar eclipse. The measured deflection of starlight matches Einstein's GR prediction precisely — not Newton's. The result makes international front-page news and transforms Einstein into a global icon."
   x: 760
   y: 760
-  size: medium
-  cls: foundation
+  size: "medium"
+  cls: "foundation"
+  paper: "https://royalsocietypublishing.org/doi/10.1098/rsta.1920.0009"
+  more: "http://www.scholarpedia.org/article/General_relativity"
+  image: "eddington-eclipse.jpg"
 
 - year: 1921
-  title: Kaluza–Klein Theory
-  desc: Theodor Kaluza proposes a five-dimensional extension of GR that unifies gravity with electromagnetism in a single geometric framework. Oskar Klein later gives the extra dimension a physical interpretation — compactified at the Planck scale. The framework becomes a direct intellectual ancestor of string theory.
+  title: "Kaluza–Klein Theory"
+  desc: "Theodor Kaluza proposes a five-dimensional extension of GR that unifies gravity with electromagnetism in a single geometric framework. Oskar Klein later gives the extra dimension a physical interpretation — compactified at the Planck scale. The framework becomes a direct intellectual ancestor of string theory."
   x: 1040
   y: 400
-  size: small
-  cls: theory
+  size: "small"
+  cls: "theory"
+  paper: "https://doi.org/10.1007/BF01314090"
+  more: "http://www.scholarpedia.org/article/Kaluza-Klein_theory"
+  image: "kaluza.gif"
 
 - year: 1922
-  title: Expanding Universe
-  desc: Alexander Friedmann derives a family of solutions to Einstein's field equations in which the universe is not static but dynamic — it can expand or contract. Einstein initially dismisses this as a mathematical curiosity, but Friedmann's equations will prove to be the foundational language of modern cosmology.
+  title: "Expanding Universe"
+  desc: "Alexander Friedmann derives a family of solutions to Einstein's field equations in which the universe is not static but dynamic — it can expand or contract. Einstein initially dismisses this as a mathematical curiosity, but Friedmann's equations will prove to be the foundational language of modern cosmology."
   x: 1280
   y: 680
-  size: medium
-  cls: cosmo
+  size: "medium"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1007/BF01332580"
+  more: "http://www.scholarpedia.org/article/Cosmology"
+  image: "friedmann.jpg"
 
 - year: 1929
-  title: Hubble's Law
-  desc: Edwin Hubble, using the 100-inch Hooker telescope at Mount Wilson, observes that galaxies are moving away from Earth at speeds proportional to their distance. This linear relationship—Hubble's Law—provides the first observational evidence that the universe is expanding, confirming the dynamic models proposed by Friedmann and Lemaître and forever changing our conception of the cosmos.
+  title: "Hubble's Law"
+  desc: "Edwin Hubble, using the 100-inch Hooker telescope at Mount Wilson, observes that galaxies are moving away from Earth at speeds proportional to their distance. This linear relationship—Hubble's Law—provides the first observational evidence that the universe is expanding, confirming the dynamic models proposed by Friedmann and Lemaître and forever changing our conception of the cosmos."
   x: 1410
   y: 450
-  size: large
-  cls: cosmo
+  size: "large"
+  cls: "cosmo"
+  paper: "https://www.pnas.org/doi/10.1073/pnas.15.3.168"
+  more: "http://www.scholarpedia.org/article/Hubble_constant"
+  image: "Raisinbread.gif"
 
 - year: 1939
-  title: Gravitational Collapse
-  desc: J. Robert Oppenheimer and Hartland Snyder publish the first rigorous relativistic model of stellar gravitational collapse. Their calculation shows that a sufficiently massive star will collapse indefinitely past any known pressure barrier — pointing directly to what would later be called a black hole.
+  title: "Gravitational Collapse"
+  desc: "J. Robert Oppenheimer and Hartland Snyder publish the first rigorous relativistic model of stellar gravitational collapse. Their calculation shows that a sufficiently massive star will collapse indefinitely past any known pressure barrier — pointing directly to what would later be called a black hole."
   x: 1640
   y: 920
-  size: large
-  cls: blackhole
+  size: "large"
+  cls: "blackhole"
+  paper: "https://journals.aps.org/pr/abstract/10.1103/PhysRev.56.455"
+  more: "http://www.scholarpedia.org/article/Black_hole"
+  image: "oscollapse.gif"
 
 - year: 1963
-  title: Kerr Metric
-  desc: Roy Kerr discovers an exact solution to Einstein's field equations for a rotating massive body. The Kerr metric is arguably the most physically important exact solution in GR since virtually all real astrophysical black holes carry angular momentum, Kerr's solution describes nearly every black hole in the observable universe.
+  title: "Kerr Metric"
+  desc: "Roy Kerr discovers an exact solution to Einstein's field equations for a rotating massive body. The Kerr metric is arguably the most physically important exact solution in GR since virtually all real astrophysical black holes carry angular momentum, Kerr's solution describes nearly every black hole in the observable universe."
   x: 1980
   y: 290
-  size: large
-  cls: blackhole
+  size: "large"
+  cls: "blackhole"
+  paper: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.11.237"
+  more: "http://www.scholarpedia.org/article/Kerr_metric"
+  image: "kerr.jpg"
 
 - year: 1974
-  title: Hawking Radiation
-  desc: Stephen Hawking demonstrates that black holes are not entirely black. Applying quantum field theory in curved spacetime, he shows that particle-antiparticle pairs near the event horizon can result in net radiation escaping to infinity — thermal radiation inversely proportional in temperature to the black hole's mass. The discovery forges a deep link between gravity, thermodynamics, and quantum mechanics.
+  title: "Hawking Radiation"
+  desc: "Stephen Hawking demonstrates that black holes are not entirely black. Applying quantum field theory in curved spacetime, he shows that particle-antiparticle pairs near the event horizon can result in net radiation escaping to infinity — thermal radiation inversely proportional in temperature to the black hole's mass. The discovery forges a deep link between gravity, thermodynamics, and quantum mechanics."
   x: 2320
   y: 580
-  size: large
-  cls: wave
+  size: "large"
+  cls: "wave"
+  paper: "https://www.nature.com/articles/248030a0"
+  more: "http://www.scholarpedia.org/article/Hawking_radiation"
+  image: "hawking-rad.jpg"
 
 - year: 1998
-  title: Accelerating Universe
-  desc: The High-Z Supernova Search Team and the Supernova Cosmology Project independently analyse Type Ia supernovae as standard candles and discover that the universe's expansion is accelerating. This demands dark energy — a previously unknown form of energy comprising roughly 68% of the total energy content of the cosmos.
+  title: "Accelerating Universe"
+  desc: "The High-Z Supernova Search Team and the Supernova Cosmology Project independently analyse Type Ia supernovae as standard candles and discover that the universe's expansion is accelerating. This demands dark energy — a previously unknown form of energy comprising roughly 68% of the total energy content of the cosmos."
   x: 2660
   y: 840
-  size: large
-  cls: cosmo
+  size: "large"
+  cls: "cosmo"
+  paper: "https://iopscience.iop.org/article/10.1086/300499"
+  more: "http://www.scholarpedia.org/article/Dark_energy"
+  image: "hubble-tel.jpg"
 
 - year: 2015
-  title: GW150914
-  desc: On 14 September 2015, the LIGO interferometers at Hanford and Livingston simultaneously register a 0.2-second transient gravitational wave signal matching the GR waveform template for two merging black holes of roughly 36 and 29 solar masses. It is the first direct detection of gravitational waves.
+  title: "GW150914"
+  desc: "On 14 September 2015, the LIGO interferometers at Hanford and Livingston simultaneously register a 0.2-second transient gravitational wave signal matching the GR waveform template for two merging black holes of roughly 36 and 29 solar masses. It is the first direct detection of gravitational waves."
   x: 2980
   y: 210
-  size: large
-  cls: wave
+  size: "large"
+  cls: "wave"
+  paper: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102"
+  more: "http://www.scholarpedia.org/article/Gravitational_Waves:_Science_with_Compact_Binary_Coalescences"
+  image: "gw150914.png"
 
 - year: 2019
-  title: Imaging a Black Hole
-  desc: The Event Horizon Telescope — a planet-scale array of eight radio observatories — releases the first direct image of a black hole's shadow. The target is M87*, the supermassive black hole at the centre of Messier 87. The luminous crescent surrounding the dark shadow matches GR predictions with extraordinary precision.
+  title: "Imaging a Black Hole"
+  desc: "The Event Horizon Telescope — a planet-scale array of eight radio observatories — releases the first direct image of a black hole's shadow. The target is M87*, the supermassive black hole at the centre of Messier 87. The luminous crescent surrounding the dark shadow matches GR predictions with extraordinary precision."
   x: 3280
   y: 590
-  size: large
-  cls: blackhole
+  size: "large"
+  cls: "blackhole"
+  paper: "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7"
+  more: "http://www.scholarpedia.org/article/Event_Horizon_Telescope"
+  image: "ehtbh.jpg"
 
 - year: 2023
-  title: Nanohertz GW Background
-  desc: Five independent pulsar timing array collaborations simultaneously announce strong evidence for a stochastic background of gravitational waves at nanohertz frequencies. The most probable source is the inspiral of supermassive black hole binaries across cosmic history.
+  title: "Nanohertz GW Background"
+  desc: "Five independent pulsar timing array collaborations simultaneously announce strong evidence for a stochastic background of gravitational waves at nanohertz frequencies. The most probable source is the inspiral of supermassive black hole binaries across cosmic history."
   x: 3660
   y: 360
-  size: medium
-  cls: wave
+  size: "medium"
+  cls: "wave"
+  paper: "https://iopscience.iop.org/article/10.3847/2041-8213/acdac6"
+  more: "http://www.scholarpedia.org/article/Gravitational_waves"
+  image: "nanograv.jpg"
