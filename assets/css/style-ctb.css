@@ -324,41 +324,58 @@
     /* ============================================================
        DETAIL PANEL
     ============================================================ */
-    .panel {
-      position: fixed;
-      top: 0;
-      right: -480px;
-      width: 440px;
-      max-width: 95vw;
-      height: 100%;
-      background: rgba(4,8,20,.98);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-left: 1px solid rgba(255,255,255,.06);
-      transition: right .38s cubic-bezier(.4,0,.2,1);
-      z-index: 20;
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: rgba(70,90,150,.3) transparent;
-    }
-    .panel.open { right: 0; }
+   .panel{
+  position:fixed;
+  top:0;
+  right:-480px;
+  width:440px;
+  max-width:95vw;
+  height:100%;
+  background:rgba(4,8,20,.98);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-left:1px solid rgba(255,255,255,.06);
+  transition:right .38s cubic-bezier(.4,0,.2,1);
+  z-index:20;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(70,90,150,.3) transparent;
+}
 
-    .panel-inner { padding: 32px 32px 52px; }
+.panel.open{
+  right:0;
+}
 
-    /* Image / graphic placeholder */
-    .panel-img {
-      width: 100%;
-      height: 130px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #0b1226, #101b34, #090f1e);
-      border: 1px solid rgba(255,255,255,.05);
-      margin-bottom: 26px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .panel-img-icon { opacity: .22; pointer-events: none; }
+.panel-inner{
+  padding:72px 32px 52px;
+}
+
+.panel-img{
+  width:100%;
+  height:170px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#0b1226,#101b34,#090f1e);
+  border:1px solid rgba(255,255,255,.05);
+  margin-bottom:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+
+#pimg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none;
+}
+
+.panel-img-icon{
+  opacity:.22;
+  pointer-events:none;
+  position:absolute;
+}
 
     /* Close button */
     .close-btn {
