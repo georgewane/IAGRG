@@ -1,62 +1,79 @@
-- name: "Prof. Jayant V. Narlikar"
-  lifespan: "1938 – 2025"
-  image: "/assets/img/jvn.webp"
-  interest: "Cosmology, Mach's Principle, Conformal Gravity"
-  bio: "A leading proponent of steady-state cosmology and a pioneer in modifying General Relativity to incorporate Mach's Principle."
-  works:
-    - "Hoyle-Narlikar Theory of Gravity (1964) – A conformal, action-at-a-distance theory of gravity."
-
-- name: "Prof. Naresh Dadhich"
-  lifespan: "1944 – 2025"
-  image: "/assets/img/NareshD.jpg"
-  interest: "General Relativity, Black Hole Physics, Cosmology, Higher-Dimensional Gravity"
-  bio: "One of India’s most distinguished relativists, known for deep contributions to gravitation, black hole physics, and cosmology. He made influential advances in higher-dimensional gravity, Lovelock theories, and the fundamental structure of spacetime."
-  works:
-    - "Dadhich–Molina Black Hole Solutions – Important exact solutions in higher-dimensional gravity."
-    - "Major contributions to Lovelock Gravity and Einstein–Gauss–Bonnet theories."
-    - "Extensive work on gravitational collapse, spacetime singularities, and cosmological models."
-
-- name: "Prof. Thanu Padmanabhan"
-  lifespan: "1957 – 2021"
-  image: "/assets/img/paddy.jpg"
-  interest: "Quantum Gravity, Cosmology, Structure Formation"
-  bio: "An internationally acclaimed theoretical physicist known for his thermodynamic approach to gravity."
-  works:
-    - "Emergent Gravity Paradigm – Interpreting gravity as an emergent, thermodynamic phenomenon."
-    - "Gravitation: Foundations and Frontiers (Book, 2010)"
-
-- name: "Prof. C. V. Vishveshwara"
-  lifespan: "1938 – 2017"
-  image: "/assets/img/cvvishu.jpeg"
-  interest: "Black Hole Physics, General Relativity, Gravitational Waves, Relativistic Astrophysics"
-  bio: "A pioneering Indian relativist celebrated for foundational work on black holes and their stability. He was among the earliest researchers to predict the characteristic oscillations of black holes, later known as quasi-normal modes, and played a major role in building relativity research in India."
-  works:
-    - "Discovery of Black Hole Quasi-Normal Modes (1970) – Predicted the ringing vibrations emitted by perturbed black holes."
-    - "Important studies on Schwarzschild black hole stability and relativistic compact objects."
-    - "Major contributions to science education and the growth of gravitation research in India."
-
-- name: "Prof. Prahlad Chunnilal Vaidya"
-  lifespan: "1918 – 2010"
-  image: "/assets/img/pvaidya.jpeg"
-  interest: "Astrophysics, Exact Solutions in GR"
-  bio: "A pioneer in modeling the exterior gravitational field of radiating stars, providing one of the most important exact solutions to Einstein's equations."
-  works:
-    - "The Vaidya Metric (1951) – Describes the spacetime around a radiating, non-rotating spherical body."
-
-- name: "Prof. Amal Kumar Raychaudhuri"
-  lifespan: "1923 – 2005"
-  image: "/assets/img/AKRaychaudhuri.jpg"
-  interest: "Cosmology, General Relativity, Singularities"
-  bio: "A legendary physicist whose work laid the geometric foundation for the Penrose-Hawking singularity theorems."
-  works:
-    - "The Raychaudhuri Equation (1955) – A fundamental equation describing the kinematics of congruences of trajectories in general relativity."
-    - "Theoretical Cosmology (Book, 1979)"
-
 - name: "Prof. Subrahmanyan Chandrasekhar"
+  born: 1910
   lifespan: "1910 – 1995"
   image: "/assets/img/chandra.jpeg"
   interest: "Stellar Structure, Black Holes, Radiative Transfer"
   bio: "Nobel Laureate (1983) who completely solved the mathematical theory of black holes and the stability of white dwarfs."
   works:
     - "The Chandrasekhar Limit (1930) – The maximum mass of a stable white dwarf star."
-    - "The Mathematical Theory of Black Holes (Book, 1983)"
+    - "The Mathematical Theory of Black Holes (Book, 1983)."
+
+- name: "Prof. Vishnu Vasudev Narlikar"
+  born: 1918
+  lifespan: "1918 – 1991"
+  image: "/assets/img/vvnarlikar.jpg"
+  interest: "General Relativity, Cosmology, Mathematical Physics"
+  bio: "Among the earliest Indian relativists who contributed significantly to gravitation and cosmology, while shaping mathematical physics education in India."
+  works:
+    - "Important contributions to General Relativity and cosmological models."
+    - "Mentored and influenced generations of Indian theoretical physicists."
+
+- name: "Prof. Prahlad Chunnilal Vaidya"
+  born: 1918
+  lifespan: "1918 – 2010"
+  image: "/assets/img/pvaidya.jpeg"
+  interest: "Astrophysics, Exact Solutions in GR"
+  bio: "A pioneer in modeling the exterior gravitational field of radiating stars, providing one of the most important exact solutions to Einstein's equations."
+  works:
+    - "The Vaidya Metric (1951) – Describes the spacetime around a radiating, non-rotating spherical body."
+    - "Major contributions to exact solutions in General Relativity."
+
+- name: "Prof. Amal Kumar Raychaudhuri"
+  born: 1923
+  lifespan: "1923 – 2005"
+  image: "/assets/img/AKRaychaudhuri.jpg"
+  interest: "Cosmology, General Relativity, Singularities"
+  bio: "A legendary physicist whose work laid the geometric foundation for the Penrose-Hawking singularity theorems."
+  works:
+    - "The Raychaudhuri Equation (1955) – A fundamental equation describing the kinematics of congruences of trajectories in general relativity."
+    - "Theoretical Cosmology (Book, 1979)."
+
+- name: "Prof. Jayant V. Narlikar"
+  born: 1938
+  lifespan: "1938 – 2025"
+  image: "/assets/img/jvn.webp"
+  interest: "Cosmology, Mach's Principle, Conformal Gravity"
+  bio: "A leading proponent of steady-state cosmology and a pioneer in modifying General Relativity to incorporate Mach's Principle."
+  works:
+    - "Hoyle-Narlikar Theory of Gravity (1964) – A conformal, action-at-a-distance theory of gravity."
+    - "Major contributions to cosmology and science popularisation."
+
+- name: "Prof. C. V. Vishveshwara"
+  born: 1938
+  lifespan: "1938 – 2017"
+  image: "/assets/img/cvvishu.jpeg"
+  interest: "Black Hole Physics, General Relativity, Gravitational Waves, Relativistic Astrophysics"
+  bio: "A pioneering Indian relativist celebrated for foundational work on black holes and their stability."
+  works:
+    - "Discovery of Black Hole Quasi-Normal Modes (1970) – Predicted the ringing vibrations emitted by perturbed black holes."
+    - "Major contributions to black hole stability and relativity research in India."
+
+- name: "Prof. Naresh Dadhich"
+  born: 1944
+  lifespan: "1944 – 2025"
+  image: "/assets/img/NareshD.jpg"
+  interest: "General Relativity, Black Hole Physics, Cosmology, Higher-Dimensional Gravity"
+  bio: "One of India’s most distinguished relativists, known for deep contributions to gravitation, black hole physics, and cosmology."
+  works:
+    - "Major contributions to Lovelock Gravity and Einstein–Gauss–Bonnet theories."
+    - "Extensive work on gravitational collapse, spacetime singularities, and cosmological models."
+
+- name: "Prof. Thanu Padmanabhan"
+  born: 1957
+  lifespan: "1957 – 2021"
+  image: "/assets/img/paddy.jpg"
+  interest: "Quantum Gravity, Cosmology, Structure Formation"
+  bio: "An internationally acclaimed theoretical physicist known for his thermodynamic approach to gravity."
+  works:
+    - "Emergent Gravity Paradigm – Interpreting gravity as an emergent, thermodynamic phenomenon."
+    - "Gravitation: Foundations and Frontiers (Book, 2010)."
