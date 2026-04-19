@@ -351,28 +351,58 @@ h4 {
    Homepage opening visual section.
 ================================================== */
 
-.hero-immersive {
+.hero-immersive{
   min-height: 75vh;
-
   background-size: cover;
   background-position: center;
-
   position: relative;
+  overflow: hidden;
 }
 
+/* Seamless bleed from hero into cosmic timeline */
+.hero-immersive::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:220px;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(8,13,28,0) 0%,
+      rgba(8,13,28,0.28) 35%,
+      rgba(8,13,28,0.65) 68%,
+      rgba(8,13,28,0.92) 88%,
+      #08111f 100%
+    );
+}
 /* Dark overlay improves text readability
    over image backgrounds */
-.hero-gradient {
+.hero-gradient{
   position: absolute;
   inset: 0;
-
   display: flex;
   align-items: center;
 
   background:
-    linear-gradient(to right,
-      rgba(10, 17, 40, 0.94),
-      rgba(10, 17, 40, 0.55));
+    linear-gradient(
+      to right,
+      rgba(10,17,40,0.92) 0%,
+      rgba(10,17,40,0.58) 42%,
+      rgba(10,17,40,0.20) 78%,
+      rgba(10,17,40,0.05) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(8,10,18,0.08) 58%,
+      rgba(8,12,24,0.30) 76%,
+      rgba(8,13,28,0.62) 90%,
+      rgba(8,13,28,0.88) 100%
+    );
 }
 
 .hero-content {
@@ -1525,219 +1555,14 @@ h4 {
    Replaces old timeline-ribbon-section
 ====================================== */
 
-@keyframes ctbTwinkle {
-  0%,100%  { opacity: 0; }
-  50%      { opacity: var(--op, 0.5); }
-}
-
-@keyframes ctbDraw {
-  to { stroke-dashoffset: 0; }
-}
-
-.cosmic-timeline-bridge {
-  position: relative;
-  padding: 72px 0 52px;
-  background: linear-gradient(180deg,
-    #050b1a  0%,
-    #0a1535 40%,
-    #0d1e42 70%,
-    #0f2238 100%);
-  overflow: hidden;
-}
-
-.ctb-stars {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.ctb-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.ctb-head {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.ctb-eyebrow {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--brand-accent);
-  margin-bottom: 16px;
-}
-
-.ctb-title {
-  font-size: 2.8rem;
-  font-weight: 300;
-  font-family: var(--font-heading);
-  color: #e8eef8;
-  margin: 0 0 16px;
-  line-height: 1.15;
-}
-
-.ctb-sub {
-  font-size: 1rem;
-  color: #7d96b4;
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.75;
-}
-
-/* Scroll wrapper */
-.ctb-scroll-wrap {
-  overflow-x: auto;
-  overflow-y: visible;
-  padding: 28px 0 12px;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.ctb-scroll-wrap::-webkit-scrollbar {
-  display: none;
-}
-
-.ctb-svg {
-  display: block;
-  width: 100%;
-  min-width: 960px;
-  overflow: visible;
-}
-
-/* Animated path */
-.ctb-path {
-  fill: none;
-  stroke: url(#tlgrd);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 3000;
-  stroke-dashoffset: 3000;
-  animation: ctbDraw 2.6s cubic-bezier(.4,0,.2,1) .2s forwards;
-}
-
-/* Nodes */
-.ctb-node {
-  cursor: pointer;
-}
-
-.ctb-halo {
-  fill: none;
-  stroke: var(--brand-accent);
-  stroke-width: 10;
-  opacity: 0;
-  transition: opacity .3s ease;
-}
-
-.ctb-node:hover .ctb-halo {
-  opacity: 0.15;
-}
-
-.ctb-dot {
-  fill: #0a1535;
-  stroke: var(--brand-accent);
-  stroke-width: 2.5;
-  transition: all .25s ease;
-  filter: drop-shadow(0 0 5px rgba(252,163,17,0.45));
-}
-
-.ctb-node:hover .ctb-dot {
-  fill: var(--brand-accent);
-  stroke: #fff;
-  filter: drop-shadow(0 0 14px rgba(252,163,17,0.9));
-}
-
-.ctb-year {
-  text-anchor: middle;
-  font-size: 10.5px;
-  font-family: var(--font-body);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  fill: #6e89a8;
-  transition: fill .25s;
-}
-
-.ctb-node:hover .ctb-year {
-  fill: var(--brand-accent);
-}
-
-/* Tooltip card */
-.ctb-tip {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease, transform .25s ease;
-  transform-box: fill-box;
-  transform-origin: 50% 100%;
-  transform: translateY(8px);
-}
-
-.ctb-node:hover .ctb-tip {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.ctb-tip rect:first-child {
-  fill: rgba(8,15,40,0.97);
-  stroke: rgba(252,163,17,0.28);
-  stroke-width: 1;
-}
-
-.ctb-tip-bar {
-  fill: var(--brand-accent);
-}
-
-.ctb-tip-yr {
-  fill: var(--brand-accent);
-  font-size: 10px;
-  font-family: var(--font-body);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.ctb-tip-tx {
-  fill: #b8cce0;
-  font-size: 11px;
-  font-family: var(--font-body);
-  font-weight: 500;
-}
-
-/* CTA */
-.ctb-cta {
-  text-align: center;
-  margin-top: 28px;
-}
-
-.ctb-btn {
-  display: inline-block;
-  border: 1px solid rgba(252,163,17,0.35);
-  color: var(--brand-accent);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 11px 28px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all .2s ease;
-}
-
-.ctb-btn:hover {
-  background: rgba(252,163,17,0.08);
-  border-color: rgba(252,163,17,0.65);
-  color: var(--brand-accent);
-}
-
 #ctb {
   background:linear-gradient(180deg,#050b1a 0%,#0a1535 40%,#0d1e42 70%,#10243a 100%);
   padding:64px 0 48px;
   overflow:hidden;
   position:relative;
-  font-family:'Inter',sans-serif
+  font-family:'Inter',sans-serif;
+  margin-top: -35px;
+  z-index: 2;
 }
 
 #stars {position:absolute;inset:0;
@@ -1761,9 +1586,9 @@ h4 {
   padding:0 24px
 }
 
-.ctb-head {
+.ctb-head{
   text-align:center;
-  margin-bottom:44px
+  margin-bottom:14px;
 }
 
 .ctb-eyebrow {display:block;
@@ -1775,12 +1600,12 @@ h4 {
 }
 
 .ctb-title {
-  font-size:2.6rem;
+  font-size:3rem;
   font-weight:300;
   color:#e8eef8;
   line-height:1.15;
   margin:0 0 14px;
-  font-family:Georgia,serif
+  font-family:var(--font-heading);
 }
 
 .ctb-sub {
@@ -1791,22 +1616,24 @@ h4 {
   line-height:1.75
 }
 
-.ctb-scroll {
+.ctb-scroll{
   overflow-x:auto;
   overflow-y:visible;
-  padding:96px 0 40px;
+  padding:0 0 8px;
   scrollbar-width:none;
-  -webkit-overflow-scrolling:touch
+  -webkit-overflow-scrolling:touch;
 }
 
 .ctb-scroll::-webkit-scrollbar {
   display:none
 }
 
-.ctb-svg {
+.ctb-svg{
   display:block;
   min-width:1020px;
-  overflow:visible}
+  overflow:visible;
+  margin-top:-58px;
+}
 
 .tl-path {
   fill:none;
