@@ -23,9 +23,6 @@ layout: none
 
 <div id="scene">
 
-  <!-- Subtle edge vignette -->
-  <div class="vignette"></div>
-
   <!-- Perspective grid floor -->
   <div class="grid"></div>
 
@@ -47,7 +44,7 @@ layout: none
   <div id="viewport">
     <div id="world">
       <svg id="worldSvg" xmlns="http://www.w3.org/2000/svg"></svg>
-      <!-- Star buttons and year labels injected by JS -->
+      <!-- Stars and year labels injected by JS -->
     </div>
   </div>
 
@@ -58,35 +55,27 @@ layout: none
   <div class="panel" id="panel">
     <div class="close-btn" id="closeBtn">&times;</div>
     <div class="panel-inner">
-
       <div class="panel-img">
-        <svg class="panel-img-icon" id="pimgIcon"
-             width="80" height="80" viewBox="0 0 80 80"
-             fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+        <svg class="panel-img-icon" id="pimgIcon" width="80" height="80"
+             viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
       </div>
-
       <div class="p-year"  id="py"></div>
       <h2  class="p-title" id="pt"></h2>
       <div class="p-sep"></div>
       <p   class="p-desc"  id="pd"></p>
-
-      <div class="ptags" id="ptags"></div>
-
+      <div class="ptags"   id="ptags"></div>
       <div class="p-btns">
         <a class="btn-p" href="#" id="paperBtn">Read Paper</a>
         <a class="btn-s" href="#" id="moreBtn">Learn More</a>
       </div>
-
       <div class="p-next" id="pnext"></div>
-
     </div>
-
   </div>
 
   <!-- Instruction hint -->
   <div class="hint">Drag to explore &nbsp;·&nbsp; Click a star to open</div>
 
-</div><!-- /#scene -->
+</div>
 
 <script>
 
@@ -94,172 +83,67 @@ layout: none
      DATA — 12 milestone events.
 
      LAYOUT ZONES (x ranges):
-       100–1600  = Left   — Foundations 1915–1939
-       1700–2800 = Centre — Theory Revolution 1963–1998
+       100–1600  = Left  — Foundations 1915–1939
+       1700–2800 = Center — Theory Revolution 1963–1998
        2900–3900 = Right  — Observation Era 2015–2023
 
      Y positions deliberately scattered across 120–950 of the
-     1100 px world height so stars form constellation clusters,
+     1100px world height so stars form constellation clusters,
      never a straight horizontal line.
   ============================================================ */
-  const events = [
-
-    /* ── LEFT ZONE: Foundations 1915–1939 ── */
-    {
-      year: '1915',
-      title: 'The Field Equations',
-      desc: 'In November 1915, Einstein presents his General Theory of Relativity to the Prussian Academy of Sciences — ten coupled nonlinear partial differential equations that rewrite gravity not as a force but as the curvature of spacetime geometry. It is one of the greatest intellectual achievements in the history of science.',
-      x: 260, y: 520,
-      size: 'large', cls: 'foundation'
-    },
-    {
-      year: '1916',
-      title: 'Schwarzschild Solution',
-      desc: 'Karl Schwarzschild, writing from the Russian front during World War I, derives the first exact solution to Einstein\'s field equations. It describes spacetime outside a perfectly spherical mass and predicts a critical radius — the Schwarzschild radius — within which nothing, not even light, can escape.',
-      x: 520, y: 230,
-      size: 'medium', cls: 'foundation'
-    },
-    {
-      year: '1919',
-      title: 'Solar Eclipse Confirmation',
-      desc: 'Arthur Eddington leads expeditions to Príncipe and Sobral to photograph stars near the Sun during a total solar eclipse. The measured deflection of starlight matches Einstein\'s GR prediction precisely — not Newton\'s. The result makes international front-page news and transforms Einstein into a global icon.',
-      x: 760, y: 760,
-      size: 'medium', cls: 'foundation'
-    },
-    {
-      year: '1921',
-      title: 'Kaluza–Klein Theory',
-      desc: 'Theodor Kaluza proposes a five-dimensional extension of GR that unifies gravity with electromagnetism in a single geometric framework. Oskar Klein later gives the extra dimension a physical interpretation — compactified at the Planck scale. The framework becomes a direct intellectual ancestor of string theory.',
-      x: 1040, y: 400,
-      size: 'small', cls: 'theory'
-    },
-    {
-      year: '1922',
-      title: 'Expanding Universe',
-      desc: 'Alexander Friedmann derives a family of solutions to Einstein\'s field equations in which the universe is not static but dynamic — it can expand or contract. Einstein initially dismisses this as a mathematical curiosity, but Friedmann\'s equations will prove to be the foundational language of modern cosmology.',
-      x: 1280, y: 680,
-      size: 'medium', cls: 'cosmo'
-    },
-    {
-      year: '1939',
-      title: 'Gravitational Collapse',
-      desc: 'J. Robert Oppenheimer and Hartland Snyder publish the first rigorous relativistic model of stellar gravitational collapse. Their calculation shows that a sufficiently massive star will collapse indefinitely past any known pressure barrier — pointing directly to what would later be called a black hole.',
-      x: 1540, y: 920,
-      size: 'large', cls: 'blackhole'
-    },
-
-    /* ── CENTRE ZONE: Theory Revolution 1963–1998 ── */
-    {
-      year: '1963',
-      title: 'Kerr Metric',
-      desc: 'Roy Kerr discovers an exact solution to Einstein\'s field equations for a rotating massive body. The Kerr metric is arguably the most physically important exact solution in GR: since virtually all real astrophysical black holes carry angular momentum, Kerr\'s solution describes nearly every black hole in the observable universe.',
-      x: 1980, y: 290,
-      size: 'large', cls: 'blackhole'
-    },
-    {
-      year: '1974',
-      title: 'Hawking Radiation',
-      desc: 'Stephen Hawking demonstrates that black holes are not entirely black. Applying quantum field theory in curved spacetime, he shows that particle-antiparticle pairs near the event horizon can result in net radiation escaping to infinity — thermal radiation inversely proportional in temperature to the black hole\'s mass. The discovery forges a deep link between gravity, thermodynamics, and quantum mechanics.',
-      x: 2320, y: 580,
-      size: 'large', cls: 'wave'
-    },
-    {
-      year: '1998',
-      title: 'Accelerating Universe',
-      desc: 'The High-Z Supernova Search Team and the Supernova Cosmology Project independently analyse Type Ia supernovae as standard candles and discover that the universe\'s expansion is accelerating. This demands dark energy — a previously unknown form of energy comprising roughly 68% of the total energy content of the cosmos. The Nobel Prize in Physics 2011 was awarded for this discovery.',
-      x: 2660, y: 840,
-      size: 'large', cls: 'cosmo'
-    },
-
-    /* ── RIGHT ZONE: Observation Era 2015–2023 ── */
-    {
-      year: '2015',
-      title: 'GW150914',
-      desc: 'On 14 September 2015, the LIGO interferometers at Hanford and Livingston simultaneously register a 0.2-second transient gravitational wave signal matching the GR waveform template for two merging black holes of roughly 36 and 29 solar masses, 1.3 billion light-years distant. It is the first direct detection of gravitational waves — a new observational window on the universe opens.',
-      x: 2980, y: 210,
-      size: 'large', cls: 'wave'
-    },
-    {
-      year: '2019',
-      title: 'Imaging a Black Hole',
-      desc: 'The Event Horizon Telescope — a planet-scale array of eight radio observatories — releases the first direct image of a black hole\'s shadow. The target is M87*, the supermassive black hole at the centre of Messier 87, massing approximately 6.5 billion solar masses. The luminous crescent surrounding the dark shadow matches GR predictions with extraordinary precision.',
-      x: 3280, y: 590,
-      size: 'large', cls: 'blackhole'
-    },
-    {
-      year: '2023',
-      title: 'Nanohertz GW Background',
-      desc: 'Five independent pulsar timing array collaborations — NANOGrav, EPTA, PPTA, CPTA, and InPTA — simultaneously announce strong evidence for a stochastic background of gravitational waves at nanohertz frequencies. The most probable source is the inspiral of supermassive black hole binaries across cosmic history. A new frequency frontier in gravitational wave astronomy opens.',
-      x: 3660, y: 360,
-      size: 'medium', cls: 'wave'
-    }
-
-  ];
-
-
+  const events = {{ site.data.ctb | jsonify }};
   /* ============================================================
      TAG MAP — category pill labels for the detail panel
   ============================================================ */
-  const tagMap = {
-    foundation: ['Foundations', 'General Relativity', '1910s'],
-    blackhole:  ['Black Holes', 'Singularities'],
-    wave:       ['Gravitational Waves', 'Observation'],
-    cosmo:      ['Cosmology', 'Expansion'],
-    theory:     ['Unified Theory', 'Extra Dimensions']
-  };
-
+  const tagMap = {{ site.data.ctb_tags | jsonify }};
 
   /* ============================================================
-     PANEL ICON MAP
-     SVG drawn inside the panel image placeholder (80×80 viewBox).
-     One design per category.
+     PANEL ICON MAP — SVG drawn inside the image placeholder.
+     One design per category; rendered at 80×80 viewBox.
   ============================================================ */
   const iconMap = {
-    foundation: `
-      <circle cx="40" cy="40" r="28" stroke="rgba(252,163,17,.55)" stroke-width="1.5" fill="none"/>
-      <circle cx="40" cy="40" r="16" stroke="rgba(252,163,17,.35)" stroke-width="1"   fill="none"/>
-      <circle cx="40" cy="40" r="4"  fill="rgba(252,163,17,.7)"/>
-      <line x1="40" y1="4"  x2="40" y2="14" stroke="rgba(252,163,17,.4)" stroke-width="1"/>
-      <line x1="40" y1="66" x2="40" y2="76" stroke="rgba(252,163,17,.4)" stroke-width="1"/>
-      <line x1="4"  y1="40" x2="14" y2="40" stroke="rgba(252,163,17,.4)" stroke-width="1"/>
-      <line x1="66" y1="40" x2="76" y2="40" stroke="rgba(252,163,17,.4)" stroke-width="1"/>`,
-
-    blackhole: `
-      <circle cx="40" cy="40" r="30" stroke="rgba(70,170,255,.25)" stroke-width="1"   fill="none"/>
-      <circle cx="40" cy="40" r="20" stroke="rgba(70,170,255,.45)" stroke-width="1.5" fill="none"/>
-      <circle cx="40" cy="40" r="10" stroke="rgba(70,170,255,.65)" stroke-width="1"   fill="none"/>
-      <circle cx="40" cy="40" r="4"  fill="rgba(4,9,16,.98)" stroke="rgba(70,170,255,.9)" stroke-width="1.5"/>`,
-
-    wave: `
-      <path d="M5,40 Q17,20 29,40 Q41,60 53,40 Q65,20 75,40" stroke="rgba(90,235,255,.7)" stroke-width="1.5" fill="none"/>
-      <path d="M5,52 Q17,32 29,52 Q41,72 53,52 Q65,32 75,52" stroke="rgba(90,235,255,.3)" stroke-width="1"   fill="none"/>
-      <path d="M5,28 Q17,8  29,28 Q41,48 53,28 Q65,8  75,28" stroke="rgba(90,235,255,.2)" stroke-width="1"   fill="none"/>`,
-
-    cosmo: `
-      <circle cx="40" cy="40" r="24" stroke="rgba(155,115,255,.5)" stroke-width="1.5" fill="rgba(90,60,195,.06)"/>
-      <circle cx="40" cy="40" r="4"  fill="rgba(155,115,255,.8)"/>
-      <circle cx="22" cy="24" r="2"   fill="rgba(195,165,255,.5)"/>
-      <circle cx="58" cy="30" r="2.5" fill="rgba(195,165,255,.4)"/>
-      <circle cx="28" cy="58" r="1.5" fill="rgba(195,165,255,.5)"/>
-      <circle cx="55" cy="54" r="2"   fill="rgba(195,165,255,.3)"/>`,
-
-    theory: `
-      <rect x="20" y="20" width="40" height="40" stroke="rgba(170,215,255,.5)" stroke-width="1.5" fill="none" rx="2"/>
-      <rect x="30" y="30" width="20" height="20" stroke="rgba(170,215,255,.3)" stroke-width="1"   fill="none" rx="1"/>
-      <circle cx="40" cy="40" r="3" fill="rgba(195,225,255,.8)"/>
-      <line x1="20" y1="20" x2="30" y2="30" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
-      <line x1="60" y1="20" x2="50" y2="30" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
-      <line x1="20" y1="60" x2="30" y2="50" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
-      <line x1="60" y1="60" x2="50" y2="50" stroke="rgba(170,215,255,.3)" stroke-width="1"/>`
+    foundation:
+      `<circle cx="40" cy="40" r="28" stroke="rgba(255,195,60,.55)" stroke-width="1.5" fill="none"/>
+       <circle cx="40" cy="40" r="16" stroke="rgba(255,195,60,.35)" stroke-width="1" fill="none"/>
+       <circle cx="40" cy="40" r="4"  fill="rgba(255,195,60,.7)"/>
+       <line x1="40" y1="4"  x2="40" y2="14" stroke="rgba(255,195,60,.4)" stroke-width="1"/>
+       <line x1="40" y1="66" x2="40" y2="76" stroke="rgba(255,195,60,.4)" stroke-width="1"/>
+       <line x1="4"  y1="40" x2="14" y2="40" stroke="rgba(255,195,60,.4)" stroke-width="1"/>
+       <line x1="66" y1="40" x2="76" y2="40" stroke="rgba(255,195,60,.4)" stroke-width="1"/>`,
+    blackhole:
+      `<circle cx="40" cy="40" r="30" stroke="rgba(70,170,255,.25)" stroke-width="1" fill="none"/>
+       <circle cx="40" cy="40" r="20" stroke="rgba(70,170,255,.45)" stroke-width="1.5" fill="none"/>
+       <circle cx="40" cy="40" r="10" stroke="rgba(70,170,255,.65)" stroke-width="1" fill="none"/>
+       <circle cx="40" cy="40" r="4"  fill="rgba(4,9,16,.98)" stroke="rgba(70,170,255,.9)" stroke-width="1.5"/>`,
+    wave:
+      `<path d="M5,40 Q17,20 29,40 Q41,60 53,40 Q65,20 75,40" stroke="rgba(90,235,255,.7)" stroke-width="1.5" fill="none"/>
+       <path d="M5,52 Q17,32 29,52 Q41,72 53,52 Q65,32 75,52" stroke="rgba(90,235,255,.3)" stroke-width="1" fill="none"/>
+       <path d="M5,28 Q17,8  29,28 Q41,48 53,28 Q65,8  75,28" stroke="rgba(90,235,255,.2)" stroke-width="1" fill="none"/>`,
+    cosmo:
+      `<circle cx="40" cy="40" r="24" stroke="rgba(155,115,255,.5)" stroke-width="1.5" fill="rgba(90,60,195,.06)"/>
+       <circle cx="40" cy="40" r="4"  fill="rgba(155,115,255,.8)"/>
+       <circle cx="22" cy="24" r="2"  fill="rgba(195,165,255,.5)"/>
+       <circle cx="58" cy="30" r="2.5" fill="rgba(195,165,255,.4)"/>
+       <circle cx="28" cy="58" r="1.5" fill="rgba(195,165,255,.5)"/>
+       <circle cx="55" cy="54" r="2"  fill="rgba(195,165,255,.3)"/>`,
+    theory:
+      `<rect x="20" y="20" width="40" height="40" stroke="rgba(170,215,255,.5)" stroke-width="1.5" fill="none" rx="2"/>
+       <rect x="30" y="30" width="20" height="20" stroke="rgba(170,215,255,.3)" stroke-width="1" fill="none" rx="1"/>
+       <circle cx="40" cy="40" r="3" fill="rgba(195,225,255,.8)"/>
+       <line x1="20" y1="20" x2="30" y2="30" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
+       <line x1="60" y1="20" x2="50" y2="30" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
+       <line x1="20" y1="60" x2="30" y2="50" stroke="rgba(170,215,255,.3)" stroke-width="1"/>
+       <line x1="60" y1="60" x2="50" y2="50" stroke="rgba(170,215,255,.3)" stroke-width="1"/>`
   };
 
-
   /* ============================================================
-     WORLD DIMENSIONS
+     WORLD DIMENSIONS — 4000 × 1100 px
+       Horizontal: wide enough to contain all events with drag room
+       Vertical: 1100px gives ~300px of meaningful vertical drag
+                 in a typical 800px viewport
   ============================================================ */
   const WORLD_W = 4000;
   const WORLD_H = 1100;
-
 
   /* ============================================================
      DOM REFERENCES
@@ -271,7 +155,6 @@ layout: none
   const panel     = document.getElementById('panel');
   const ambientEl = document.getElementById('ambient');
 
-
   /* ============================================================
      SIZE WORLD & SVG
   ============================================================ */
@@ -281,10 +164,11 @@ layout: none
   svg.setAttribute('height',  WORLD_H);
   svg.setAttribute('viewBox', `0 0 ${WORLD_W} ${WORLD_H}`);
 
-
   /* ============================================================
      NEBULA CLOUD POSITIONS
-     Fixed relative to the viewport, not the scrollable world.
+     Placed relative to viewport (not world) so they stay fixed
+     as the user drags — they represent the background sky, not
+     objects on the timeline canvas.
   ============================================================ */
   function positionNebulae() {
     const vw = window.innerWidth;
@@ -298,55 +182,69 @@ layout: none
   }
   positionNebulae();
 
+  /* Fade nebulae in after a short delay (avoids flash-of-colour on load) */
   setTimeout(() => {
-    ['neb-left', 'neb-mid', 'neb-right'].forEach(id =>
+    ['neb-left','neb-mid','neb-right'].forEach(id =>
       document.getElementById(id).classList.add('visible')
     );
   }, 500);
 
-
   /* ============================================================
      SVG CONNECTOR LINE
-     Drawn through all events in chronological order.
-     Animated dash offset (CSS @keyframes dashFlow) makes the
-     line appear to flow — subtle, not distracting.
+     Drawn through all large-sized events in chronological order.
+     The animated dash-offset (CSS @keyframes dashFlow) makes the
+     line appear to flow along its path — subtle, not distracting.
   ============================================================ */
-  const orderedEvents = [...events].sort((a, b) => parseInt(a.year) - parseInt(b.year));
+const lineEvents = events;
 
-  const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-  poly.setAttribute('points', orderedEvents.map(e => `${e.x},${e.y}`).join(' '));
-  poly.setAttribute('fill', 'none');
-  poly.setAttribute('stroke', 'rgba(252,163,17,.22)');
-  poly.setAttribute('stroke-width', '1.6');
-  poly.setAttribute('stroke-linecap', 'round');
-  poly.setAttribute('stroke-linejoin', 'round');
-  poly.classList.add('connector-line');
-  svg.appendChild(poly);
+const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
 
+poly.setAttribute(
+  'points',
+  lineEvents.map(e => `${e.x},${e.y}`).join(' ')
+);
+
+poly.setAttribute('fill', 'none');
+poly.setAttribute('stroke', 'rgba(70,150,200,.2)');
+poly.setAttribute('stroke-width', '1');
+
+poly.classList.add('connector-line');
+
+svg.appendChild(poly);
 
   /* ============================================================
      BUILD STARS & LABELS
+
+     For each event:
+       1. Create a <button class="star …"> at (e.x, e.y)
+       2. Attach tooltip + click handlers
+       3. Create a <div class="starlabel"> with the year,
+          positioned just below the dot's bottom edge
+
+     wasDrag is the shared click-vs-drag flag (set in drag engine).
   ============================================================ */
   let wasDrag = false;
 
   events.forEach(e => {
+
+    /* ── Dot radius for label offset ── */
     const dotR = e.size === 'large' ? 8.5 : e.size === 'medium' ? 6 : 4;
 
-    /* Star button */
+    /* ── Star button ── */
     const btn = document.createElement('button');
     btn.className = `star ${e.size} ${e.cls}`;
     btn.style.left = e.x + 'px';
     btn.style.top  = e.y + 'px';
     btn.setAttribute('aria-label', `${e.year}: ${e.title}`);
 
-    /* Year label */
+    /* ── Year label ── */
     const lbl = document.createElement('div');
     lbl.className   = 'starlabel';
     lbl.textContent = e.year;
     lbl.style.left  = e.x + 'px';
     lbl.style.top   = (e.y + dotR + 10) + 'px';
 
-    /* Hover: show tooltip + highlight label */
+    /* Show tooltip on hover; highlight label */
     btn.addEventListener('mouseenter', ev => {
       tip.innerHTML     = `<strong>${e.year}</strong>${e.title}`;
       tip.style.opacity = '1';
@@ -359,7 +257,7 @@ layout: none
       lbl.classList.remove('active');
     });
 
-    /* Click: open panel (ignore if this was a drag) */
+    /* Open panel on click — bail if this was actually a drag */
     btn.addEventListener('click', ev => {
       if (wasDrag) return;
       ev.stopPropagation();
@@ -370,7 +268,6 @@ layout: none
     world.appendChild(lbl);
   });
 
-
   /* ============================================================
      TOOLTIP POSITION HELPER
   ============================================================ */
@@ -379,9 +276,16 @@ layout: none
     tip.style.top  = (ev.clientY + 14) + 'px';
   }
 
-
   /* ============================================================
      PANEL OPEN / CLOSE
+
+     openPanel(e):
+       - Writes icon SVG, year badge, title, description, tags, next
+       - Adds .open class to slide the panel in
+       - Scrolls panel content to top (in case a prev entry was scrolled)
+
+     closePanel():
+       - Removes .open to slide the panel out
   ============================================================ */
   function openPanel(e) {
     document.getElementById('pimgIcon').innerHTML = iconMap[e.cls] || '';
@@ -393,8 +297,8 @@ layout: none
     document.getElementById('ptags').innerHTML =
       tagList.map(t => `<span class="tag">${t}</span>`).join('');
 
-    const idx   = events.indexOf(e);
-    const next  = events[idx + 1];
+    const idx  = events.indexOf(e);
+    const next = events[idx + 1];
     const pnext = document.getElementById('pnext');
     pnext.innerHTML = next
       ? `Next milestone &rarr; <span>${next.year} — ${next.title}</span>`
@@ -408,14 +312,29 @@ layout: none
 
   document.getElementById('closeBtn').addEventListener('click', closePanel);
 
+  /* Click outside panel + stars closes panel */
   document.getElementById('scene').addEventListener('click', ev => {
     if (!ev.target.closest('.panel') && !ev.target.closest('.star')) closePanel();
   });
 
-
   /* ============================================================
      DRAG ENGINE — Mouse
+
+     Uses translate3d() exclusively (never changes left/top),
+     keeping the drag on the GPU compositor for smooth 60 fps.
+
+     wasDrag:
+       - Set true as soon as pointer moves > 4px during a mousedown
+       - Cleared 60ms after mouseup (delay lets star click handler
+         see it as true, preventing accidental panel opens after drag)
+
+     Clamping:
+       - Horizontal: 100px slack lets user slightly overshoot edges
+       - Vertical:   200px slack for the 1100px tall world
   ============================================================ */
+
+  /* Initial camera: center on Kerr Metric (x=1980) — the heart of
+     the theory era. User can drag left for origins, right for modern. */
   const CAM_X = 1980;
   let tx = -(CAM_X - window.innerWidth * 0.44);
   let ty = -(WORLD_H / 2 - window.innerHeight / 2);
@@ -441,20 +360,19 @@ layout: none
   window.addEventListener('mouseup', () => {
     isDown = false;
     viewport.classList.remove('dragging');
-    setTimeout(() => { wasDrag = false; }, 20);
+    setTimeout(() => { wasDrag = false; }, 60);
   });
 
   window.addEventListener('mousemove', ev => {
     if (!isDown) return;
     const dx = ev.clientX - startX;
     const dy = ev.clientY - startY;
-    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) wasDrag = true;
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) wasDrag = true;
     tx = startTx + dx;
     ty = startTy + dy;
     clamp();
     applyTransform();
   });
-
 
   /* ============================================================
      DRAG ENGINE — Touch
@@ -474,7 +392,7 @@ layout: none
     const t  = ev.touches[0];
     const dx = t.clientX - startX;
     const dy = t.clientY - startY;
-    if (Math.abs(dx) > 12 || Math.abs(dy) > 12) wasDrag = true;
+    if (Math.abs(dx) > 6 || Math.abs(dy) > 6) wasDrag = true;
     tx = startTx + dx;
     ty = startTy + dy;
     clamp();
@@ -483,49 +401,49 @@ layout: none
 
   window.addEventListener('touchend', () => {
     isDown = false;
-    setTimeout(() => { wasDrag = false; }, 20);
+    setTimeout(() => { wasDrag = false; }, 60);
   });
-
 
   /* ============================================================
      DRAG HELPERS
   ============================================================ */
   function clamp() {
+    /* Horizontal: 100px slack either side of the world edges */
     tx = Math.max(-(WORLD_W - window.innerWidth  + 100), Math.min(100, tx));
+    /* Vertical:   200px slack — meaningful range within 1100px world */
     ty = Math.max(-(WORLD_H - window.innerHeight + 200), Math.min(200, ty));
   }
 
   function applyTransform() {
-    const rx = (-ty / 60);
-    const ry = (tx / 220);
-    world.style.transform =
-      `translate3d(${tx}px, ${ty}px, 0) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    world.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
   }
 
-
   /* ============================================================
-     AMBIENT BACKGROUND STARS — 180 dots, layered for depth.
+     AMBIENT BACKGROUND STARS — 180 dots with size / opacity
+     variation to simulate depth layers (closer = larger + brighter).
   ============================================================ */
   for (let i = 0; i < 180; i++) {
     const s     = document.createElement('span');
-    const layer = Math.random();
+    const layer = Math.random(); /* 0 = very distant, 1 = nearer */
     const size  = layer > 0.88 ? 2.5 : layer > 0.6 ? 1.5 : 1;
     const baseOp = layer > 0.88 ? 0.55 : layer > 0.6 ? 0.32 : 0.18;
     const dur   = (3.5 + Math.random() * 5).toFixed(1) + 's';
     const delay = (Math.random() * 7).toFixed(1) + 's';
 
     s.style.cssText =
-      `left:${(Math.random() * 100).toFixed(2)}%;`  +
-      `top:${(Math.random()  * 100).toFixed(2)}%;`  +
-      `width:${size}px;height:${size}px;`             +
+      `left:${(Math.random()*100).toFixed(2)}%;` +
+      `top:${(Math.random()*100).toFixed(2)}%;`  +
+      `width:${size}px;height:${size}px;`         +
       `--base-op:${baseOp};--dur:${dur};--delay:${delay};`;
 
     ambientEl.appendChild(s);
   }
 
-
   /* ============================================================
-     PARALLAX — ambient stars drift at ~30% of cursor offset.
+     PARALLAX — subtle ambient layer drift on mouse move.
+     Moves at ~30% of cursor offset, creating a sense that the
+     background stars are farther away than the world canvas.
+     Does NOT move the world or stars.
   ============================================================ */
   document.addEventListener('mousemove', ev => {
     const x = (ev.clientX / window.innerWidth  - 0.5) * 10;

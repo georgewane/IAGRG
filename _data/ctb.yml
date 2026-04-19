@@ -1,0 +1,95 @@
+- year: 1915
+  title: The Field Equations
+  desc: In November 1915, Einstein presents his General Theory of Relativity to the Prussian Academy of Sciences — ten coupled nonlinear partial differential equations that rewrite gravity not as a force but as the curvature of spacetime geometry. It is one of the greatest intellectual achievements in the history of science.
+  x: 260
+  y: 520
+  size: large
+  cls: foundation
+
+- year: 1916
+  title: Schwarzschild Solution
+  desc: Karl Schwarzschild, writing from the Russian front during World War I, derives the first exact solution to Einstein's field equations. It describes spacetime outside a perfectly spherical mass and predicts a critical radius — the Schwarzschild radius — within which nothing, not even light, can escape.
+  x: 520
+  y: 230
+  size: medium
+  cls: foundation
+
+- year: 1919
+  title: Solar Eclipse Confirmation
+  desc: Arthur Eddington leads expeditions to Príncipe and Sobral to photograph stars near the Sun during a total solar eclipse. The measured deflection of starlight matches Einstein's GR prediction precisely — not Newton's. The result makes international front-page news and transforms Einstein into a global icon.
+  x: 760
+  y: 760
+  size: medium
+  cls: foundation
+
+- year: 1921
+  title: Kaluza–Klein Theory
+  desc: Theodor Kaluza proposes a five-dimensional extension of GR that unifies gravity with electromagnetism in a single geometric framework. Oskar Klein later gives the extra dimension a physical interpretation — compactified at the Planck scale. The framework becomes a direct intellectual ancestor of string theory.
+  x: 1040
+  y: 400
+  size: small
+  cls: theory
+
+- year: 1922
+  title: Expanding Universe
+  desc: Alexander Friedmann derives a family of solutions to Einstein's field equations in which the universe is not static but dynamic — it can expand or contract. Einstein initially dismisses this as a mathematical curiosity, but Friedmann's equations will prove to be the foundational language of modern cosmology.
+  x: 1280
+  y: 680
+  size: medium
+  cls: cosmo
+
+- year: 1939
+  title: Gravitational Collapse
+  desc: J. Robert Oppenheimer and Hartland Snyder publish the first rigorous relativistic model of stellar gravitational collapse. Their calculation shows that a sufficiently massive star will collapse indefinitely past any known pressure barrier — pointing directly to what would later be called a black hole.
+  x: 1540
+  y: 920
+  size: large
+  cls: blackhole
+
+- year: 1963
+  title: Kerr Metric
+  desc: Roy Kerr discovers an exact solution to Einstein's field equations for a rotating massive body. The Kerr metric is arguably the most physically important exact solution in GR since virtually all real astrophysical black holes carry angular momentum, Kerr's solution describes nearly every black hole in the observable universe.
+  x: 1980
+  y: 290
+  size: large
+  cls: blackhole
+
+- year: 1974
+  title: Hawking Radiation
+  desc: Stephen Hawking demonstrates that black holes are not entirely black. Applying quantum field theory in curved spacetime, he shows that particle-antiparticle pairs near the event horizon can result in net radiation escaping to infinity — thermal radiation inversely proportional in temperature to the black hole's mass. The discovery forges a deep link between gravity, thermodynamics, and quantum mechanics.
+  x: 2320
+  y: 580
+  size: large
+  cls: wave
+
+- year: 1998
+  title: Accelerating Universe
+  desc: The High-Z Supernova Search Team and the Supernova Cosmology Project independently analyse Type Ia supernovae as standard candles and discover that the universe's expansion is accelerating. This demands dark energy — a previously unknown form of energy comprising roughly 68% of the total energy content of the cosmos.
+  x: 2660
+  y: 840
+  size: large
+  cls: cosmo
+
+- year: 2015
+  title: GW150914
+  desc: On 14 September 2015, the LIGO interferometers at Hanford and Livingston simultaneously register a 0.2-second transient gravitational wave signal matching the GR waveform template for two merging black holes of roughly 36 and 29 solar masses. It is the first direct detection of gravitational waves.
+  x: 2980
+  y: 210
+  size: large
+  cls: wave
+
+- year: 2019
+  title: Imaging a Black Hole
+  desc: The Event Horizon Telescope — a planet-scale array of eight radio observatories — releases the first direct image of a black hole's shadow. The target is M87*, the supermassive black hole at the centre of Messier 87. The luminous crescent surrounding the dark shadow matches GR predictions with extraordinary precision.
+  x: 3280
+  y: 590
+  size: large
+  cls: blackhole
+
+- year: 2023
+  title: Nanohertz GW Background
+  desc: Five independent pulsar timing array collaborations simultaneously announce strong evidence for a stochastic background of gravitational waves at nanohertz frequencies. The most probable source is the inspiral of supermassive black hole binaries across cosmic history.
+  x: 3660
+  y: 360
+  size: medium
+  cls: wave
