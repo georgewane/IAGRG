@@ -352,7 +352,7 @@ h4 {
 ================================================== */
 
 .hero-immersive{
-  min-height: 75vh;
+  min-height: 92vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1561,8 +1561,18 @@ h4 {
   overflow:hidden;
   position:relative;
   font-family:'Inter',sans-serif;
-  margin-top: -35px;
+  margin-top: 0 px;
   z-index: 2;
+   opacity:0;
+  transform:translateY(28px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}
+#ctb.visible{
+  opacity:1;
+  transform:translateY(0);
 }
 
 #stars {position:absolute;inset:0;
