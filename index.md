@@ -4,7 +4,7 @@ title: Home
 ---
 
 <!-- HERO -->
-<section class="hero-immersive" style="background-image: url('{{ '/assets/img/eht-hero.jpg' | relative_url }}');">
+<section class="hero-immersive" id="hero-section" style="background-image: url('{{ '/assets/img/eht-hero.jpg' | relative_url }}');">
   <div class="hero-gradient">
     <div class="hero-content container">
 
@@ -27,24 +27,69 @@ title: Home
       </div>
 
     </div>
+  </div>
 
+  <!-- Animated scroll hint -->
+  <div class="hero-scroll-hint" id="heroScrollHint" role="button" tabindex="0" aria-label="Scroll to Cosmic Timeline">
+    <span class="hint-label">Cosmic Timeline</span>
+    <svg class="hint-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 4v14M4 11l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </section>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const ctb = document.getElementById("ctb");
+  var hero      = document.getElementById("hero-section");
+  var ctb       = document.getElementById("ctb");
+  var mainSec   = document.getElementById("main-section");
+  var heroHint  = document.getElementById("heroScrollHint");
+  var ctbHint   = document.getElementById("ctbScrollHint");
 
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-ctb.classList.add("visible");
-}
-});
-}, {
-threshold: 0.15
-});
+  /* ── Click / keyboard handlers ── */
+  heroHint.addEventListener("click", function () {
+    ctb.scrollIntoView({ behavior: "smooth" });
+  });
+  heroHint.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") ctb.scrollIntoView({ behavior: "smooth" });
+  });
 
-observer.observe(ctb);
+  ctbHint.addEventListener("click", function () {
+    mainSec.scrollIntoView({ behavior: "smooth" });
+  });
+  ctbHint.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") mainSec.scrollIntoView({ behavior: "smooth" });
+  });
+
+  /* ── Watch the HERO leaving the viewport to hide/show heroHint ──
+     Much more reliable than watching CTB entering, since CTB has overflow:hidden */
+  var heroObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        /* Hero is back in view — show hint */
+        heroHint.classList.remove("hint-hidden");
+      } else {
+        /* Hero has left — hide hint */
+        heroHint.classList.add("hint-hidden");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  heroObserver.observe(hero);
+
+  /* ── Watch CTB for: reveal animation + ctbHint show/hide ── */
+  var ctbObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        ctb.classList.add("visible");
+        ctbHint.classList.remove("hint-hidden");
+      } else {
+        ctbHint.classList.add("hint-hidden");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  ctbObserver.observe(ctb);
 });
 </script>
 
@@ -76,6 +121,14 @@ observer.observe(ctb);
    View Full Timeline →
 </a>
     </div>
+  </div>
+
+  <!-- Scroll hint to main section -->
+  <div class="ctb-scroll-hint hint-hidden" id="ctbScrollHint" role="button" tabindex="0" aria-label="Scroll to History and News">
+    <span class="hint-label">Our History & News</span>
+    <svg class="hint-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 4v14M4 11l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 </div>
 
@@ -253,7 +306,7 @@ observer.observe(ctb);
 })();
 </script>
 <!-- MAIN SECTION -->
-<section class="home-main-section bg-light">
+<section class="home-main-section bg-light" id="main-section">
   <div class="container grid-layout">
 
     <!-- LEFT COLUMN -->
