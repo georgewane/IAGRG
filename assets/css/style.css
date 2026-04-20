@@ -351,12 +351,14 @@ h4 {
    Homepage opening visual section.
 ================================================== */
 
-.hero-immersive{
+.hero-immersive {
+  height: 92vh;
   min-height: 92vh;
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 /* Seamless bleed from hero into cosmic timeline */
@@ -1556,19 +1558,23 @@ h4 {
 ====================================== */
 
 #ctb {
-  background:linear-gradient(180deg,#050b1a 0%,#0a1535 40%,#0d1e42 70%,#10243a 100%);
-  padding:64px 0 48px;
-  overflow:hidden;
-  position:relative;
-  font-family:'Inter',sans-serif;
-  margin-top: 0 px;
+  background: linear-gradient(180deg,#050b1a 0%,#0a1535 40%,#0d1e42 70%,#10243a 100%);
+  padding: 64px 0 48px;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif;
   z-index: 2;
-   opacity:0;
-  transform:translateY(28px);
+  opacity: 0;
+  transform: translateY(28px);
   transition:
     opacity .9s ease,
     transform .9s cubic-bezier(.22,1,.36,1);
   will-change: opacity, transform;
+  scroll-snap-align: start;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #ctb.visible{
   opacity:1;
@@ -1799,5 +1805,79 @@ h4 {
 
   .contact-card p {
     font-size: 0.96rem;
+  }
+}
+/* ==================================================
+   SCROLL HINTS — shared base + per-section overrides
+================================================== */
+
+/* Shared base for both hints */
+.hero-scroll-hint,
+.ctb-scroll-hint {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  z-index: 3;
+
+  /* Smooth fade in/out */
+  opacity: 1;
+  transition: color 0.2s ease, opacity 0.4s ease;
+
+  animation: hintFloat 2.2s ease-in-out infinite;
+}
+
+/* Hero hint — white on dark photo */
+.hero-scroll-hint {
+  color: rgba(255, 255, 255, 0.65);
+}
+.hero-scroll-hint:hover {
+  color: #fca311;
+}
+
+/* CTB hint — gold-tinted on dark starfield */
+.ctb-scroll-hint {
+  color: rgba(252, 163, 17, 0.6);
+}
+.ctb-scroll-hint:hover {
+  color: rgba(252, 163, 17, 1);
+}
+
+.hint-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hint-arrow {
+  display: block;
+}
+
+@keyframes hintFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0);   }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+/* Hidden state — used by JS to fade hints in/out */
+.hint-hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* ==================================================
+   RESPONSIVE — simplify hint on very small phones
+================================================== */
+@media (max-width: 480px) {
+  .hint-label {
+    display: none; /* just the arrow on very small screens */
   }
 }
