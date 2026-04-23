@@ -4,7 +4,7 @@ window.loadMembers = function(stateName){
   const list = document.getElementById("memberList");
 
   const matches = window.memberData.filter(
-    m => m.state.toLowerCase() === stateName.toLowerCase()
+    m => (m.state || "").toLowerCase() === stateName.toLowerCase()
   );
 
   title.textContent = `${stateName} (${matches.length})`;

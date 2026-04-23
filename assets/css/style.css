@@ -114,6 +114,8 @@ h4 {
   background: var(--brand-dark);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 8px 0;
+   /* overflow-x: clip;
+  overflow-y: visible; */
 }
 
 /* Main navbar row:
@@ -125,6 +127,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Prevent the nav from ever causing horizontal scroll
+  min-width: 0; */
 }
 
 
@@ -167,7 +171,7 @@ h4 {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 90px;          /* was 90px — too wide for mid-range viewports */
 }
 
 /* Primary nav links */
@@ -175,13 +179,13 @@ h4 {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 28px;
+  gap: 28px;      
 }
 
 .nav-list a {
   text-decoration: none;
   color: white;
-  font-size: 0.95rem;
+  font-size: 0.95rem;      /* was 0.95rem */
   font-weight: 500;
 }
 
@@ -352,27 +356,59 @@ h4 {
 ================================================== */
 
 .hero-immersive {
-  min-height: 75vh;
-
+  height: 92vh;
+  min-height: 92vh;
   background-size: cover;
   background-position: center;
-
   position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
 
+/* Seamless bleed from hero into cosmic timeline */
+.hero-immersive::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:220px;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(8,13,28,0) 0%,
+      rgba(8,13,28,0.28) 35%,
+      rgba(8,13,28,0.65) 68%,
+      rgba(8,13,28,0.92) 88%,
+      #08111f 100%
+    );
+}
 /* Dark overlay improves text readability
    over image backgrounds */
-.hero-gradient {
+.hero-gradient{
   position: absolute;
   inset: 0;
-
   display: flex;
   align-items: center;
 
   background:
-    linear-gradient(to right,
-      rgba(10, 17, 40, 0.94),
-      rgba(10, 17, 40, 0.55));
+    linear-gradient(
+      to right,
+      rgba(10,17,40,0.92) 0%,
+      rgba(10,17,40,0.58) 42%,
+      rgba(10,17,40,0.20) 78%,
+      rgba(10,17,40,0.05) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(8,10,18,0.08) 58%,
+      rgba(8,12,24,0.30) 76%,
+      rgba(8,13,28,0.62) 90%,
+      rgba(8,13,28,0.88) 100%
+    );
 }
 
 .hero-content {
@@ -954,7 +990,7 @@ h4 {
    10. RESPONSIVE RULES
 ================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
   /* Show hamburger button */
   .nav-toggle {
@@ -1517,6 +1553,296 @@ h4 {
   margin-bottom: 0;
 }
 
+/* ==========================================================================
+   Horizontal Swipeable Timeline Ribbon
+   ========================================================================== */
+/* ======================================
+   COSMIC TIMELINE BRIDGE
+   Replaces old timeline-ribbon-section
+====================================== */
+
+#ctb {
+  background: linear-gradient(180deg,#050b1a 0%,#0a1535 40%,#0d1e42 70%,#10243a 100%);
+  padding: 64px 0 48px;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity .9s ease,
+    transform .9s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+  scroll-snap-align: start;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#ctb.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+#stars {position:absolute;inset:0;
+  pointer-events:none
+}
+
+.star {position:absolute;
+  background:#fff;
+  border-radius:50%;
+  animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s);
+  opacity:0
+}
+
+@keyframes twinkle {
+  0%,100%{opacity:0}50%{opacity:var(--op,0.5)}
+}
+
+.ctb-inner {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px
+}
+
+.ctb-head{
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.ctb-eyebrow {display:block;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#fca311;margin-bottom:14px
+}
+
+.ctb-title {
+  font-size:3rem;
+  font-weight:300;
+  color:#e8eef8;
+  line-height:1.15;
+  margin:0 0 14px;
+  font-family:var(--font-heading);
+}
+
+.ctb-sub {
+  font-size:0.97rem;
+  color:#8da0bc;
+  max-width:600px;
+  margin:0 auto;
+  line-height:1.75
+}
+
+.ctb-scroll{
+  overflow-x:auto;
+  overflow-y:visible;
+  padding:0 0 8px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+
+.ctb-scroll::-webkit-scrollbar {
+  display:none
+}
+
+.ctb-svg{
+  display:block;
+  min-width:1020px;
+  overflow:visible;
+  margin-top:-58px;
+}
+
+.tl-path {
+  fill:none;
+  stroke:url(#tlgrd);
+  stroke-width:2.5;
+  stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:3200;
+  stroke-dashoffset:3200;
+  animation:drawPath 2.6s cubic-bezier(.4,0,.2,1) .3s forwards
+}
+
+@keyframes drawPath {
+  to{stroke-dashoffset:0}
+}
+
+.tl-node {
+  cursor:pointer
+}
+
+.tl-halo {
+  fill:none;
+  stroke:#fca311;
+  stroke-width:10;
+  opacity:0;
+  transition:opacity .3s
+}
+
+.tl-node:hover .tl-halo {
+  opacity:0.15
+}
+
+.tl-dot {
+  fill:#0a1535;
+  stroke:#fca311;
+  stroke-width:2.5;
+  transition:all .25s ease;
+  filter:drop-shadow(0 0 5px rgba(252,163,17,0.5))
+}
+
+.tl-node:hover .tl-dot {
+  fill:#fca311;
+  stroke:#fff;
+  filter:drop-shadow(0 0 14px rgba(252,163,17,0.9))
+}
+
+.tl-year {
+  text-anchor:middle;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;fill:#6e89a8;
+  transition:fill .25s
+}
+
+.tl-node:hover .tl-year {
+  fill:#fca311
+}
+
+.tl-tip {
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease,transform .25s ease
+}
+
+.tl-node:hover .tl-tip {
+  opacity:1
+}
+
+.tl-tip-bg {
+  fill:rgba(8,15,40,0.97);
+  stroke:rgba(252,163,17,0.3);
+  stroke-width:1
+}
+
+.tl-tip-bar {
+  fill:#fca311
+}
+
+.tl-tip-yr {
+  fill:#fca311;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.5px
+}
+
+.tl-tip-tx {
+  fill:#b8cce0;
+  font-size:11px;
+  font-weight:500
+}
+
+.ctb-cta {
+  text-align:center;
+  margin-top:24px
+}
+
+.ctb-btn {
+  display:inline-block;
+  border:1px solid rgba(252,163,17,0.35);
+  color:#fca311;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;padding:11px 28px;
+  border-radius:4px;
+  text-decoration:none;
+  transition:all .2s;
+  background:transparent;
+  cursor:pointer
+}
+
+.ctb-btn:hover {
+  background:rgba(252,163,17,0.08);
+  border-color:rgba(252,163,17,0.65)
+}
+/* Mobile */
+/* ── ADD this replacement block ── */
+@media (max-width: 768px) {
+
+  #ctb {
+    min-height: auto;
+    display: block;        /* slightly shorter on mobile — less dead space */
+    padding: 40px 0 30px;
+  }
+
+  .ctb-title {
+    font-size: 2rem;         /* was 3rem — too large on small screens */
+  }
+
+  .ctb-sub {
+    font-size: 0.88rem;
+    padding: 0 8px;          /* prevents text touching screen edge */
+  }
+
+  .ctb-scroll {
+    /* Add top padding so tooltip boxes (which extend above the path)
+       are not clipped — the SVG viewBox starts at y=-90 */
+    padding: 70px 0 24px;
+    /* Keep horizontal scroll but ensure vertical clip doesn't cut tooltips */
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+  .ctb-svg {
+    /* Scale down from 1020px to fit mobile while still scrollable */
+    min-width: 768px;
+  }
+
+  .tl-tip {
+    /* Keep tooltips on mobile but make them smaller */
+    display: block;
+  }
+
+  .tl-tip-bg {
+    /* Slightly transparent on mobile to show the path beneath */
+    fill: rgba(8,15,40,0.92);
+  }
+
+  .ctb-head {
+    margin-bottom: 0;        /* remove gap — padding on .ctb-scroll handles it */
+    padding: 0 16px;
+  }
+
+  .ctb-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .ctb-cta {
+    margin-top: 16px;
+    padding: 0 16px;
+    padding-bottom: 46px;
+  }
+
+  .ctb-scroll-hint{
+  bottom: 10px !important;
+  right: 14px !important;
+  transform: scale(0.88);
+}
+}
+
+/* ── Very small phones ── */
+@media (max-width: 400px) {
+  .ctb-svg {
+    min-width: 780px;
+  }
+  .ctb-title {
+    font-size: 1.75rem;
+  }
+}
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -1535,5 +1861,137 @@ h4 {
 
   .contact-card p {
     font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 1150px){
+
+.nav-right{
+  gap: 20px;
+}
+
+.nav-list{
+  gap: 12px;
+}
+
+.nav-list a{
+  font-size: 0.82rem;
+}
+
+.site-logo a{
+  font-size: 1.3rem;
+}
+
+.site-logo img{
+  height: 42px;
+}
+
+.header-ctas{
+  gap: 8px;
+}
+.nav-container{
+  min-width:0;
+  overflow:hidden;
+}
+
+}
+/* ==================================================
+   SCROLL HINTS — shared base + per-section overrides
+================================================== */
+
+/* Shared base for both hints */
+.hero-scroll-hint,
+.ctb-scroll-hint {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  z-index: 3;
+
+  /* Smooth fade in/out */
+  opacity: 1;
+  transition: color 0.2s ease, opacity 0.4s ease;
+
+  animation: hintFloat 2.2s ease-in-out infinite;
+}
+
+/* Hero hint — white on dark photo */
+.hero-scroll-hint {
+  color: rgba(255, 255, 255, 0.65);
+}
+.hero-scroll-hint:hover {
+  color: #fca311;
+}
+
+/* CTB hint — gold-tinted on dark starfield */
+.ctb-scroll-hint {
+  color: rgba(252, 163, 17, 0.6);
+}
+.ctb-scroll-hint:hover {
+  color: rgba(252, 163, 17, 1);
+}
+
+.hint-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hint-arrow {
+  display: block;
+}
+
+@keyframes hintFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0);   }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+/* Hidden state — used by JS to fade hints in/out */
+.hint-hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* ==================================================
+   RESPONSIVE — simplify hint on very small phones
+================================================== */
+@media (max-width: 480px) {
+  .hint-label {
+    display: none; /* just the arrow on very small screens */
+  }
+}
+
+/* ==================================================
+   Additional Fixes due to the Ipad UI bug
+================================================== */
+
+/* ── ADD this new media query block ── */
+@media (max-width: 960px) and (min-width: 901px) {
+  /* iPad landscape and similar — tighten nav before hamburger triggers */
+  .nav-right {
+    gap: 24px;
+  }
+  .nav-list {
+    gap: 14px;
+  }
+  .nav-list a {
+    font-size: 0.82rem;
+  }
+  .header-ctas {
+    gap: 8px;
+  }
+  .btn-header-outline,
+  .btn-header-solid {
+    padding: 8px 12px;
+    font-size: 0.78rem;
   }
 }

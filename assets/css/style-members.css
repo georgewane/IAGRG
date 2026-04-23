@@ -143,15 +143,18 @@
 
 /* OPTIONAL COUNT BADGE */
 
-.state-count {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(252,163,17,0.12);
-  color: #9a6400;
-  font-size: 0.8rem;
-  font-weight: 700;
+.state-count{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:0;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(252,163,17,0.12);
+  color:#9a6400;
+  font-size:0.82rem;
+  font-weight:700;
+  line-height:1;
 }
 
 /* SCROLLABLE MEMBER LIST (for large states) */
@@ -261,4 +264,142 @@
 .member-sublist li{
   margin:6px 0;
   color:var(--text-main);
+}
+
+/* ======================================
+   MEMBERS COLUMN (RIGHT SIDE STACK)
+====================================== */
+
+.members-column{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* ======================================
+   DIRECTORY NOTES
+====================================== */
+
+.member-note{
+  background:#f8fafc;
+  border:1px solid #edf0f2;
+  border-radius:14px;
+  padding:16px 18px;
+  font-size:0.9rem;
+  line-height:1.75;
+  color:var(--text-muted);
+}
+
+/* ======================================
+   INTERNATIONAL MEMBERS
+====================================== */
+
+.intl-wrap{
+  margin:0 0 18px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(0,0,0,0.045);
+}
+
+.intl-toggle{
+  width:100%;
+  border:none;
+  background:white;
+  padding:24px 28px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  transition:0.2s ease;
+}
+
+.intl-toggle:hover{
+  background:#fafbfc;
+}
+
+.intl-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:1.45rem;
+  font-weight:700;
+  color:var(--brand-dark);
+  line-height:1.2;
+  font-family: inherit;
+}
+
+.intl-icon{
+  font-size:0.95rem;
+  color:var(--brand-accent);
+  transition:transform 0.25s ease;
+}
+
+.intl-toggle.active .intl-icon{
+  transform:rotate(180deg);
+}
+
+.intl-content{
+  display:none;
+  padding:24px 28px;
+  border-top:1px solid #edf0f2;
+}
+
+.intl-content.open{
+  display:grid;
+  gap:16px;
+}
+
+/* INTERNATIONAL NOTE */
+
+.intl-member-note{
+  background:#f8fafc;
+  border:1px solid #edf0f2;
+  border-radius:14px;
+  padding:16px 16px;
+  font-size:0.9rem;
+  line-height:1.75;
+  color:var(--text-muted);
+  margin-bottom:80px;
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width:768px){
+
+  .members-column{
+    gap:14px;
+  }
+
+  .member-note{
+    padding:14px 16px;
+    font-size:0.88rem;
+  }
+
+  .intl-wrap{
+    border-radius:14px;
+  }
+
+  .intl-toggle{
+    padding:18px 20px;
+  }
+
+  .intl-left{
+    gap:10px;
+    font-size:1rem;
+  }
+
+  .intl-content{
+    padding:18px 20px;
+  }
+
+  .intl-member-note{
+    padding:14px 16px;
+    font-size:0.88rem;
+    margin-bottom:60px;
+      border-left:4px solid var(--brand-accent);
+  }
 }

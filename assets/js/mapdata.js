@@ -45,7 +45,7 @@ url_new_tab: "no",
 fade_time: 0.1,
 popups: "detect",
 
-keyboard_navigation: "yes"
+keyboard_navigation: "no"
 },
 
 state_specific: {

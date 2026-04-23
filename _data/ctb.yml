@@ -1,0 +1,340 @@
+- year: 1915
+  title: "The Field Equations"
+  desc: "In November 1915, Albert Einstein presented General Relativity to the Prussian Academy of Sciences after years of struggle. Ten coupled nonlinear equations replaced Newton's gravitational force with the curvature of spacetime itself. It was one of the great turning points in science, revealing that matter shapes geometry and geometry guides motion."
+  x: 240
+  y: 520
+  size: "large"
+  cls: "foundation"
+  paper: "https://einsteinpapers.press.princeton.edu/vol6-trans/351"
+  more: "http://www.scholarpedia.org/article/General_relativity"
+  image: "einstein-eqns.webp"
+
+- year: 1916
+  title: "Schwarzschild Solution"
+  desc: "While serving on the Russian front during World War I, Karl Schwarzschild sent Einstein the first exact solution to the new field equations. It described spacetime outside a perfectly spherical mass and revealed a critical radius from which not even light could escape. The mathematical seed of the modern black hole had appeared almost immediately after relativity itself."
+  x: 500
+  y: 230
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1002/andp.19163591602"
+  more: "http://www.scholarpedia.org/article/Black_hole"
+  image: "schwarzschild.png"
+
+- year: 1919
+  title: "Solar Eclipse Confirmation"
+  desc: "During the total solar eclipse of 1919, Arthur Eddington's expeditions to Príncipe and Sobral photographed stars whose light passed near the Sun. Their measured deflection agreed with Einstein's prediction rather than Newton's. Newspapers around the world announced a revolution in physics, and Einstein became an international icon."
+  x: 760
+  y: 770
+  size: "medium"
+  cls: "foundation"
+  paper: "https://royalsocietypublishing.org/doi/10.1098/rsta.1920.0009"
+  more: "http://www.scholarpedia.org/article/General_relativity"
+  image: "eddington-eclipse.jpg"
+
+- year: 1921
+  title: "Kaluza–Klein Theory"
+  desc: "Theodor Kaluza proposed extending Einstein's theory into five dimensions so that gravity and electromagnetism could emerge from one geometry. Oskar Klein later suggested the extra dimension might be curled into an unseen microscopic circle. Though far ahead of its time, the idea would later echo through modern unification and string theory."
+  x: 1020
+  y: 380
+  size: "small"
+  cls: "theory"
+  paper: "https://doi.org/10.1007/BF01314090"
+  more: "http://www.scholarpedia.org/article/Kaluza-Klein_theory"
+  image: "kaluza.gif"
+
+- year: 1922
+  title: "Expanding Universe"
+  desc: "Alexander Friedmann discovered solutions to Einstein's equations in which the universe could expand or contract rather than remain static. Einstein first dismissed the result, then later acknowledged the mathematics was sound. From these equations, modern cosmology would eventually grow."
+  x: 1240
+  y: 690
+  size: "medium"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1007/BF01332580"
+  more: "http://www.scholarpedia.org/article/Cosmology"
+  image: "friedmann.jpg"
+
+- year: 1929
+  title: "Hubble's Law"
+  desc: "Using the great Hooker telescope at Mount Wilson, Edwin Hubble measured galaxies receding from Earth with speeds proportional to their distance. The universe was not static but expanding in every direction. What had once seemed eternal and unchanging was now understood to have a history."
+  x: 1460
+  y: 440
+  size: "large"
+  cls: "cosmo"
+  paper: "https://www.pnas.org/doi/10.1073/pnas.15.3.168"
+  more: "http://www.scholarpedia.org/article/Hubble_constant"
+  image: "Raisinbread.gif"
+
+- year: 1939
+  title: "Gravitational Collapse"
+  desc: "J. Robert Oppenheimer and Hartland Snyder studied the fate of a sufficiently massive dying star under Einstein's theory. Once pressure can no longer resist gravity, collapse proceeds without known limit. Their work pointed directly toward the existence of black holes decades before the term became common."
+  x: 1680
+  y: 920
+  size: "large"
+  cls: "blackhole"
+  paper: "https://journals.aps.org/pr/abstract/10.1103/PhysRev.56.455"
+  more: "http://www.scholarpedia.org/article/Black_hole"
+  image: "oscollapse.gif"
+
+- year: 1948
+  title: "Big Bang Nucleosynthesis"
+  desc: "Inspired by Hans Bethe's stellar fusion theory and George Gamow's 1946 vision of a hot dense early universe, physicists proposed that the first minutes of cosmic history forged primordial hydrogen and helium. In the same year, Bondi, Gold, and Hoyle advanced the rival steady-state universe with continuous creation of matter. The observed abundance of light elements would later become a decisive victory for the Big Bang model."
+  x: 1840
+  y: 330
+  size: "medium"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1103/PhysRev.73.803"
+  more: "http://www.scholarpedia.org/article/Big_Bang_nucleosynthesis"
+  image: "bbn.jpeg"
+
+- year: 1959
+  title: "Gravitational Redshift Measured"
+  desc: "In Harvard's Jefferson tower, Robert Pound and Glen Rebka used gamma rays and the Mössbauer effect to test Einstein's theory on Earth. Radiation climbing upward through gravity lost energy exactly as predicted. Time itself was shown to flow differently at different heights."
+  x: 1980
+  y: 640
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1103/PhysRevLett.4.337"
+  more: "http://www.scholarpedia.org/article/Gravitational_redshift"
+  image: "pr.jpg"
+
+- year: 1963
+  title: "Kerr Metric"
+  desc: "In 1963, Roy Kerr discovered the exact spacetime geometry surrounding a rotating mass. Because real collapsed stars are expected to spin, the Kerr solution soon became the most astrophysically relevant black-hole metric in General Relativity. It remains central to modern black-hole astronomy."
+  x: 2140
+  y: 250
+  size: "large"
+  cls: "blackhole"
+  paper: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.11.237"
+  more: "http://www.scholarpedia.org/article/Kerr_metric"
+  image: "kerr.jpg"
+
+- year: 1964
+  title: "Shapiro Time Delay"
+  desc: "Irwin Shapiro proposed a new classical test of relativity using radar signals sent to planets and reflected back to Earth. Signals passing near the Sun returned slightly late because curved spacetime altered their path and travel time. Later spacecraft measurements confirmed the effect with extraordinary precision."
+  x: 2220
+  y: 860
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1103/PhysRevLett.13.789"
+  more: "http://www.scholarpedia.org/article/Shapiro_effect"
+  image: "shapiro.gif"
+
+- year: 1965
+  title: "Cosmic Microwave Background Discovered"
+  desc: "At Bell Laboratories, Arno Penzias and Robert Wilson tried to eliminate a persistent microwave hiss in their antenna. The noise came not from equipment, pigeons, or atmosphere, but from the sky itself. It was relic radiation from the hot early universe, providing decisive support for the Big Bang."
+  x: 2320
+  y: 500
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1086/148307"
+  more: "http://www.scholarpedia.org/article/Cosmic_microwave_background"
+  image: "cmbhorn.jpg"
+
+- year: 1965
+  title: "Singularity Theorem"
+  desc: "Roger Penrose proved that singularities arise naturally from gravitational collapse and are not merely artifacts of perfect symmetry. Under broad physical conditions, Einstein's theory predicts regions where curvature becomes extreme and classical spacetime ceases to make sense. Relativity had revealed the limits of relativity."
+  x: 2420
+  y: 720
+  size: "large"
+  cls: "blackhole"
+  paper: "https://doi.org/10.1103/PhysRevLett.14.57"
+  more: "http://www.scholarpedia.org/article/Penrose-Hawking_singularity_theorems"
+  image: "roger.jpg"
+
+# - year: 1965
+#   title: "Fifth-Force Searches Begin"
+#   desc: "Precision experiments in the 1960s tested whether gravity truly obeyed the equivalence principle at all accessible scales. Any tiny deviation might signal a new long-range interaction beyond Einstein and Newton. The search for hidden forces had begun."
+#   x: 2480
+#   y: 360
+#   size: "small"
+#   cls: "theory"
+#   paper: "https://doi.org/10.1103/PhysRevLett.14.381"
+#   more: "http://www.scholarpedia.org/article/Tests_of_gravity"
+#   image: ""
+
+- year: 1969
+  title: "Quantum Fields in Curved Spacetime"
+  desc: "Leonard Parker and others developed a framework for quantum fields propagating through curved spacetime. In an expanding universe, geometry itself could create particles from the vacuum. This was the conceptual bridge that later led to Hawking radiation."
+  x: 2560
+  y: 160
+  size: "medium"
+  cls: "wave"
+  paper: "https://doi.org/10.1007/BF02753982"
+  more: "http://www.scholarpedia.org/article/Quantum_field_theory_in_curved_spacetime"
+  image: "particleprod.webp"
+
+- year: 1970
+  title: "Dark Matter in Galaxies"
+  desc: "In the 1970s, astronomers including Vera Rubin and Kent Ford found that stars in spiral galaxies orbit too rapidly far from their centers. Independent studies by Ostriker, Peebles, Yahil, and by Einasto's group argued that galaxies must be embedded in vast halos of unseen matter. The modern dark matter hypothesis had taken firm root."
+  x: 2650
+  y: 250
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1086/153513"
+  more: "http://www.scholarpedia.org/article/Dark_matter"
+  image: "dm.gif"
+
+- year: 1971
+  title: "Hafele–Keating Experiment"
+  desc: "Atomic clocks flown eastward and westward around Earth aboard commercial aircraft returned out of step with clocks kept on the ground. The measured differences matched the combined effects of motion and gravity. Relativistic time dilation had become a practical reality."
+  x: 2750
+  y: 540
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1126/science.177.4044.166"
+  more: "http://www.scholarpedia.org/article/Time_dilation"
+  image: "hafelekeating.jpeg"
+
+- year: 1972
+  title: "Black Hole Thermodynamics"
+  desc: "In 1972, Jacob Bekenstein proposed that black holes possess an entropy proportional to the area of their event horizons, hinting at a profound link between gravity, information, and thermodynamics. Soon after, the laws of black hole mechanics gave this idea mathematical form. Hawking's discovery of black hole radiation would complete the picture."
+  x: 2820
+  y: 880
+  size: "large"
+  cls: "blackhole"
+  paper: "https://doi.org/10.1007/BF01645742"
+  more: "http://www.scholarpedia.org/article/Black_hole_thermodynamics"
+  image: "bhentropy.png"
+
+- year: 1974
+  title: "Hawking Radiation"
+  desc: "Stephen Hawking showed that black holes are not entirely black when quantum effects are considered. Particle creation near the horizon causes them to emit thermal radiation and slowly evaporate. Gravity, thermodynamics, and quantum theory were suddenly tied together."
+  x: 2880
+  y: 620
+  size: "large"
+  cls: "wave"
+  paper: "https://www.nature.com/articles/248030a0"
+  more: "http://www.scholarpedia.org/article/Hawking_radiation"
+  image: "hawking-rad.jpg"
+
+- year: 1974
+  title: "Hulse–Taylor Binary Pulsar"
+  desc: "Russell Hulse and Joseph Taylor discovered a pulsar locked in a tight binary orbit. Over time, the orbit shrank exactly as General Relativity predicted from gravitational-wave energy loss. Nature had supplied indirect evidence long before detectors could listen directly."
+  x: 2920
+  y: 300
+  size: "large"
+  cls: "wave"
+  paper: "https://doi.org/10.1086/153168"
+  more: "http://www.scholarpedia.org/article/Hulse-Taylor_pulsar"
+  image: "hulsetaylor.gif"
+
+- year: 1975
+  title: "COW Neutron Interferometry"
+  desc: "The Colella-Overhauser-Werner experiment used neutron matter waves split along paths at different heights in Earth's field. The beams returned with a measurable phase difference caused by gravity. Quantum interference and gravitation had met in the laboratory."
+  x: 3000
+  y: 740
+  size: "small"
+  cls: "foundation"
+  paper: "https://doi.org/10.1103/PhysRevLett.34.1472"
+  more: "http://www.scholarpedia.org/article/Quantum_gravity"
+  image: "cow.png"
+
+- year: 1980
+  title: "Cosmic Inflation"
+  desc: "In the late 1970s and early 1980s, Alexei Starobinsky, Alan Guth, and Andrei Linde developed the theory of cosmic inflation, proposing a brief period of exponential expansion in the newborn universe. Inflation explained why the cosmos appears remarkably smooth, isotropic, and nearly flat on the largest scales. Quantum fluctuations from that primordial era were stretched to cosmic size and became the seeds of galaxies and structure."
+  x: 3120
+  y: 470
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1103/PhysRevD.23.347"
+  more: "http://www.scholarpedia.org/article/Inflation"
+  image: "inflation.webp"
+
+- year: 1992
+  title: "COBE Detects Primordial Fluctuations"
+  desc: "NASA's COBE satellite discovered faint temperature ripples across the microwave sky at the level of one part in one hundred thousand. These tiny irregularities were the primordial seeds from which galaxies and cosmic structure later emerged. Precision cosmology had truly begun."
+  x: 3260
+  y: 820
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1086/186504"
+  more: "http://www.scholarpedia.org/article/Cosmic_microwave_background"
+  image: "cobe.png"
+
+# - year: 1993
+#   title: "Hubble Space Telescope Restored"
+#   desc: "Astronauts servicing the Hubble Space Telescope installed corrective optics that transformed a troubled mission into a triumph. The repaired observatory delivered razor-sharp images, deep galaxy fields, and crucial measurements of cosmic expansion. Hubble became one of history's great scientific instruments."
+#   x: 3340
+#   y: 360
+#   size: "medium"
+#   cls: "cosmo"
+#   paper: "https://doi.org/10.1086/191793"
+#   more: "http://www.scholarpedia.org/article/Hubble_Space_Telescope"
+#   image: ""
+
+- year: 1995
+  title: "GPS and Relativity"
+  desc: "As the Global Positioning System reached maturity, its satellite clocks required continual corrections predicted by Einstein's theories. Without them, navigation errors would grow by kilometers each day. Relativity had become embedded in everyday engineering."
+  x: 3360
+  y: 360
+  size: "medium"
+  cls: "foundation"
+  paper: "https://doi.org/10.1119/1.18986"
+  more: "http://www.scholarpedia.org/article/GPS_and_relativity"
+  image: "gps.webp"
+
+- year: 1998
+  title: "Accelerating Universe"
+  desc: "Two independent teams studying distant Type Ia supernovae found that cosmic expansion is speeding up rather than slowing down. The universe was being driven apart by an unknown component now called dark energy. One of the greatest surprises in modern astronomy had arrived."
+  x: 3500
+  y: 880
+  size: "large"
+  cls: "cosmo"
+  paper: "https://iopscience.iop.org/article/10.1086/300499"
+  more: "http://www.scholarpedia.org/article/Dark_energy"
+  image: "hubble-tel.jpg"
+
+- year: 2003
+  title: "WMAP Precision Cosmology"
+  desc: "The Wilkinson Microwave Anisotropy Probe mapped the microwave background in unprecedented detail. Its data fixed the age, geometry, and composition of the universe with remarkable precision. Cosmology had become a quantitative science."
+  x: 3600
+  y: 470
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1086/377226"
+  more: "http://www.scholarpedia.org/article/Wilkinson_Microwave_Anisotropy_Probe"
+  image: "Wmap_CMB.jpeg"
+
+- year: 2013
+  title: "Planck: The Definitive CMB Map"
+  desc: "The European Space Agency's Planck mission delivered the most precise full-sky map of relic radiation from the early universe. Cosmological parameters were tightened to extraordinary accuracy, while new tensions with late-time measurements emerged. Even precision can deepen mystery."
+  x: 3720
+  y: 740
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1051/0004-6361/201321529"
+  more: "http://www.scholarpedia.org/article/Planck_satellite"
+  image: "Planck_CMB.jpg"
+
+- year: 2015
+  title: "GW150914"
+  desc: "On 14 September 2015, the twin LIGO detectors in Louisiana and Washington recorded a fleeting ripple in spacetime from two merging black holes more than a billion light-years away. It was the first direct detection of gravitational waves. A century after Einstein's prediction, the universe had finally been heard."
+  x: 3840
+  y: 210
+  size: "large"
+  cls: "wave"
+  paper: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102"
+  more: "http://www.scholarpedia.org/article/Gravitational_Waves:_Science_with_Compact_Binary_Coalescences"
+  image: "gw150914.png"
+
+- year: 2019
+  title: "Imaging a Black Hole"
+  desc: "The Event Horizon Telescope linked radio observatories across Earth into a planet-sized instrument. In 2019 it released the first direct image of a black hole's shadow in the galaxy Messier 87. Einstein's theory had entered the age of imaging."
+  x: 4000
+  y: 590
+  size: "large"
+  cls: "blackhole"
+  paper: "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7"
+  more: "http://www.scholarpedia.org/article/Event_Horizon_Telescope"
+  image: "ehtbh.jpg"
+
+- year: 2023
+  title: "Nanohertz GW Background"
+  desc: "Pulsar timing array collaborations across the world announced strong evidence for a background hum of gravitational waves at nanohertz frequencies. The most likely source is a cosmic population of slowly orbiting supermassive black hole binaries. Even the quietest motions of the universe had become detectable."
+  x: 4200
+  y: 340
+  size: "medium"
+  cls: "wave"
+  paper: "https://iopscience.iop.org/article/10.3847/2041-8213/acdac6"
+  more: "http://www.scholarpedia.org/article/Gravitational_waves"
+  image: "nanograv.jpg"
