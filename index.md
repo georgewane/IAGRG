@@ -27,6 +27,7 @@ title: Home
       </div>
 
     </div>
+
   </div>
 
   <!-- Animated scroll hint -->
