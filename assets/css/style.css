@@ -1895,6 +1895,40 @@ h4 {
 }
 
 }
+
+@media (max-width: 900px){
+
+  .nav-right{
+    gap:14px;
+  }
+
+  .nav-list{
+    gap:8px;
+  }
+
+  .nav-list a{
+    font-size:0.78rem;
+  }
+
+  .site-logo a{
+    font-size:1.18rem;
+  }
+
+  .site-logo img{
+    height:38px;
+  }
+
+  .header-ctas{
+    gap:6px;
+  }
+
+  .btn-header-outline,
+  .btn-header-solid{
+    padding:8px 12px;
+    font-size:0.78rem;
+  }
+
+}
 /* ==================================================
    SCROLL HINTS — shared base + per-section overrides
 ================================================== */
