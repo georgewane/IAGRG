@@ -50,22 +50,14 @@ title: News & Announcements
       </div>
 
       <h2 class="news-title">
-<<<<<<< HEAD
-        <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
-=======
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
->>>>>>> redesign
       </h2>
 
       <p class="news-excerpt">
         {{ post.excerpt | strip_html | truncatewords: 34 }}
       </p>
 
-<<<<<<< HEAD
-      <a href="{{ post.url | relative_url}}" class="read-more">Read More →</a>
-=======
       <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
->>>>>>> redesign
 
     </article>
     {% endfor %}
