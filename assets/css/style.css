@@ -114,6 +114,7 @@ h4 {
   background: var(--brand-dark);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 8px 0;
+  overflow: hidden;   /* ADD THIS — clips any overflowing child */
 }
 
 /* Main navbar row:
@@ -125,6 +126,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Prevent the nav from ever causing horizontal scroll */
+  min-width: 0;
 }
 
 
@@ -167,7 +170,9 @@ h4 {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 40px;          /* was 90px — too wide for mid-range viewports */
+  min-width: 0;       /* allows flex children to shrink below content size */
+  overflow: hidden;   /* catches any remaining overflow at this level */
 }
 
 /* Primary nav links */
@@ -175,14 +180,17 @@ h4 {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 28px;
+  gap: 20px;          /* was 28px — tighter to survive mid-width viewports */
+  flex-wrap: nowrap;  /* explicit — prevents accidental wrapping */
+  min-width: 0;
 }
 
 .nav-list a {
   text-decoration: none;
   color: white;
-  font-size: 0.95rem;
+  font-size: 0.9rem;      /* was 0.95rem */
   font-weight: 500;
+  white-space: nowrap;    /* ADD THIS — prevents ▾ arrow dropping to next line */
 }
 
 .nav-list a:hover {
@@ -986,7 +994,7 @@ h4 {
    10. RESPONSIVE RULES
 ================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
   /* Show hamburger button */
   .nav-toggle {
@@ -1765,26 +1773,78 @@ h4 {
   border-color:rgba(252,163,17,0.65)
 }
 /* Mobile */
-
+/* ── ADD this replacement block ── */
 @media (max-width: 768px) {
-  .cosmic-timeline-bridge {
-    padding: 52px 0 40px;
+
+  #ctb {
+    min-height: auto;
+    display: block;        /* slightly shorter on mobile — less dead space */
+    padding: 40px 0 30px;
   }
 
   .ctb-title {
-    font-size: 2rem;
+    font-size: 2rem;         /* was 3rem — too large on small screens */
   }
 
   .ctb-sub {
-    font-size: 0.94rem;
+    font-size: 0.88rem;
+    padding: 0 8px;          /* prevents text touching screen edge */
   }
 
-  .ctb-scroll-wrap {
-    padding: 20px 0 8px;
+  .ctb-scroll {
+    /* Add top padding so tooltip boxes (which extend above the path)
+       are not clipped — the SVG viewBox starts at y=-90 */
+    padding: 70px 0 24px;
+    /* Keep horizontal scroll but ensure vertical clip doesn't cut tooltips */
+    overflow-x: auto;
+    overflow-y: visible;
   }
 
-  .ctb-tip {
-    display: none; /* tooltips hidden on mobile — years still visible */
+  .ctb-svg {
+    /* Scale down from 1020px to fit mobile while still scrollable */
+    min-width: 768px;
+  }
+
+  .tl-tip {
+    /* Keep tooltips on mobile but make them smaller */
+    display: block;
+  }
+
+  .tl-tip-bg {
+    /* Slightly transparent on mobile to show the path beneath */
+    fill: rgba(8,15,40,0.92);
+  }
+
+  .ctb-head {
+    margin-bottom: 0;        /* remove gap — padding on .ctb-scroll handles it */
+    padding: 0 16px;
+  }
+
+  .ctb-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .ctb-cta {
+    margin-top: 16px;
+    padding: 0 16px;
+    padding-bottom: 46px;
+  }
+
+  .ctb-scroll-hint{
+  bottom: 10px !important;
+  right: 14px !important;
+  transform: scale(0.88);
+}
+}
+
+/* ── Very small phones ── */
+@media (max-width: 400px) {
+  .ctb-svg {
+    min-width: 780px;
+  }
+  .ctb-title {
+    font-size: 1.75rem;
   }
 }
 /* Responsive */
@@ -1879,5 +1939,31 @@ h4 {
 @media (max-width: 480px) {
   .hint-label {
     display: none; /* just the arrow on very small screens */
+  }
+}
+
+/* ==================================================
+   Additional Fixes due to the Ipad UI bug
+================================================== */
+
+/* ── ADD this new media query block ── */
+@media (max-width: 960px) and (min-width: 901px) {
+  /* iPad landscape and similar — tighten nav before hamburger triggers */
+  .nav-right {
+    gap: 24px;
+  }
+  .nav-list {
+    gap: 14px;
+  }
+  .nav-list a {
+    font-size: 0.82rem;
+  }
+  .header-ctas {
+    gap: 8px;
+  }
+  .btn-header-outline,
+  .btn-header-solid {
+    padding: 8px 12px;
+    font-size: 0.78rem;
   }
 }
