@@ -77,18 +77,18 @@
 
 - year: 1948
   title: "Big Bang Nucleosynthesis"
-  desc: "In the late 1940s, George Gamow, Ralph Alpher, and collaborators showed that the young universe could forge light nuclei while still hot and dense. Hydrogen, helium, and traces of lithium became fossils from the first minutes of cosmic time. Their predicted abundances remain a cornerstone of Big Bang cosmology."
+  desc: "Inspired by Hans Bethe's stellar fusion theory and George Gamow's 1946 vision of a hot dense early universe, physicists proposed that the first minutes of cosmic history forged primordial hydrogen and helium. In the same year, Bondi, Gold, and Hoyle advanced the rival steady-state universe with continuous creation of matter. The observed abundance of light elements would later become a decisive victory for the Big Bang model."
   x: 1840
   y: 330
   size: "medium"
   cls: "cosmo"
   paper: "https://doi.org/10.1103/PhysRev.73.803"
   more: "http://www.scholarpedia.org/article/Big_Bang_nucleosynthesis"
-  image: "bbn.png"
+  image: ""
 
 - year: 1959
   title: "Gravitational Redshift Measured"
-  desc: "Robert Pound and Glen Rebka used gamma rays and the Mössbauer effect inside Harvard's Jefferson tower to test Einstein on Earth. Radiation climbing upward through a gravitational field lost energy exactly as relativity predicted. Time itself was shown to pass differently at different heights."
+  desc: "In Harvard's Jefferson tower, Robert Pound and Glen Rebka used gamma rays and the Mössbauer effect to test Einstein's theory on Earth. Radiation climbing upward through gravity lost energy exactly as predicted. Time itself was shown to flow differently at different heights."
   x: 1980
   y: 640
   size: "medium"
