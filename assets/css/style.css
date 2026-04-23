@@ -1770,7 +1770,7 @@ h4 {
 }
 /* Mobile */
 /* ── ADD this replacement block ── */
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
   #ctb {
     min-height: auto;
@@ -1895,40 +1895,6 @@ h4 {
 }
 
 }
-
-@media (max-width: 900px){
-
-  .nav-right{
-    gap:14px;
-  }
-
-  .nav-list{
-    gap:8px;
-  }
-
-  .nav-list a{
-    font-size:0.78rem;
-  }
-
-  .site-logo a{
-    font-size:1.18rem;
-  }
-
-  .site-logo img{
-    height:38px;
-  }
-
-  .header-ctas{
-    gap:6px;
-  }
-
-  .btn-header-outline,
-  .btn-header-solid{
-    padding:8px 12px;
-    font-size:0.78rem;
-  }
-
-}
 /* ==================================================
    SCROLL HINTS — shared base + per-section overrides
 ================================================== */
@@ -2028,4 +1994,133 @@ h4 {
     padding: 8px 12px;
     font-size: 0.78rem;
   }
+}
+/* ── iPad Air Portrait / Similar 820px Devices ── */
+@media (min-width: 801px) and (max-width: 860px){
+
+  #ctb{
+    min-height:auto;
+    display:block;
+    padding:48px 0 34px;
+  }
+
+  .ctb-title{
+    font-size:2.4rem;
+    text-align:center;
+  }
+
+  .ctb-sub{
+    font-size:0.94rem;
+    padding:0 18px;
+    text-align:center;
+  }
+
+  .ctb-scroll{
+    padding:78px 0 26px;
+    overflow-x:auto;
+    overflow-y:visible;
+  }
+
+  .ctb-svg{
+    min-width:880px;
+  }
+
+  .tl-tip{
+    display:block;
+  }
+
+  .tl-tip-bg{
+    fill:rgba(8,15,40,0.93);
+  }
+
+  .ctb-head{
+    margin-bottom:0;
+    padding:0 22px;
+    text-align:center;
+  }
+
+  .ctb-eyebrow{
+    font-size:10px;
+    letter-spacing:2.8px;
+    text-align:center;
+  }
+
+  .ctb-cta{
+    margin-top:18px;
+    padding:0 22px;
+    padding-bottom:48px;
+    text-align:center;
+  }
+
+  .ctb-scroll-hint{
+    bottom:12px !important;
+    right:16px !important;
+    transform:scale(0.92);
+  }
+
+}
+
+/* ── Surface Pro 7 Portrait / Similar 912px Devices ── */
+@media (min-width: 890px) and (max-width: 940px){
+
+  #ctb{
+    min-height:auto;
+    display:block;
+    padding:50px 0 36px;
+  }
+
+  .ctb-title{
+    font-size:2.55rem;
+    text-align:center;
+  }
+
+  .ctb-sub{
+    font-size:0.98rem;
+    padding:0 22px;
+    text-align:center;
+  }
+
+  .ctb-scroll{
+    padding:82px 0 28px;
+    overflow-x:auto;
+    overflow-y:visible;
+  }
+
+  .ctb-svg{
+    min-width:940px;
+  }
+
+  .tl-tip{
+    display:block;
+  }
+
+  .tl-tip-bg{
+    fill:rgba(8,15,40,0.93);
+  }
+
+  .ctb-head{
+    margin-bottom:0;
+    padding:0 26px;
+    text-align:center;
+  }
+
+  .ctb-eyebrow{
+    font-size:10px;
+    letter-spacing:3px;
+    text-align:center;
+  }
+
+  .ctb-cta{
+    margin-top:18px;
+    padding:0 26px;
+    padding-bottom:50px;
+    text-align:center;
+  }
+
+  .ctb-scroll-hint{
+    bottom:12px !important;
+    right:18px !important;
+    transform:scale(0.95);
+  }
+
 }
