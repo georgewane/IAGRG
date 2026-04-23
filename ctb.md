@@ -149,7 +149,7 @@ layout: none
        Vertical: 1100px gives ~300px of meaningful vertical drag
                  in a typical 800px viewport
   ============================================================ */
-  const WORLD_W = 4000;
+  const WORLD_W = 5000;
   const WORLD_H = 1100;
 
   /* ============================================================
@@ -212,7 +212,7 @@ poly.setAttribute(
 );
 
 poly.setAttribute('fill', 'none');
-poly.setAttribute('stroke', 'rgba(70,150,200,.2)');
+poly.setAttribute('stroke', 'rgb(87, 79, 79)');
 poly.setAttribute('stroke-width', '1');
 
 poly.classList.add('connector-line');
