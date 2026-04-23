@@ -84,7 +84,7 @@
   cls: "cosmo"
   paper: "https://doi.org/10.1103/PhysRev.73.803"
   more: "http://www.scholarpedia.org/article/Big_Bang_nucleosynthesis"
-  image: ""
+  image: "bbn.jpeg"
 
 - year: 1959
   title: "Gravitational Redshift Measured"
@@ -95,7 +95,7 @@
   cls: "foundation"
   paper: "https://doi.org/10.1103/PhysRevLett.4.337"
   more: "http://www.scholarpedia.org/article/Gravitational_redshift"
-  image: ""
+  image: "pr.jpg"
 
 - year: 1963
   title: "Kerr Metric"
@@ -117,7 +117,7 @@
   cls: "foundation"
   paper: "https://doi.org/10.1103/PhysRevLett.13.789"
   more: "http://www.scholarpedia.org/article/Shapiro_effect"
-  image: ""
+  image: "shapiro.gif"
 
 - year: 1965
   title: "Cosmic Microwave Background Discovered"
@@ -128,7 +128,7 @@
   cls: "cosmo"
   paper: "https://doi.org/10.1086/148307"
   more: "http://www.scholarpedia.org/article/Cosmic_microwave_background"
-  image: ""
+  image: "cmbhorn.jpg"
 
 - year: 1965
   title: "Singularity Theorem"
@@ -139,18 +139,18 @@
   cls: "blackhole"
   paper: "https://doi.org/10.1103/PhysRevLett.14.57"
   more: "http://www.scholarpedia.org/article/Penrose-Hawking_singularity_theorems"
-  image: ""
+  image: "roger.jpg"
 
-- year: 1965
-  title: "Fifth-Force Searches Begin"
-  desc: "Precision experiments in the 1960s tested whether gravity truly obeyed the equivalence principle at all accessible scales. Any tiny deviation might signal a new long-range interaction beyond Einstein and Newton. The search for hidden forces had begun."
-  x: 2480
-  y: 360
-  size: "small"
-  cls: "theory"
-  paper: "https://doi.org/10.1103/PhysRevLett.14.381"
-  more: "http://www.scholarpedia.org/article/Tests_of_gravity"
-  image: ""
+# - year: 1965
+#   title: "Fifth-Force Searches Begin"
+#   desc: "Precision experiments in the 1960s tested whether gravity truly obeyed the equivalence principle at all accessible scales. Any tiny deviation might signal a new long-range interaction beyond Einstein and Newton. The search for hidden forces had begun."
+#   x: 2480
+#   y: 360
+#   size: "small"
+#   cls: "theory"
+#   paper: "https://doi.org/10.1103/PhysRevLett.14.381"
+#   more: "http://www.scholarpedia.org/article/Tests_of_gravity"
+#   image: ""
 
 - year: 1969
   title: "Quantum Fields in Curved Spacetime"
@@ -161,40 +161,40 @@
   cls: "wave"
   paper: "https://doi.org/10.1007/BF02753982"
   more: "http://www.scholarpedia.org/article/Quantum_field_theory_in_curved_spacetime"
-  image: ""
-
-- year: 1970
-  title: "Laws of Black Hole Mechanics"
-  desc: "Researchers found four elegant laws governing black-hole horizons whose form mirrored ordinary thermodynamics. Surface gravity behaved like temperature, and horizon area resembled entropy. What first seemed analogy would soon become profound physical truth."
-  x: 2640
-  y: 880
-  size: "large"
-  cls: "blackhole"
-  paper: "https://doi.org/10.1007/BF01645742"
-  more: "http://www.scholarpedia.org/article/Black_hole_thermodynamics"
-  image: ""
+  image: "particleprod.webp"
 
 - year: 1970
   title: "Dark Matter in Galaxies"
-  desc: "Observations of spiral galaxies showed stars orbiting too rapidly at large distances from their centers. Visible matter alone could not supply the needed gravity. Vast halos of unseen matter appeared to dominate galaxies."
-  x: 2720
-  y: 1010
+  desc: "In the 1970s, astronomers including Vera Rubin and Kent Ford found that stars in spiral galaxies orbit too rapidly far from their centers. Independent studies by Ostriker, Peebles, Yahil, and by Einasto's group argued that galaxies must be embedded in vast halos of unseen matter. The modern dark matter hypothesis had taken firm root."
+  x: 2650
+  y: 250
   size: "large"
   cls: "cosmo"
   paper: "https://doi.org/10.1086/153513"
   more: "http://www.scholarpedia.org/article/Dark_matter"
-  image: ""
+  image: "dm.gif"
 
 - year: 1971
   title: "Hafele–Keating Experiment"
   desc: "Atomic clocks flown eastward and westward around Earth aboard commercial aircraft returned out of step with clocks kept on the ground. The measured differences matched the combined effects of motion and gravity. Relativistic time dilation had become a practical reality."
-  x: 2790
+  x: 2750
   y: 540
   size: "medium"
   cls: "foundation"
   paper: "https://doi.org/10.1126/science.177.4044.166"
   more: "http://www.scholarpedia.org/article/Time_dilation"
-  image: ""
+  image: "hafelekeating.jpeg"
+
+- year: 1972
+  title: "Black Hole Thermodynamics"
+  desc: "In 1972, Jacob Bekenstein proposed that black holes possess an entropy proportional to the area of their event horizons, hinting at a profound link between gravity, information, and thermodynamics. Soon after, the laws of black hole mechanics gave this idea mathematical form. Hawking's discovery of black hole radiation would complete the picture."
+  x: 2820
+  y: 880
+  size: "large"
+  cls: "blackhole"
+  paper: "https://doi.org/10.1007/BF01645742"
+  more: "http://www.scholarpedia.org/article/Black_hole_thermodynamics"
+  image: "bhentropy.png"
 
 - year: 1974
   title: "Hawking Radiation"
@@ -216,7 +216,7 @@
   cls: "wave"
   paper: "https://doi.org/10.1086/153168"
   more: "http://www.scholarpedia.org/article/Hulse-Taylor_pulsar"
-  image: ""
+  image: "hulsetaylor.gif"
 
 - year: 1975
   title: "COW Neutron Interferometry"
@@ -227,18 +227,18 @@
   cls: "foundation"
   paper: "https://doi.org/10.1103/PhysRevLett.34.1472"
   more: "http://www.scholarpedia.org/article/Quantum_gravity"
-  image: ""
+  image: "cow.png"
 
 - year: 1980
   title: "Cosmic Inflation"
-  desc: "Theoretical work in the early 1980s proposed that the infant universe underwent a brief burst of exponential expansion. Inflation explained the large-scale smoothness of the cosmos while preserving tiny primordial fluctuations. Those minute seeds would later grow into galaxies and clusters."
+  desc: "In the late 1970s and early 1980s, Alexei Starobinsky, Alan Guth, and Andrei Linde developed the theory of cosmic inflation, proposing a brief period of exponential expansion in the newborn universe. Inflation explained why the cosmos appears remarkably smooth, isotropic, and nearly flat on the largest scales. Quantum fluctuations from that primordial era were stretched to cosmic size and became the seeds of galaxies and structure."
   x: 3120
   y: 470
   size: "large"
   cls: "cosmo"
   paper: "https://doi.org/10.1103/PhysRevD.23.347"
   more: "http://www.scholarpedia.org/article/Inflation"
-  image: ""
+  image: "inflation.webp"
 
 - year: 1992
   title: "COBE Detects Primordial Fluctuations"
@@ -249,29 +249,29 @@
   cls: "cosmo"
   paper: "https://doi.org/10.1086/186504"
   more: "http://www.scholarpedia.org/article/Cosmic_microwave_background"
-  image: ""
+  image: "cobe.png"
 
-- year: 1993
-  title: "Hubble Space Telescope Restored"
-  desc: "Astronauts servicing the Hubble Space Telescope installed corrective optics that transformed a troubled mission into a triumph. The repaired observatory delivered razor-sharp images, deep galaxy fields, and crucial measurements of cosmic expansion. Hubble became one of history's great scientific instruments."
-  x: 3340
-  y: 360
-  size: "medium"
-  cls: "cosmo"
-  paper: "https://doi.org/10.1086/191793"
-  more: "http://www.scholarpedia.org/article/Hubble_Space_Telescope"
-  image: ""
+# - year: 1993
+#   title: "Hubble Space Telescope Restored"
+#   desc: "Astronauts servicing the Hubble Space Telescope installed corrective optics that transformed a troubled mission into a triumph. The repaired observatory delivered razor-sharp images, deep galaxy fields, and crucial measurements of cosmic expansion. Hubble became one of history's great scientific instruments."
+#   x: 3340
+#   y: 360
+#   size: "medium"
+#   cls: "cosmo"
+#   paper: "https://doi.org/10.1086/191793"
+#   more: "http://www.scholarpedia.org/article/Hubble_Space_Telescope"
+#   image: ""
 
 - year: 1995
   title: "GPS and Relativity"
   desc: "As the Global Positioning System reached maturity, its satellite clocks required continual corrections predicted by Einstein's theories. Without them, navigation errors would grow by kilometers each day. Relativity had become embedded in everyday engineering."
-  x: 3420
-  y: 620
+  x: 3360
+  y: 360
   size: "medium"
   cls: "foundation"
   paper: "https://doi.org/10.1119/1.18986"
   more: "http://www.scholarpedia.org/article/GPS_and_relativity"
-  image: ""
+  image: "gps.webp"
 
 - year: 1998
   title: "Accelerating Universe"
@@ -293,7 +293,7 @@
   cls: "cosmo"
   paper: "https://doi.org/10.1086/377226"
   more: "http://www.scholarpedia.org/article/Wilkinson_Microwave_Anisotropy_Probe"
-  image: ""
+  image: "Wmap_CMB.jpeg"
 
 - year: 2013
   title: "Planck: The Definitive CMB Map"
@@ -304,7 +304,7 @@
   cls: "cosmo"
   paper: "https://doi.org/10.1051/0004-6361/201321529"
   more: "http://www.scholarpedia.org/article/Planck_satellite"
-  image: ""
+  image: "Planck_CMB.jpg"
 
 - year: 2015
   title: "GW150914"
