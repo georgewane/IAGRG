@@ -114,7 +114,8 @@ h4 {
   background: var(--brand-dark);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 8px 0;
-  overflow: hidden;   /* ADD THIS — clips any overflowing child */
+   /* overflow-x: clip;
+  overflow-y: visible; */
 }
 
 /* Main navbar row:
@@ -126,8 +127,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Prevent the nav from ever causing horizontal scroll */
-  min-width: 0;
+  /* Prevent the nav from ever causing horizontal scroll
+  min-width: 0; */
 }
 
 
@@ -170,9 +171,7 @@ h4 {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 40px;          /* was 90px — too wide for mid-range viewports */
-  min-width: 0;       /* allows flex children to shrink below content size */
-  overflow: hidden;   /* catches any remaining overflow at this level */
+  gap: 90px;          /* was 90px — too wide for mid-range viewports */
 }
 
 /* Primary nav links */
@@ -180,17 +179,14 @@ h4 {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;          /* was 28px — tighter to survive mid-width viewports */
-  flex-wrap: nowrap;  /* explicit — prevents accidental wrapping */
-  min-width: 0;
+  gap: 28px;      
 }
 
 .nav-list a {
   text-decoration: none;
   color: white;
-  font-size: 0.9rem;      /* was 0.95rem */
+  font-size: 0.95rem;      /* was 0.95rem */
   font-weight: 500;
-  white-space: nowrap;    /* ADD THIS — prevents ▾ arrow dropping to next line */
 }
 
 .nav-list a:hover {
@@ -1866,6 +1862,38 @@ h4 {
   .contact-card p {
     font-size: 0.96rem;
   }
+}
+
+@media (max-width: 1150px){
+
+.nav-right{
+  gap: 20px;
+}
+
+.nav-list{
+  gap: 12px;
+}
+
+.nav-list a{
+  font-size: 0.82rem;
+}
+
+.site-logo a{
+  font-size: 1.3rem;
+}
+
+.site-logo img{
+  height: 42px;
+}
+
+.header-ctas{
+  gap: 8px;
+}
+.nav-container{
+  min-width:0;
+  overflow:hidden;
+}
+
 }
 /* ==================================================
    SCROLL HINTS — shared base + per-section overrides
