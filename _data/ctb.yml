@@ -240,10 +240,21 @@
   more: "http://www.scholarpedia.org/article/Inflation"
   image: "inflation.webp"
 
+- year: 1987
+  title: "SN1987A Supernova"
+  desc: "Light and neutrinos from SN1987A reached Earth together, revealing a stellar death in real time. It became the first true multimessenger observation, uniting astronomy and particle physics."
+  x: 3210
+  y: 640
+  size: "large"
+  cls: "cosmo"
+  paper: "https://doi.org/10.1103/PhysRevLett.58.1490"
+  more: "https://en.wikipedia.org/wiki/SN_1987A"
+  image: "sn1987a.gif"
+
 - year: 1992
   title: "COBE Detects Primordial Fluctuations"
   desc: "NASA's COBE satellite discovered faint temperature ripples across the microwave sky at the level of one part in one hundred thousand. These tiny irregularities were the primordial seeds from which galaxies and cosmic structure later emerged. Precision cosmology had truly begun."
-  x: 3260
+  x: 3290
   y: 820
   size: "large"
   cls: "cosmo"
@@ -317,10 +328,21 @@
   more: "http://www.scholarpedia.org/article/Gravitational_Waves:_Science_with_Compact_Binary_Coalescences"
   image: "gw150914.png"
 
+- year: 2017
+  title: "GW170817 Merger"
+  desc: "On 17 August 2017, LIGO and Virgo detected gravitational waves from two merging neutron stars. Within seconds, space telescopes observed a burst of gamma rays, followed by light across the electromagnetic spectrum. For the first time, a cosmic collision was both heard and seen."
+  x: 3950
+  y: 560
+  size: "large"
+  cls: "wave"
+  paper: "https://doi.org/10.1103/PhysRevLett.119.161101"
+  more: "https://en.wikipedia.org/wiki/GW170817"
+  image: "gw170817.gif"
+
 - year: 2019
   title: "Imaging a Black Hole"
   desc: "The Event Horizon Telescope linked radio observatories across Earth into a planet-sized instrument. In 2019 it released the first direct image of a black hole's shadow in the galaxy Messier 87. Einstein's theory had entered the age of imaging."
-  x: 4000
+  x: 4100
   y: 590
   size: "large"
   cls: "blackhole"
