@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 10 nodes, evenly distributed across 4 segments (0.0 to 1.0 each)
   // Distribute t values so nodes are visually balanced:
   // We spread across total t in [0..4] and map to segment+local t
-  var globalTs = [0, 0.44, 0.89, 1.33, 1.78, 2.22, 2.67, 3.11, 3.56, 4.0];
+  var globalTs = [0, 0.38, 0.76, 1.14, 1.52, 1.90, 2.28, 2.66, 3.04, 3.42, 4.0];
 
   function evalGlobal(gt){
     var seg = Math.min(Math.floor(gt), 3);
@@ -199,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {year:'1998', line1:'Accelerating', line2:'Universe'},
     {year:'2015', line1:'LIGO',         line2:'Detection'},
     {year:'2019', line1:'EHT Black',    line2:'Hole Image'},
+    {year:'2023', line1:'Cosmic GW',    line2:'GW Background'}
   ];
 
   var pts = globalTs.map(function(gt){ return evalGlobal(gt); });
