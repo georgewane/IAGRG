@@ -496,7 +496,7 @@
       font-weight: 300;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(80,110,170,.42);
+      color: rgb(227, 230, 235);
       z-index: 5;
       pointer-events: none;
     }
