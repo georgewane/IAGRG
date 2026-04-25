@@ -5,7 +5,13 @@ title: Home
 
 <!-- HERO -->
 <section class="hero-immersive" id="hero-section" style="background-image: url('{{ '/assets/img/eht-hero.jpg' | relative_url }}');">
-  <div class="hero-gradient">
+
+  <!-- Pure overlay: darkens the background image only, no layout role -->
+  <div class="hero-gradient" aria-hidden="true"></div>
+
+  <!-- Layout container: flex-column, grows to fill the section,
+       pushes scroll-hint to the bottom via margin-top:auto -->
+  <div class="hero-layout">
     <div class="hero-content container">
 
       <span class="hero-kicker">
@@ -28,14 +34,14 @@ title: Home
 
     </div>
 
-  </div>
+    <!-- Scroll hint: absolutely positioned at section bottom, matching CTB behavior -->
+    <div class="hero-scroll-hint" id="heroScrollHint" role="button" tabindex="0" aria-label="Scroll to Cosmic Timeline">
+      <span class="hint-label">Cosmic Timeline</span>
+      <svg class="hint-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 4v14M4 11l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
 
-  <!-- Animated scroll hint -->
-  <div class="hero-scroll-hint" id="heroScrollHint" role="button" tabindex="0" aria-label="Scroll to Cosmic Timeline">
-    <span class="hint-label">Cosmic Timeline</span>
-    <svg class="hint-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11 4v14M4 11l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
   </div>
 </section>
 
